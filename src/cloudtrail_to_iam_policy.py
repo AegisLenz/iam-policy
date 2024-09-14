@@ -26,6 +26,10 @@ def makeField(file_path):
         eventName = data.get("eventName")
         eventSource = data.get('eventSource')
         resources = data.get("resources")
+        errorCode = data.get("errorCode")
+
+        if errorCode:
+            continue
 
         # eventSource에서 서비스 이름 추출
         tmp = eventSource.split(".")
