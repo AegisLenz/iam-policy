@@ -1,0 +1,15 @@
+{
+    "policy": {
+        "Action": [
+            "s3:GetObject",
+            "s3:PutObject",
+            "s3:PutObjectAcl",
+            "s3:PutObjectLegalHold",
+            "s3:PutObjectRetention"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:s3:::{bucket_name}/{object_key}"
+        ]
+    }
+}

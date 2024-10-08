@@ -1,0 +1,11 @@
+{
+    "policy": {
+        "Action": [
+            "s3:ListAllMyBuckets"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "*"
+        ]
+    }
+}

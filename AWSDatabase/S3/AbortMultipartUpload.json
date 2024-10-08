@@ -1,0 +1,12 @@
+{
+    "policy": {
+        "Action": [
+            "s3:DeleteObject",
+            "s3:AbortMultipartUpload"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:s3:::{bucket_name}/{object_key}"
+        ]
+    }
+}
