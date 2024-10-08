@@ -1,0 +1,12 @@
+{
+    "policy": {
+        "Action": [
+            "s3:DeleteObjectVersion",
+            "s3:DeleteObject"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:s3:::{bucket_name}"
+        ]
+    }
+}

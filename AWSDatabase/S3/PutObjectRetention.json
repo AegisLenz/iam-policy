@@ -1,0 +1,12 @@
+{
+    "policy": {
+        "Action": [
+            "s3:PutObjectRetention",
+            "s3:BypassGovernanceRetention"  
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:s3:::{bucket_name}/*"
+        ]
+    }
+}

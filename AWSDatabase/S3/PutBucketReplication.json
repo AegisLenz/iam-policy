@@ -1,0 +1,12 @@
+{
+    "policy": {
+        "Action": [
+            "s3:PutReplicationConfiguration",
+            "iam:PassRole"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:s3:::{bucket_name}"
+        ]
+    }
+}
