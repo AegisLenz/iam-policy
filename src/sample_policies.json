@@ -1,0 +1,58 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "s3:DeleteBucket",
+                "s3:CreateBucket",
+                "s3:PutBucketAcl",
+                "s3:PutBucketObjectLockConfiguration",
+                "s3:PutBucketVersioning"
+            ],
+            "Resource": [
+                "arn:aws:s3:::rjpjj-bucket"
+            ],
+            "Effect": "Allow",
+            "Sid": "policy-arn:aws:s3:::rjpjj-bucket"
+        },
+        {
+            "Action": [
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow",
+            "Sid": "policy-*"
+        },
+        {
+            "Action": [
+                "iam:GetUserPolicy",
+                "iam:GetUser",
+                "iam:CreateUser",
+                "iam:PutUserPolicy",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": [
+                "arn:aws:iam::954976319365:user/rjpjj"
+            ],
+            "Effect": "Allow",
+            "Sid": "policy-arn:aws:iam::954976319365:user/rjpjj"
+        },
+        {
+            "Action": [
+                "iam:ListGroupsForUser",
+                "iam:DeleteUser",
+                "iam:DeleteUserPolicy",
+                "iam:DeleteAccessKey",
+                "iam:GetUser",
+                "iam:ListAccessKeys",
+                "iam:GetUserPolicy"
+            ],
+            "Resource": [
+                "arn:aws:iam::954976319365:user/acebx"
+            ],
+            "Effect": "Allow",
+            "Sid": "policy-arn:aws:iam::954976319365:user/acebx"
+        }
+    ]
+}
