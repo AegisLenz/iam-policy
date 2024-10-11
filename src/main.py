@@ -3,9 +3,9 @@ from policy_mapper import map_event_to_permissions, make_policy_from_resource
 import json
 
 # 정책 생성 및 저장을 위한 실행 코드
-policy_folder = "/home/yjeongc/Downloads/iam-policy/AWSDatabase/S3"
-cloudtrail_log_filepath = "/home/yjeongc/Downloads/iam__backdoor_assume_role_policy_O1.json"
-output_json_file = "/home/yjeongc/Downloads/iam-policy/src/sample_policies.json"
+policy_folder = "정책_템플릿_폴더경로"
+cloudtrail_log_filepath = "CloudTrail_Log_파일경로"
+output_json_file = "sample_정책_저장경로"
 
 # CloudTrail 로그를 분석하여 필요한 데이터를 추출
 logs = load_and_extract_cloudtrail_logs(cloudtrail_log_filepath)
