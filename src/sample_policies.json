@@ -2,13 +2,13 @@
     "Statement": [
         {
             "Action": [
-                "iam:DetachUserPolicy",
-                "iam:DeleteAccessKey",
-                "iam:ListAccessKeys",
-                "iam:ListGroupsForUser",
+                "iam:GetUser",
                 "iam:ListAttachedUserPolicies",
                 "iam:DeleteUser",
-                "iam:GetUser"
+                "iam:ListAccessKeys",
+                "iam:ListGroupsForUser",
+                "iam:DeleteAccessKey",
+                "iam:DetachUserPolicy"
             ],
             "Resource": [
                 "arn:aws:iam::891377205497:user/new_user"
@@ -18,16 +18,16 @@
         },
         {
             "Action": [
-                "sts:GetCallerIdentity",
-                "iam:GetPolicy",
                 "iam:DetachRolePolicy",
-                "iam:DeleteRole",
+                "iam:GetPolicy",
                 "iam:ListPolicyVersions",
-                "iam:ListAttachedRolePolicies",
-                "iam:DeletePolicy",
+                "sts:GetCallerIdentity",
                 "iam:GetPolicyVersion",
+                "iam:DeletePolicy",
                 "iam:GetRole",
-                "iam:UpdateAssumeRolePolicy"
+                "iam:ListAttachedRolePolicies",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:DeleteRole"
             ],
             "Resource": [
                 "*"
