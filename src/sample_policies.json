@@ -2,12 +2,12 @@
     "Statement": [
         {
             "Action": [
-                "iam:GetUserPolicy",
-                "iam:CreateAccessKey",
                 "iam:CreateUser",
-                "iam:PutUserPolicy",
+                "iam:CreateAccessKey",
                 "iam:GetUser",
-                "iam:ListAccessKeys"
+                "iam:GetUserPolicy",
+                "iam:ListAccessKeys",
+                "iam:PutUserPolicy"
             ],
             "Resource": [
                 "arn:aws:iam::954976319365:user/quqpq"
@@ -20,10 +20,10 @@
                 "sts:GetCallerIdentity"
             ],
             "Resource": [
-                "arn:aws:sts:::getcalleridentity"
+                "*"
             ],
             "Effect": "Allow",
-            "Sid": "policy-arn:aws:sts:::getcalleridentity"
+            "Sid": "policy-*"
         }
     ]
 }
