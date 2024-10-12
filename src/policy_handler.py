@@ -6,7 +6,7 @@ import json
 # 현재는 S3 및 IAM 이벤트에 대해 정책 템플릿을 로드함
 def load_policy_template(event_name, policy_folder_path, event_source):
     # 지원되는 이벤트 소스 목록
-    supported_event_sources = ['s3.amazonaws.com', 'iam.amazonaws.com']
+    supported_event_sources = ['s3.amazonaws.com']
 
     # 이벤트 소스가 지원되는 경우에만 정책 템플릿 로드
     if event_source not in supported_event_sources:
