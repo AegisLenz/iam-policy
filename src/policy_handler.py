@@ -1,13 +1,15 @@
-#policy_handler.py
-#policy_handler.py
+#poliy_handler.py
 import os
 import json
 
 # 특정 이벤트 이름에 해당하는 정책 템플릿 파일을 로드하는 함수
-# event_source가 's3.amazonaws.com'인 경우에만 로드함
+# 현재는 S3 및 IAM 이벤트에 대해 정책 템플릿을 로드함
 def load_policy_template(event_name, policy_folder_path, event_source):
+    # 지원되는 이벤트 소스 목록
+    supported_event_sources = ['s3.amazonaws.com', 'iam.amazonaws.com']
 
-    if event_source != 's3.amazonaws.com':
+    # 이벤트 소스가 지원되는 경우에만 정책 템플릿 로드
+    if event_source not in supported_event_sources:
         return None
 
     policy_file_path = os.path.join(policy_folder_path, f'{event_name}.json')
@@ -25,7 +27,6 @@ def load_policy_template(event_name, policy_folder_path, event_source):
 
 # 로그 항목과 정책 템플릿을 사용해 필요한 리소스를 생성하는 함수
 def generate_resource(log_entry, policy_template, context_data):
-
     resource_list = []
     resources = log_entry.get('resources', [])
 
