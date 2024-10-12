@@ -1,3 +1,4 @@
+#main.py
 from cloudtrail_parser import load_and_extract_cloudtrail_logs
 from policy_mapper import map_event_to_permissions, make_policy_from_resource
 import json
