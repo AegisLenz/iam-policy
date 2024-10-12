@@ -68,16 +68,9 @@ def generate_resource(log_entry, policy_template, context_data):
             if resource_arn not in resource_list:
                 resource_list.append(resource_arn)
 
-    # STS 관련 이벤트 처리 (event_source가 'sts.amazonaws.com'인 경우)
-    if log_entry.get('eventSource') == 'sts.amazonaws.com':
-        request_parameters = log_entry.get('requestParameters', {})
-        role_arn = request_parameters.get('roleArn') if request_parameters else None
-        if role_arn and role_arn not in resource_list:
-            resource_list.append(role_arn)
-
     # 그 외의 이벤트 처리
     if not resource_list:
-        general_resource = f"arn:aws:{log_entry.get('eventSource', '').split('.')[0]}:::{log_entry.get('eventName', '').lower()}"
+        general_resource = f"*"
         if general_resource not in resource_list:
             resource_list.append(general_resource)
 
