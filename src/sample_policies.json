@@ -2,22 +2,32 @@
     "Statement": [
         {
             "Action": [
-                "iam:CreateUser",
-                "iam:CreateAccessKey",
-                "iam:GetUser",
-                "iam:GetUserPolicy",
+                "iam:DetachUserPolicy",
+                "iam:DeleteAccessKey",
                 "iam:ListAccessKeys",
-                "iam:PutUserPolicy"
+                "iam:ListGroupsForUser",
+                "iam:ListAttachedUserPolicies",
+                "iam:DeleteUser",
+                "iam:GetUser"
             ],
             "Resource": [
-                "arn:aws:iam::954976319365:user/quqpq"
+                "arn:aws:iam::891377205497:user/new_user"
             ],
             "Effect": "Allow",
-            "Sid": "policy-arn:aws:iam::954976319365:user/quqpq"
+            "Sid": "policy-arn:aws:iam::891377205497:user/new_user"
         },
         {
             "Action": [
-                "sts:GetCallerIdentity"
+                "sts:GetCallerIdentity",
+                "iam:GetPolicy",
+                "iam:DetachRolePolicy",
+                "iam:DeleteRole",
+                "iam:ListPolicyVersions",
+                "iam:ListAttachedRolePolicies",
+                "iam:DeletePolicy",
+                "iam:GetPolicyVersion",
+                "iam:GetRole",
+                "iam:UpdateAssumeRolePolicy"
             ],
             "Resource": [
                 "*"
