@@ -1,0 +1,13 @@
+{
+    "policy": {
+      "Action": [
+           "ec2:AcceptVpcPeeringConnection"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:ec2:*:{account_id}:vpc-peering-connection/*",
+        "arn:aws:ec2:*:{account_id}:vpc/*"
+      ]
+    }
+  }
+  

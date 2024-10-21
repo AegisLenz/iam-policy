@@ -1,0 +1,11 @@
+{
+    "policy": {
+        "Action": [
+            "ec2:AcceptTransitGatewayVpcAttachment"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+                "arn:aws:ec2:*:{account_id}:transit-gateway-attachment/*"
+        ]
+    }
+}
