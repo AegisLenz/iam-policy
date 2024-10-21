@@ -1,0 +1,11 @@
+{
+    "policy": {
+        "Action": [
+            "ec2:GetReservedInstancesExchangeQuote"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "*"
+        ]
+    }
+}
