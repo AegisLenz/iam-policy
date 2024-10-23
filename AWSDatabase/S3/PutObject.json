@@ -1,15 +1,16 @@
 {
-    "policy": {
-        "Action": [
-            "s3:PutObject",
-            "s3:PutObjectAcl",
-            "s3:PutObjectTagging",
-            "s3:PutObjectRetention"
-        ],
-        "Effect": "Allow",
-        "Resource": [
-               "arn:aws:s3:::{bucket_name}/{object_name}"
-        ]
-
-    }
+    "policy": [
+        {
+            "Action": [
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:PutObjectTagging",
+                "s3:PutObjectRetention"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::{bucket_name}/{object_name}"
+            ]
+        }
+    ]
 }

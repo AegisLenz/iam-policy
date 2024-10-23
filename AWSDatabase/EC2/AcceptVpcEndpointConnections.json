@@ -1,12 +1,14 @@
 {
-  "policy": {
-    "Action": [
-        "ec2:AcceptVpcEndpointConnections"
-    ],
-    "Effect": "Allow",
-    "Resource": [
-      "arn:aws:ec2:*:{account_id}:vpc-endpoint/*",
-      "arn:aws:ec2:*:{account_id}:vpc-endpoint-service/{service_id}"
+    "policy": [
+        {
+            "Action": [
+                "ec2:AcceptVpcEndpointConnections"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:*:{account_id}:vpc-endpoint/*",
+                "arn:aws:ec2:*:{account_id}:vpc-endpoint-service/{service_id}"
+            ]
+        }
     ]
-  }
 }

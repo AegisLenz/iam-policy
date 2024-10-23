@@ -1,11 +1,13 @@
 {
-    "policy": {
-        "Action": [
-            "s3:GetBucketCors"
-        ],
-        "Effect": "Allow",
-        "Resource": [
-            "arn:aws:s3:::{bucket_name}"
-        ]
-    }
+    "policy": [
+        {
+            "Action": [
+                "s3:GetBucketCors"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::{bucket_name}"
+            ]
+        }
+    ]
 }
