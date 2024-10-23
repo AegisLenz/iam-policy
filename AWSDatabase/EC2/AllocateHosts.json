@@ -1,24 +1,22 @@
 {
-    "policy": {
-        "Statement": [
-            {
-                "Action": [
-                    "ec2:AllocateHosts"
-                ],
-                "Effect": "Allow",
-                "Resource": [
-                    "arn:aws:ec2:{region}:{account_id}:dedicated-host/{host_id}"
-                ]
-            },
-            {
-                "Action": [
-                    "ec2:CreateTags"
-                ],
-                "Effect": "Allow",
-                "Resource": [
-                    "*"
-                ]
-            }
-        ]
-    }
+    "policy": [
+        {
+            "Action": [
+                "ec2:AllocateHosts"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:dedicated-host/{host_id}"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
 }

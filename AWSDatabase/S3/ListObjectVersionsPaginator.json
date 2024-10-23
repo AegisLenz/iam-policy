@@ -1,10 +1,14 @@
 {
-  "policy": {
-    "Action": ["s3:ListBucketVersions"],
-    "Effect": "Allow",
-    "Resource": [
-      "arn:aws:s3:::{bucket_name}",
-      "arn:aws:s3:::{bucket_name}/{key_prefix}*"
+    "policy": [
+        {
+            "Action": [
+                "s3:ListBucketVersions"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::{bucket_name}",
+                "arn:aws:s3:::{bucket_name}/{key_prefix}*"
+            ]
+        }
     ]
-  }
 }

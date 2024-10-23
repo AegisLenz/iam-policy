@@ -1,9 +1,11 @@
 {
-    "policy": {
-        "Action": [
-            "ec2:AllocateAddress"
-        ],
-        "Effect": "Allow",
-        "Resource": "*"
-    }
+    "policy": [
+        {
+            "Action": [
+                "ec2:AllocateAddress"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
 }

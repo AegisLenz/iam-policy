@@ -1,11 +1,13 @@
 {
-    "policy": {
-        "Action": [
-            "ec2:AcceptTransitGatewayPeeringAttachment"
-        ],
-        "Effect": "Allow",
-        "Resource": [
+    "policy": [
+        {
+            "Action": [
+                "ec2:AcceptTransitGatewayPeeringAttachment"
+            ],
+            "Effect": "Allow",
+            "Resource": [
                 "arn:aws:ec2:*:{account_id}:transit-gateway-attachment/*"
-        ]
-    }
+            ]
+        }
+    ]
 }
