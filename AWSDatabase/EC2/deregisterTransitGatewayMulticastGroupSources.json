@@ -7,7 +7,7 @@
             "Effect": "Allow",
             "Resource": [
                 "arn:aws:ec2:{region}:{account_id}:network_interface/{network_interface_id}",
-                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/tgw-mcast-domain-04f33ddc790370387"
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/{transit_gateway_multicast_domain_id}"
             ]
         }
     ]
