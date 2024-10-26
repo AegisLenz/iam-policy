@@ -1,1 +1,11 @@
-Involves purchasing scheduled instances before running it.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:RunScheduledInstances"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

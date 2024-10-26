@@ -1,1 +1,13 @@
-Only Classic-enabled accounts can restore a VPC EIP to Classic
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:RestoreAddressToClassic"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:eip-allocation/{allocation_id}"
+            ]
+        }
+    ]
+}

@@ -1,1 +1,13 @@
-No API to create client vpn connection
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:TerminateClientVpnConnections"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:client-vpn-endpoint/{client_vpn_endpoint_id}"
+            ]
+        }
+    ]
+}

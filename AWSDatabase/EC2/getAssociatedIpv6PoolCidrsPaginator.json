@@ -1,3 +1,13 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetAssociatedIpv6PoolCidrs"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:ipv6-pool/{ipv6_pool_id}"
+            ]
+        }
+    ]
 }

@@ -1,1 +1,13 @@
-The action ResetAddressAttribute is not valid for this web service.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ResetAddressAttribute"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:eip-allocation/{allocation_id}"
+            ]
+        }
+    ]
+}

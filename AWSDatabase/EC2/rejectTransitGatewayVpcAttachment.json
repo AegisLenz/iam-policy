@@ -1,1 +1,13 @@
-An error occurred (IncorrectState) when calling the RejectTransitGatewayVpcAttachment operation: tgw-attach-03f536c5a381c9d11 is in invalid state
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:RejectTransitGatewayVpcAttachment"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-attachment/{attachment_id}"
+            ]
+        }
+    ]
+}

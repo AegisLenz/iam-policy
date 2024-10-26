@@ -1,1 +1,13 @@
-Requires another account for this API to be invoked succesfully
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:RejectTransitGatewayMulticastDomainAssociations"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/{multicast_domain_id}"
+            ]
+        }
+    ]
+}

@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::image/ami-013ad70ab73da1ff2"
+                "arn:aws:ec2:{region}::image/{image_id}"
             ]
         }
     ]
