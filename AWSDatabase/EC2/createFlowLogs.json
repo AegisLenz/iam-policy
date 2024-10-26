@@ -1,0 +1,34 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateFlowLogs"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:network-interface/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc/*",
+                "arn:aws:ec2:{region}:{account_id}:subnet/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc-flow-log/*"
+            ]
+        },
+        {
+            "Action": [
+                "logs:CreateLogDelivery"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

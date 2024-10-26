@@ -1,0 +1,22 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreatePlacementGroup"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:placement-group/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

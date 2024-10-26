@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:AuthorizeClientVpnIngress"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:client_vpn_endpoint/{client_vpn_endpoint_id}"
+            ]
+        }
+    ]
+}

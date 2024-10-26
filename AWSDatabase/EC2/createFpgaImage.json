@@ -1,0 +1,22 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateFpgaImage"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::fpga-image/*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

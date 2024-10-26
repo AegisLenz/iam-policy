@@ -1,0 +1,24 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateClientVpnEndpoint"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:client-vpn-endpoint/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc/*",
+                "arn:aws:ec2:{region}:{account_id}:security-group/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

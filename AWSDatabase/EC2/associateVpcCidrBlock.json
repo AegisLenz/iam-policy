@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:AssociateVpcCidrBlock"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:ipv6pool-ec2/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc/{vpc_id}"
+            ]
+        }
+    ]
+}

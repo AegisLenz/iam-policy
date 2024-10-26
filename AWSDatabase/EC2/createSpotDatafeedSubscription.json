@@ -1,0 +1,31 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "s3:GetBucketAcl"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateSpotDatafeedSubscription"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:PutBucketAcl"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461"
+            ]
+        }
+    ]
+}

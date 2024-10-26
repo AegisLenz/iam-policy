@@ -1,0 +1,15 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:AssociateTransitGatewayMulticastDomain"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:subnet/{subnet_id}",
+                "arn:aws:ec2:{region}:{account_id}:attachment/{attachment_id}",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/tgw-mcast-domain-05874549ae8ebd553"
+            ]
+        }
+    ]
+}

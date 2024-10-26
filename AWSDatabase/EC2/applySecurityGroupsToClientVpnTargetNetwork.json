@@ -6,8 +6,8 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:security-group/{security_group_id}",
-                "arn:aws:ec2:{region}:{account_id}:client-vpn-endpoint/{client_vpn_endpoint_id}",
+                "arn:aws:ec2:{region}:{account_id}:security_group/{security_group_id}",
+                "arn:aws:ec2:{region}:{account_id}:client_vpn_endpoint/{client_vpn_endpoint_id}",
                 "arn:aws:ec2:{region}:{account_id}:vpc/{vpc_id}"
             ]
         }

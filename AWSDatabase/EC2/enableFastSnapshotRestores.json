@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:EnableFastSnapshotRestores"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::snapshot/snap-00891f948db7739c3"
+            ]
+        }
+    ]
+}

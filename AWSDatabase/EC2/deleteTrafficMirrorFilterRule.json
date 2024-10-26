@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DeleteTrafficMirrorFilterRule"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter-rule/*",
+                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter/tmf-0479cc103b3d3f39d"
+            ]
+        }
+    ]
+}

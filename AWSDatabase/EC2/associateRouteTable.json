@@ -1,0 +1,16 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:AssociateRouteTable"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:vpn_gateway/{vpn_gateway_id}",
+                "arn:aws:ec2:{region}:{account_id}:subnet/{subnet_id}",
+                "arn:aws:ec2:{region}:{account_id}:internet_gateway/{internet_gateway_id}",
+                "arn:aws:ec2:{region}:{account_id}:route_table/{route_table_id}"
+            ]
+        }
+    ]
+}

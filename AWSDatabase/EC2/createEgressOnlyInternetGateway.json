@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateEgressOnlyInternetGateway"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:egress-only-internet_gateway/{internet_gateway_id}",
+                "arn:aws:ec2:{region}:{account_id}:vpc/{vpc_id}"
+            ]
+        }
+    ]
+}

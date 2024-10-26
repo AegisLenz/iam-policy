@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DeregisterTransitGatewayMulticastGroupMembers"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:network-interface/*",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/*"
+            ]
+        }
+    ]
+}

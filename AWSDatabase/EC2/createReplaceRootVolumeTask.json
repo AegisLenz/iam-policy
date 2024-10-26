@@ -1,0 +1,16 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateReplaceRootVolumeTask"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:volume/*",
+                "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}",
+                "arn:aws:ec2:{region}:{account_id}:replace-root-volume-task/*",
+                "arn:aws:ec2:{region}::snapshot/*"
+            ]
+        }
+    ]
+}

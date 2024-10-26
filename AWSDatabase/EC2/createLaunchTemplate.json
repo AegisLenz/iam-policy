@@ -1,0 +1,22 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateLaunchTemplate"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:host/{host_id}",
+                "arn:aws:ec2:{region}:{account_id}:network-interface/*",
+                "arn:aws:ec2:{region}:{account_id}:security-group/*",
+                "arn:aws:ec2:{region}:{account_id}:placement-group/*",
+                "arn:aws:ec2:{region}:{account_id}:subnet/*",
+                "arn:aws:ec2:{region}:{account_id}:capacity-reservation/*",
+                "arn:aws:ec2:{region}::snapshot/*",
+                "arn:aws:ec2:{region}:{account_id}:key-pair/*",
+                "arn:aws:ec2:{region}:{account_id}:launch-template/*",
+                "arn:aws:ec2:{region}::image/*"
+            ]
+        }
+    ]
+}

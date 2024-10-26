@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DeleteRoute"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:prefix-list/*",
+                "arn:aws:ec2:{region}:{account_id}:route_table/{route_table_id}"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateTransitGatewayMulticastDomain"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway/tgw-040604673d69e2f25",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/*"
+            ]
+        }
+    ]
+}

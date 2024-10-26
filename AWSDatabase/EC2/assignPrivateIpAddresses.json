@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:network-interface/{network_interface_id}"
+                "arn:aws:ec2:{region}:{account_id}:network_interface/{network_interface_id}"
             ]
         }
     ]

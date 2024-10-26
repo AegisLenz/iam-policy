@@ -1,0 +1,23 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateTransitGatewayPeeringAttachment"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway/*",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-attachment/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

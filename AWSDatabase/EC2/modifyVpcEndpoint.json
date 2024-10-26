@@ -1,0 +1,16 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ModifyVpcEndpoint"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:security-group/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc-endpoint/*",
+                "arn:aws:ec2:{region}:{account_id}:subnet/*",
+                "arn:aws:ec2:{region}:{account_id}:route-table/*"
+            ]
+        }
+    ]
+}

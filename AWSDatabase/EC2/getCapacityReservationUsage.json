@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetCapacityReservationUsage"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:capacity-reservation/cr-022fbf9192ea245f3"
+            ]
+        }
+    ]
+}

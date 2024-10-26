@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ResetSnapshotAttribute"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::snapshot/snap-0f0be801fb576272b"
+            ]
+        }
+    ]
+}

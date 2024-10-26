@@ -1,0 +1,23 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateRouteTable"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:route-table/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc/{vpc_id}"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
