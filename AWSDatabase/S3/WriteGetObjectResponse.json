@@ -1,12 +1,14 @@
 {
-    "policy": {
-        "Action": [
-            "s3:GetObject",
-            "s3-object-lambda:WriteGetObjectResponse"
-        ],
-        "Effect": "Allow",
-        "Resource": [
-            "arn:aws:s3:::{bucket_name}/{key}/*"
-        ]
-    }
+    "policy": [
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3-object-lambda:WriteGetObjectResponse"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::{bucket_name}/{key}/*"
+            ]
+        }
+    ]
 }

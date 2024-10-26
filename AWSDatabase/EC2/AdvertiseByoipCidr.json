@@ -1,0 +1,11 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:AdvertiseByoipCidr"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

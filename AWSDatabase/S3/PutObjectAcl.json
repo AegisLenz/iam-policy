@@ -1,11 +1,13 @@
 {
-    "policy": {
-        "Action": [
-            "s3:PutObjectAcl"
-        ],
-        "Effect": "Allow",
-        "Resource": [
-            "arn:aws:s3:::{bucket_name}/{object_key}/*"
-        ]
-    }
+    "policy": [
+        {
+            "Action": [
+                "s3:PutObjectAcl"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::{bucket_name}/{object_key}/*"
+            ]
+        }
+    ]
 }

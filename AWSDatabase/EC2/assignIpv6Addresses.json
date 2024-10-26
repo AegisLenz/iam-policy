@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:AssignIpv6Addresses"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:network-interface/{network_interface_id}"
+            ]
+        }
+    ]
+}
