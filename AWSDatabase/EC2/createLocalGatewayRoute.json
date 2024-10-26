@@ -1,1 +1,15 @@
-Local gateway can be created on AWS Outpost: https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateLocalGatewayRoute"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:local-gateway-route-table/*",
+                "arn:aws:ec2:{region}:{account_id}:subnet/*",
+                "arn:aws:ec2:{region}:{account_id}:local-gateway/*"
+            ]
+        }
+    ]
+}

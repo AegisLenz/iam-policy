@@ -6,8 +6,17 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:transit-gateway/tgw-040604673d69e2f25",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway/{transit_gateway_id}",
                 "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
             ]
         }
     ]

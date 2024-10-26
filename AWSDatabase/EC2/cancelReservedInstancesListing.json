@@ -1,1 +1,13 @@
-No reserved instances listing available. Look at describeReservedInstancesListings.json
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CancelReservedInstancesListing"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:reserved-instances-listing/{reserved_instances_listing_id}"
+            ]
+        }
+    ]
+}

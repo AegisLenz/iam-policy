@@ -1,1 +1,23 @@
-Transit Gateway Attachment tgw-attach-05e6b44812968179b was deleted or does not exist.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateTransitGatewayConnectPeer"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-connect-peer/*",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-attachment/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:DescribeTransitGatewayAttachments"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

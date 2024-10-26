@@ -6,9 +6,9 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/{multicast_domain_id}",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/{transit_gateway_multicast_domain_id}",
                 "arn:aws:ec2:{region}:{account_id}:subnet/{subnet_id}",
-                "arn:aws:ec2:{region}:{account_id}:vpc/{vpc_id}"
+                "arn:aws:ec2:{region}:{account_id}:vpc/*"
             ]
         }
     ]

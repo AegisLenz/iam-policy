@@ -1,1 +1,13 @@
-The account 002677082836 is not permitted to receive cross account permissions.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateNetworkInterfacePermission"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:network-interface/{network_interface_id}"
+            ]
+        }
+    ]
+}

@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:dedicated-host/{host_id}"
+                "arn:aws:ec2:{region}:{account_id}:dedicated-host/*"
             ]
         },
         {

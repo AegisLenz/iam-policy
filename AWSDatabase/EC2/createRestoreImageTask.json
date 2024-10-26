@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::image/*"
+                "arn:aws:ec2:{region}::{account_id}:image/*"
             ]
         },
         {
@@ -15,7 +15,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:s3:::test-bucket-5461/ami-013ad70ab73da1ff2.bin"
+                "arn:aws:s3:::{bucket_name}/{object_key}"
             ]
         },
         {
@@ -24,7 +24,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::snapshot/*"
+                "arn:aws:ec2:{region}::{account_id}:snapshot/*"
             ]
         },
         {
@@ -33,7 +33,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::snapshot/*"
+                "arn:aws:ec2:{region}::{account_id}:snapshot/*"
             ]
         },
         {
@@ -42,7 +42,16 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::snapshot/*"
+                "arn:aws:ec2:{region}::{account_id}:snapshot/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::{account_id}:image/*"
             ]
         }
     ]

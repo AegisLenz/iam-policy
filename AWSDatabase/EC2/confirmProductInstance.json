@@ -1,1 +1,13 @@
-Product code that you own. Requires you to own a product (seller account)
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ConfirmProductInstance"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}"
+            ]
+        }
+    ]
+}

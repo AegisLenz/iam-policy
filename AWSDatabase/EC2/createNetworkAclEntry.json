@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:network-acl/acl-0cdd57084c6315982"
+                "arn:aws:ec2:{region}:{account_id}:network-acl/{network_acl_id}"
             ]
         }
     ]

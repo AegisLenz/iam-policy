@@ -1,1 +1,13 @@
-Cannot invoke this API because bundleInstance API cannot be invoked.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CancelBundleTask"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:bundle-task/{bundle_task_id}"
+            ]
+        }
+    ]
+}

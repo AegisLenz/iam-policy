@@ -9,7 +9,7 @@
                 "arn:aws:ec2:{region}:{account_id}:subnet/{subnet_id}",
                 "arn:aws:ec2:{region}:{account_id}:transit-gateway-attachment/*",
                 "arn:aws:ec2:{region}:{account_id}:vpc/{vpc_id}",
-                "arn:aws:ec2:{region}:{account_id}:transit-gateway/tgw-05ea99e26ea5b116a"
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway/{transit_gateway_id}"
             ]
         }
     ]
