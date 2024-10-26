@@ -1,0 +1,24 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateNetworkInterface"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:network-interface/*",
+                "arn:aws:ec2:{region}:{account_id}:security-group/*",
+                "arn:aws:ec2:{region}:{account_id}:subnet/{subnet_id}"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

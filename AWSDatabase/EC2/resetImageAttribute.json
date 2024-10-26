@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ResetImageAttribute"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::image/ami-013ad70ab73da1ff2"
+            ]
+        }
+    ]
+}

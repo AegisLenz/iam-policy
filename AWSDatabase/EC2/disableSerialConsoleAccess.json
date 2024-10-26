@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DisableSerialConsoleAccess"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

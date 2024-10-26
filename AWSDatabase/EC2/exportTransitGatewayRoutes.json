@@ -1,0 +1,22 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ExportTransitGatewayRoutes"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461/*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:RequestSpotInstances"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:security_group/{security_group_id}",
+                "arn:aws:ec2:{region}:{account_id}:subnet/*",
+                "arn:aws:ec2:{region}:{account_id}:spot-instances-request/*",
+                "arn:aws:ec2:{region}:{account_id}:key-pair/test-key-pair",
+                "arn:aws:ec2:{region}::image/ami-0029f0b4ea5bb8ee1"
+            ]
+        },
+        {
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:iam::{account_id}:role/*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateRestoreImageTask"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::image/*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461/ami-013ad70ab73da1ff2.bin"
+            ]
+        },
+        {
+            "Action": [
+                "ebs:CompleteSnapshot"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::snapshot/*"
+            ]
+        },
+        {
+            "Action": [
+                "ebs:StartSnapshot"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::snapshot/*"
+            ]
+        },
+        {
+            "Action": [
+                "ebs:PutSnapshotBlock"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::snapshot/*"
+            ]
+        }
+    ]
+}

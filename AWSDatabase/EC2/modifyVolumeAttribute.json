@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ModifyVolumeAttribute"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:volume/vol-049304f3116417955"
+            ]
+        }
+    ]
+}

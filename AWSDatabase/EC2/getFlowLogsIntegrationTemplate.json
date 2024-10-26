@@ -1,0 +1,31 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461/*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:GetBucketLocation"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:GetFlowLogsIntegrationTemplate"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:vpc-flow-log/fl-006555730e2cbb997"
+            ]
+        }
+    ]
+}

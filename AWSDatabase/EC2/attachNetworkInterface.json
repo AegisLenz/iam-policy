@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:AttachNetworkInterface"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}",
+                "arn:aws:ec2:{region}:{account_id}:network_interface/{network_interface_id}"
+            ]
+        }
+    ]
+}

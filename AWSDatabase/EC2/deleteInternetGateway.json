@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DeleteInternetGateway"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:internet_gateway/{internet_gateway_id}"
+            ]
+        }
+    ]
+}

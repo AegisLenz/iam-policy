@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateInstanceExportTask"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:export-instance-task/*",
+                "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}"
+            ]
+        }
+    ]
+}

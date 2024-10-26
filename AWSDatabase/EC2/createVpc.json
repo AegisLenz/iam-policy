@@ -1,0 +1,23 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateVpc"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:ipv6pool-ec2/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

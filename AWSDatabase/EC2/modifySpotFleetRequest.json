@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ModifySpotFleetRequest"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:launch-template/*",
+                "arn:aws:ec2:{region}:{account_id}:spot-fleet-request/sfr-bba415bb-60f9-45f8-9fa7-6601527ac4cb"
+            ]
+        }
+    ]
+}

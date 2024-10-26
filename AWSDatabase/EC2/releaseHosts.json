@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ReleaseHosts"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:dedicated-host/h-0e5ce070107a4a55b"
+            ]
+        }
+    ]
+}

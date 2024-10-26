@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:RestoreManagedPrefixListVersion"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:prefix-list/pl-073b7bab414fcb90a"
+            ]
+        }
+    ]
+}

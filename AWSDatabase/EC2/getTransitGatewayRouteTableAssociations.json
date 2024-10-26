@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetTransitGatewayRouteTableAssociations"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-route-table/tgw-rtb-02e9c220c37bb74db"
+            ]
+        }
+    ]
+}

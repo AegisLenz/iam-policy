@@ -1,0 +1,25 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ReplaceRoute"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:local-gateway/*",
+                "arn:aws:ec2:{region}:{account_id}:instance/*",
+                "arn:aws:ec2:{region}:{account_id}:network-interface/*",
+                "arn:aws:ec2:{region}:{account_id}:internet_gateway/{internet_gateway_id}",
+                "arn:aws:ec2:{region}:{account_id}:vpc-peering-connection/*",
+                "arn:aws:ec2:{region}:{account_id}:prefix-list/*",
+                "arn:aws:ec2:{region}:{account_id}:route_table/{route_table_id}",
+                "arn:aws:ec2:{region}:{account_id}:natgateway/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc-endpoint/*",
+                "arn:aws:ec2:{region}:{account_id}:vpn_gateway/{vpn_gateway_id}",
+                "arn:aws:ec2:{region}:{account_id}:egress-only-internet_gateway/{internet_gateway_id}",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway/*",
+                "arn:aws:ec2:{region}:{account_id}:carrier-gateway/*"
+            ]
+        }
+    ]
+}

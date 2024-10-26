@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetAssociatedEnclaveCertificateIamRoles"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:acm:{region}:{account_id}:certificate/{certificate_id}"
+            ]
+        }
+    ]
+}

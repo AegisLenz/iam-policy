@@ -1,0 +1,40 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "acm:RequestCertificate"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "acm-pca:GetCertificate"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:acm-pca:{region}:{account_id}:certificate-authority/f13cbd1c-6e21-4662-b103-392552c8e44f"
+            ]
+        },
+        {
+            "Action": [
+                "acm-pca:IssueCertificate"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:acm-pca:{region}:{account_id}:certificate-authority/f13cbd1c-6e21-4662-b103-392552c8e44f"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:ModifyVpnTunnelCertificate"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:vpn-connection/vpn-0124505c849bf8247"
+            ]
+        }
+    ]
+}

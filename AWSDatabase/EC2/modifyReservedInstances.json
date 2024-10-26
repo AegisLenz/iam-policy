@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ModifyReservedInstances"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:reserved-instances/7bc82b63-1b39-44fa-b5b3-7549547641e0"
+            ]
+        }
+    ]
+}

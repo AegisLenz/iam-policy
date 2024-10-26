@@ -1,0 +1,23 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateNetworkAcl"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:network-acl/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc/{vpc_id}"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DisassociateTransitGatewayRouteTable"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:attachment/{attachment_id}",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-route-table/tgw-rtb-0aecf25a3f86dfeef"
+            ]
+        }
+    ]
+}

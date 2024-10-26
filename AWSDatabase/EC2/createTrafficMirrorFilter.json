@@ -1,0 +1,22 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateTrafficMirrorFilter"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

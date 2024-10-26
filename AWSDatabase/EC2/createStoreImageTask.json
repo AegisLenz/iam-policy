@@ -1,0 +1,67 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateStoreImageTask"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::image/ami-013ad70ab73da1ff2"
+            ]
+        },
+        {
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461"
+            ]
+        },
+        {
+            "Action": [
+                "ebs:ListSnapshotBlocks"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::snapshot/*"
+            ]
+        },
+        {
+            "Action": [
+                "ebs:GetSnapshotBlock"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}::snapshot/*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "s3:PutObjectTagging"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:DescribeTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

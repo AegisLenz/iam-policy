@@ -1,0 +1,22 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-5461/snapshots/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:ImportSnapshot"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

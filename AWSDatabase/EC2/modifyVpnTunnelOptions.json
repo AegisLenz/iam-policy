@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:ModifyVpnTunnelOptions"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:vpn-connection/vpn-0d59b1da66a690911"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateVpcPeeringConnection"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:vpc-peering-connection/*",
+                "arn:aws:ec2:{region}:{account_id}:vpc/*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

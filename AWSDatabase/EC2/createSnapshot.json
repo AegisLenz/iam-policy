@@ -1,0 +1,14 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateSnapshot"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:volume/vol-0919ad27d424e8b18",
+                "arn:aws:ec2:{region}::snapshot/*"
+            ]
+        }
+    ]
+}

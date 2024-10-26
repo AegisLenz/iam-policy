@@ -1,0 +1,22 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:CreateNetworkInsightsPath"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

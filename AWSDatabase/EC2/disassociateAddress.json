@@ -1,0 +1,15 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DisassociateAddress"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:network-interface/*",
+                "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}",
+                "arn:aws:ec2:{region}:{account_id}:allocation/{allocation_id}"
+            ]
+        }
+    ]
+}

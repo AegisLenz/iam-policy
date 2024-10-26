@@ -1,0 +1,13 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DeleteTrafficMirrorFilter"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter/*"
+            ]
+        }
+    ]
+}
