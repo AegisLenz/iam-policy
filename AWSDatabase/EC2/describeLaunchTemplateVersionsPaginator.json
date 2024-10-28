@@ -6,6 +6,15 @@
             ],
             "Effect": "Allow",
             "Resource": "*"
+        },
+        {
+            "Action": [
+                "ssm:GetParameters"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ssm:{region}:{account_id}:parameter/{parameter_name}"
+            ]
         }
     ]
 }

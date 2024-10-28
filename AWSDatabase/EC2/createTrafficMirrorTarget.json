@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:CreateTrafficMirrorTarget"
+                "ec2:CreateTrafficMirrorTarget",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [

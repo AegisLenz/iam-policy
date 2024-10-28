@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:CreateVpnGateway"
+                "ec2:CreateVpnGateway",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [

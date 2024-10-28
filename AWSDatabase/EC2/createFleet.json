@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:CreateFleet"
+                "ec2:CreateFleet",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [
@@ -18,7 +19,8 @@
         },
         {
             "Action": [
-                "ec2:RunInstances"
+                "ec2:RunInstances",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [
@@ -35,6 +37,24 @@
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
                 "arn:aws:ec2:{region}:{account_id}:key-pair/*",
                 "arn:aws:ec2:{region}::{account_id}:image/*"
+            ]
+        },
+        {
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:iam::{account_id}:role/{role_name}"
+            ]
+        },
+        {
+            "Action": [
+                "ssm:GetParameters"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ssm:{region}:{account_id}:parameter/{parameter_name}"
             ]
         }
     ]

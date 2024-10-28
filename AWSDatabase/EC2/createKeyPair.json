@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:CreateKeyPair"
+                "ec2:CreateKeyPair",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [

@@ -1,1 +1,13 @@
-Cannot delete Transit Gateway Connect Peer because createTransitGatewayConnectPeer API failed.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DeleteTransitGatewayConnectPeer"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-connect-peer/{connect_peer_id}"
+            ]
+        }
+    ]
+}

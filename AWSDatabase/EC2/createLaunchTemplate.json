@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:CreateLaunchTemplate"
+                "ec2:CreateLaunchTemplate",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [
@@ -16,6 +17,15 @@
                 "arn:aws:ec2:{region}:{account_id}:key-pair/*",
                 "arn:aws:ec2:{region}:{account_id}:launch-template/*",
                 "arn:aws:ec2:{region}::image/*"
+            ]
+        },
+        {
+            "Action": [
+                "ssm:GetParameters"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ssm:{region}:{account_id}:parameter/{parameter_name}"
             ]
         }
     ]
