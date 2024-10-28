@@ -2,95 +2,92 @@ import json
 import re
 import os
 
-def generate_policy_template(policy_data):
-    """
-    입력된 정책 데이터를 템플릿 형식으로 변환하는 함수입니다.
-    """
-    patterns = {
-        "region": r"(?<=:)(\*|\w+-\w+-\d+)(?=:)",  # 리전 패턴
-        "account_id": r"002677082836",  # 계정 ID 고정 값 -> {account_id}로 변환
-        "certificate_id": r"certificate/([a-f0-9-]+)",  # ACM 인증서 ID
-        "role_name": r"role/([\w+=,.@-]+)",  # IAM 역할 이름
-        "vpc_endpoint_id": r"vpc-endpoint/(vpce-\w+)",  # VPC 엔드포인트 ID
-        "service_id": r"vpc-endpoint-service/(vpce-svc-\w+)",  # VPC 엔드포인트 서비스 ID
-        "attachment_id": r"transit-gateway-attachment/(tgw-attach-\w+)",  # Transit Gateway Attachment ID
-        "peering_connection_id": r"vpc-peering-connection/(pcx-\w+)",  # VPC 피어링 연결 ID
-        "vpc_id": r"vpc/(vpc-\w+)",  # VPC ID
-        "security_group_id": r"security-group/(sg-\w+)",  # 보안 그룹 ID
-        "client_vpn_endpoint_id": r"client-vpn-endpoint/(cvpn-endpoint-\w+)",  # 클라이언트 VPN 엔드포인트 ID
-        "network_interface_id": r"network-interface/(eni-\w+)",  # 네트워크 인터페이스 ID
-        "instance_id": r"instance/(i-\w+)",  # EC2 인스턴스 ID
-        "allocation_id": r"elastic-ip/(eipalloc-\w+)",  # Elastic IP 할당 ID
-        "route_table_id": r"route-table/(rtb-\w+)",  # 라우트 테이블 ID
-        "subnet_id": r"subnet/(subnet-\w+)"  # 서브넷 ID
+def map_resource(policy_data, log):
+    #리소스 매핑 필드 정의
+    mapping = {
+        "account_id": log.get("userIdentity").get("accountId") if log.get("userIdentity") else None,
+        "peering_connection_id": log.get("responseElements", {}).get("vpcPeeringConnectionId") if log.get("responseElements") else None,
+        "vpc_id": log.get("vpcId", ""),
+        "region": log.get("awsRegion"),
+        "transit_gateway_multicast_domain_id": log.get("requestParameters", {}).get("TransitGatewayMulticastDomainId") if log.get("requestParameters") else None,
+        "service_id": log.get("requestParameters", {}).get("ServiceId") if log.get("requestParameters") else None,
+        "security_group_id": log.get("requestParameters", {}).get("securityGroupIds", [])[0] if log.get("requestParameters", {}).get("securityGroupIds") else None,
+        "client_vpn_endpoint_id": log.get("requestParameters", {}).get("ClientVpnEndpointId") if log.get("requestParameters") else None,
+        "host_id": log.get("requestParameters", {}).get("hostIds", [])[0] if log.get("requestParameters", {}).get("hostIds") else None,
+        "bucket_name": log.get("requestParameters", {}).get("BucketName") if log.get("requestParameters") else None,
+        "attachment_id": log.get("requestParameters", {}).get("TransitGatewayAttachmentId") if log.get("requestParameters") else None,
+        "route_table_id": log.get("requestParameters", {}).get("RouteTableId") if log.get("requestParameters") else None,
+        "subnet_id": log.get("requestParameters", {}).get("SubnetId") if log.get("requestParameters") else None,
+        "instance_id": log.get("requestParameters", {}).get("InstanceId") if log.get("requestParameters") else None,
+        "volume_id": log.get("requestParameters", {}).get("VolumeId") if log.get("requestParameters") else None,
+        "image_id": log.get("requestParameters", {}).get("ImageId") if log.get("requestParameters") else None,
+        "launch_template_id": log.get("requestParameters", {}).get("LaunchTemplateId") if log.get("requestParameters") else None,
+        "key_pair_name": log.get("requestParameters", {}).get("KeyName") if log.get("requestParameters") else None,
+        "ipv6_pool_id": log.get("requestParameters", {}).get("Ipv6PoolId") if log.get("requestParameters") else None,
+        "coip_pool_id": log.get("requestParameters", {}).get("CoipPoolId") if log.get("requestParameters") else None,
+        "allocation_id": log.get("requestParameters", {}).get("AllocationId") if log.get("requestParameters") else None,
+        "instance_profile_name": log.get("requestParameters", {}).get("IamInstanceProfile", {}).get("Arn") if log.get("requestParameters") and log.get("requestParameters", {}).get("IamInstanceProfile") else None,
+        "local_gateway_route_table_id": log.get("requestParameters", {}).get("LocalGatewayRouteTableId") if log.get("requestParameters") else None,
+        "network_interface_id": log.get("requestParameters", {}).get("NetworkInterfaceId") if log.get("requestParameters") else None,
+        "object_key": log.get("requestParameters", {}).get("Key") if log.get("requestParameters") else None,
+        "customer_gateway_id": log.get("requestParameters", {}).get("CustomerGatewayId") if log.get("requestParameters") else None,
+        "parameter_name": log.get("requestParameters", {}).get("Name") if log.get("requestParameters") else None
     }
 
-    template_policy = []
+    for statement in policy_data.get("policy", []):
+        for i, resource in enumerate(statement.get("Resource", [])):
+            for key, value in mapping.items():
+                if value is not None:  
+                    resource = resource.replace(f"{{{key}}}", str(value))
+            statement["Resource"][i] = resource
 
-    # JSON 데이터가 리스트인 경우 첫 번째 요소만 사용
-    if isinstance(policy_data, list):
-        policy_data = policy_data[0]
+def load_json(file_path):
+    try:
+        with open(file_path,'r') as file:
+            data = json.load(file)
 
-    # 정책 데이터의 Statement 부분 순회
-    for statement in policy_data.get('policy', {}).get('Statement', []):
-        action = statement.get('Action', [])
-        effect = statement.get('Effect', 'Allow')
-        resources = []
+            # CloudTrail 로그 파일인 경우 "Records" 필드를 반환
+            if "Records" in data:
+                return data.get("Records", [])
+            # 정책 파일인 경우 그대로 반환
+            return data
+        
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: The file '{file_path}' contains invalid JSON.")
+        return None
 
-        # 리소스 템플릿화 처리
-        for resource in statement.get('Resource', []):
-            resource_template = resource  # 기본 리소스를 복사
-            for key, pattern in patterns.items():
-                # 계정 ID 고정 값 처리
-                if key == "account_id":
-                    resource_template = resource_template.replace(pattern, "{account_id}")
-                else:
-                    # 정규 표현식을 사용해 템플릿화
-                    resource_template = re.sub(pattern, f"{{{key}}}", resource_template)
-            resources.append(resource_template)
+def save_mapped_policy(policy_data, output_path):
+    try:
+        with open(output_path, 'w') as file:
+            json.dump(policy_data, file, indent=4)
+        print(f"Mapped policy saved to {output_path}")
+    except IOError:
+        print(f"Error: Could not write to file {output_path}")
 
-        template_policy.append({
-            "Action": action,
-            "Effect": effect,
-            "Resource": resources
-        })
+def main():
+    log_path = './ex.json'
+    database_path = './../AWSDatabase/EC2'
+    output_path ='./'
+    logs = load_json(log_path)
+    policy_path = database_path
 
-    return {"policy": template_policy}
+    if logs is not None:
+        for log in logs:
+            eventName = log.get("eventName")
 
-def load_policy_from_file(file_path):
-    """
-    JSON 파일을 로드하는 함수.
-    """
-    with open(file_path, 'r', encoding='utf-8') as file:
-        return json.load(file)
+            policy_path += f'/{eventName}.json'
+            policy = load_json(policy_path)
 
-def save_template_to_file(template, output_path):
-    """
-    템플릿화된 정책을 파일로 저장하는 함수.
-    """
-    with open(output_path, 'w', encoding='utf-8') as file:
-        json.dump(template, file, indent=4, ensure_ascii=False)
+            if policy is not None:
+                map_resource(policy, log)
+                print("Mapped Policy:", json.dumps(policy, indent=4))
 
-def process_all_json_files_in_folder(folder_path):
-    """
-    주어진 폴더의 모든 JSON 파일을 순회하며 템플릿을 생성합니다.
-    """
-    for filename in os.listdir(folder_path):
-        if filename.endswith(".json"):
-            input_file_path = os.path.join(folder_path, filename)
-            output_file_path = os.path.join(folder_path, filename.replace(".json", "_template.json"))
-
-            try:
-                policy_data = load_policy_from_file(input_file_path)
-                template = generate_policy_template(policy_data)
-
-                save_template_to_file(template, output_file_path)
-                print(f"템플릿 파일이 '{output_file_path}' 경로에 저장되었습니다.")
-            except Exception as e:
-                print(f"오류 발생: {input_file_path} 처리 중 문제 발생 - {e}")
-
-# 실행 예시: 폴더 경로 설정
-folder_path = r"C:\Users\yjeongc\Downloads\iam-policy\AWSDatabase\EC2\test"
+            # 매핑된 정책을 새로운 파일로 저장
+                #mapped_policy_path = os.path.join(output_path, f"{eventName}_mapped.json")
+                #save_mapped_policy(policy, mapped_policy_path)
 
 if __name__ == "__main__":
-    process_all_json_files_in_folder(folder_path)
+    main()
