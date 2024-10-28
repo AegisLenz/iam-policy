@@ -1,1 +1,11 @@
-No API available to create Queued Reserved Instances
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DeleteQueuedReservedInstances"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

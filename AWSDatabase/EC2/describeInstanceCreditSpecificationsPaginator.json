@@ -1,3 +1,11 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:DescribeInstanceCreditSpecifications"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
 }

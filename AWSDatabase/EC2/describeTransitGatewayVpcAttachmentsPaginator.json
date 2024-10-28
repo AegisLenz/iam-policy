@@ -1,3 +1,11 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:DescribeTransitGatewayVpcAttachments"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
 }

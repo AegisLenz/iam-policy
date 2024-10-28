@@ -1,1 +1,11 @@
-AccountId '002677082836', You are not authorized to use the requested product. Please complete the seller registration null.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DescribeReservedInstancesListings"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

@@ -15,7 +15,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:s3:::test-bucket-5461/*"
+                "arn:aws:s3:::{bucket_id}/*"
             ]
         }
     ]

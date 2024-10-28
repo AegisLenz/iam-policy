@@ -1,3 +1,11 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:DescribeNetworkInterfaces"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
 }

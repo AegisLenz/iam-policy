@@ -1,3 +1,11 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:DescribeVpcEndpoints"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
 }

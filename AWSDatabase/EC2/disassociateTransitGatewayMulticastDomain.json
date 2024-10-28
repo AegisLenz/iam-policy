@@ -8,7 +8,7 @@
             "Resource": [
                 "arn:aws:ec2:{region}:{account_id}:subnet/{subnet_id}",
                 "arn:aws:ec2:{region}:{account_id}:attachment/{attachment_id}",
-                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/tgw-mcast-domain-05874549ae8ebd553"
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway-multicast-domain/{transit_gateway_multicast_domain_id}"
             ]
         }
     ]

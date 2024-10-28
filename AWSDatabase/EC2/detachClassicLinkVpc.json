@@ -1,1 +1,11 @@
-The instance 'i-06aaba18d746c5311' cannot currently be linked. Please try again in a couple of minutes.
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DetachClassicLinkVpc"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

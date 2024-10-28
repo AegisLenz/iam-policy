@@ -1,0 +1,11 @@
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:DescribeAddressesAttribute"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}
