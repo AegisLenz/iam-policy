@@ -1,3 +1,13 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetGroupsForCapacityReservation"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:capacity-reservation/{capacity_reservation_id}"
+            ]
+        }
+    ]
 }

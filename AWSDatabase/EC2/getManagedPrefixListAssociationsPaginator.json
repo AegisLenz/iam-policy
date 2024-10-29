@@ -1,3 +1,13 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetManagedPrefixListAssociations"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:prefix-list/{prefix_list_id}"
+            ]
+        }
+    ]
 }
