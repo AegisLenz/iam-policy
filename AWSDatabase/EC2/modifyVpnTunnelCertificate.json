@@ -11,20 +11,12 @@
         },
         {
             "Action": [
-                "acm-pca:GetCertificate"
-            ],
-            "Effect": "Allow",
-            "Resource": [
-                "arn:aws:acm-pca:{region}:{account_id}:certificate-authority/f13cbd1c-6e21-4662-b103-392552c8e44f"
-            ]
-        },
-        {
-            "Action": [
+                "acm-pca:GetCertificate",
                 "acm-pca:IssueCertificate"
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:acm-pca:{region}:{account_id}:certificate-authority/f13cbd1c-6e21-4662-b103-392552c8e44f"
+                "arn:aws:acm-pca:{region}:{account_id}:certificate-authority/{certificate_authority_id}"
             ]
         },
         {
@@ -33,7 +25,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:vpn-connection/vpn-0124505c849bf8247"
+                "arn:aws:ec2:{region}:{account_id}:vpn-connection/{vpn_connection_id}"
             ]
         }
     ]
