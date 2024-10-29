@@ -5,7 +5,9 @@
                 "ec2:DescribeSpotFleetRequests"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

@@ -5,7 +5,9 @@
                 "ec2:ProvisionByoipCidr"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

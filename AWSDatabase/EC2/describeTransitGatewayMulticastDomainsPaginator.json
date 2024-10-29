@@ -5,7 +5,9 @@
                 "ec2:DescribeTransitGatewayMulticastDomains"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

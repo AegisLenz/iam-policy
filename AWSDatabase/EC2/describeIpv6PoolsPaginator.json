@@ -5,7 +5,9 @@
                 "ec2:DescribeIpv6Pools"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

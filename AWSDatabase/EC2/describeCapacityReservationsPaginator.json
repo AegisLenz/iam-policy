@@ -5,7 +5,9 @@
                 "ec2:DescribeCapacityReservations"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

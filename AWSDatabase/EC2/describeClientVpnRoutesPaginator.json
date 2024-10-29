@@ -5,7 +5,9 @@
                 "ec2:DescribeClientVpnRoutes"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

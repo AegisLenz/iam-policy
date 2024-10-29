@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:transit-gateway/tgw-02b1446b336da5112",
+                "arn:aws:ec2:{region}:{account_id}:transit-gateway/{transit_gateway_id}",
                 "arn:aws:ec2:{region}:{account_id}:transit-gateway-route-table/*"
             ]
         }

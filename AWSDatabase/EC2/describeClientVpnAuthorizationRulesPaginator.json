@@ -5,7 +5,9 @@
                 "ec2:DescribeClientVpnAuthorizationRules"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

@@ -5,7 +5,9 @@
                 "ec2:DescribeNetworkInterfacePermissions"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

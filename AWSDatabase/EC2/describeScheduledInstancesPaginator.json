@@ -5,7 +5,9 @@
                 "ec2:DescribeScheduledInstances"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

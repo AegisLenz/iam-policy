@@ -6,8 +6,8 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter-rule/tmfr-0459307730a763fc2",
-                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter/tmf-0479cc103b3d3f39d"
+                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter-rule/{traffic_mirror_filter_rule_id}",
+                "arn:aws:ec2:{region}:{account_id}:traffic-mirror-filter/{traffic_mirror_filter_id}"
             ]
         }
     ]

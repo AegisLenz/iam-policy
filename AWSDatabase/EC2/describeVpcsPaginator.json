@@ -5,7 +5,9 @@
                 "ec2:DescribeVpcs"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

@@ -5,7 +5,9 @@
                 "ec2:DescribeByoipCidrs"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

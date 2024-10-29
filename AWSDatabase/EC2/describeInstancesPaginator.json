@@ -5,7 +5,9 @@
                 "ec2:DescribeInstanceStatus"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

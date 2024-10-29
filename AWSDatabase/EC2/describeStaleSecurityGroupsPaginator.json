@@ -5,7 +5,9 @@
                 "ec2:DescribeStaleSecurityGroups"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

@@ -12,7 +12,7 @@
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
                 "arn:aws:ec2:{region}::snapshot/*",
                 "arn:aws:ec2:{region}:{account_id}:key-pair/*",
-                "arn:aws:ec2:{region}:{account_id}:launch-template/lt-078848ec86a0a2430",
+                "arn:aws:ec2:{region}:{account_id}:launch-template/{launch_template_id}",
                 "arn:aws:ec2:{region}::image/*"
             ]
         }

@@ -1,3 +1,13 @@
 {
-    "policy": []
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetTransitGatewayMulticastDomainAssociations"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
 }

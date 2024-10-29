@@ -5,7 +5,9 @@
                 "ec2:DescribeHostReservationOfferings"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

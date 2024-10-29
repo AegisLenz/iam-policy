@@ -5,7 +5,9 @@
                 "ec2:DescribeAddressesAttribute"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

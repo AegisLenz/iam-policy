@@ -5,7 +5,9 @@
                 "ec2:DescribeVpcEndpointConnections"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

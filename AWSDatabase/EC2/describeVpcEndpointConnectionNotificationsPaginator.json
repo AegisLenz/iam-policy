@@ -5,7 +5,9 @@
                 "ec2:DescribeVpcEndpointConnectionNotifications"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

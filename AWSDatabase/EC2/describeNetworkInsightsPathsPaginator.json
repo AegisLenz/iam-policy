@@ -5,7 +5,9 @@
                 "ec2:DescribeNetworkInsightsPaths"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

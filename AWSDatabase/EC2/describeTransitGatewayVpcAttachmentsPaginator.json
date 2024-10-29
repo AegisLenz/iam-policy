@@ -5,7 +5,9 @@
                 "ec2:DescribeTransitGatewayVpcAttachments"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }
