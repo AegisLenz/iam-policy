@@ -58,6 +58,50 @@ def load_json(file_path):
     except json.JSONDecodeError:
         print(f"Error: The file '{file_path}' contains invalid JSON.")
         return None
+    
+def format_policy(merged_policy):
+    policies = {"policy": []}
+    policy_data = merged_policy.get("policy",{})
+    for action in policy_data.keys():
+        effect = policy_data[action].get("Effect")
+        resource = policy_data[action].get("Resource")
+        policies["policy"].append({
+            "Action": action,
+            "Effect": effect,
+            "Resource": resource
+        })
+
+    return policies
+
+def merge_policies(policy_data_list):
+    # 중복되지 않게 정책을 병합하는 함수
+    merged_policy = {"policy": {}}
+    unique_action = set()
+
+    for policy_data in policy_data_list:
+        for statement in policy_data.get("policy", []):
+            # Resource가 리스트가 아닌 경우 리스트로 변환
+            resources = statement.get("Resource", [])
+            if not isinstance(resources, list):
+                resources = [resources]
+
+            actions = statement.get("Action")
+            effect = statement.get("Effect")
+
+            # action별로 Resource 목록을 병합하여 저장
+            for action in actions:
+                if action not in unique_action:
+                    merged_policy["policy"][action] = {
+                        "Effect": effect,
+                        "Resource": list(set(resources))  # 중복 제거 후 추가
+                    }
+                    unique_action.add(action)
+                else:
+                    # 이미 action이 있다면 기존 Resource 목록에 중복되지 않게 추가
+                    existing_resources = set(merged_policy["policy"][action]["Resource"])
+                    merged_policy["policy"][action]["Resource"] = list(existing_resources.union(resources))
+
+    return format_policy(merged_policy)
 
 def save_mapped_policy(policy_data, output_path):
     try:
@@ -75,19 +119,20 @@ def main():
     policy_path = database_path
 
     if logs is not None:
+        all_policies = []
+
         for log in logs:
             eventName = log.get("eventName")
-
-            policy_path += f'/{eventName}.json'
-            policy = load_json(policy_path)
+            specific_policy_path = os.path.join(policy_path, f'{eventName}.json')
+            policy = load_json(specific_policy_path)
 
             if policy is not None:
                 map_resource(policy, log)
-                print("Mapped Policy:", json.dumps(policy, indent=4))
+                all_policies.append(policy)
 
-            # 매핑된 정책을 새로운 파일로 저장
-                #mapped_policy_path = os.path.join(output_path, f"{eventName}_mapped.json")
-                #save_mapped_policy(policy, mapped_policy_path)
+        merged_policy = merge_policies(all_policies)
+        print(json.dumps(merged_policy, indent=4))
+        #save_mapped_policy(merged_policy, output_path)
 
 if __name__ == "__main__":
     main()
