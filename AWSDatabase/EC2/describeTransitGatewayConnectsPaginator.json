@@ -5,7 +5,9 @@
                 "ec2:DescribeTransitGatewayConnects"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

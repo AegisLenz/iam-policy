@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:capacity-reservation/cr-06d06d028d5c6afc6"
+                "arn:aws:ec2:{region}:{account_id}:capacity-reservation/{capacity_reservation_id}"
             ]
         }
     ]

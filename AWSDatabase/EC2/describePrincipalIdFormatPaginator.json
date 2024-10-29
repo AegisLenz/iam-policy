@@ -5,7 +5,9 @@
                 "ec2:DescribePrincipalIdFormat"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

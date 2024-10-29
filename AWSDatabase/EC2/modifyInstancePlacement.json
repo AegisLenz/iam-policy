@@ -8,7 +8,7 @@
             "Resource": [
                 "arn:aws:ec2:{region}:{account_id}:placement-group/*",
                 "arn:aws:ec2:{region}:{account_id}:instance/*",
-                "arn:aws:ec2:{region}:{account_id}:dedicated-host/h-00b810d31c4c3db2e"
+                "arn:aws:ec2:{region}:{account_id}:dedicated-host/{dedicated_host_id}"
             ]
         }
     ]

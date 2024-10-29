@@ -5,7 +5,9 @@
                 "ec2:DeleteLocalGatewayRouteTableVpcAssociation"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

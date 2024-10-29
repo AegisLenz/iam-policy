@@ -5,7 +5,9 @@
                 "ec2:DescribeReservedInstancesListings"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

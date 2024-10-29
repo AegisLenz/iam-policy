@@ -5,7 +5,9 @@
                 "ec2:DescribeInstanceTypes"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

@@ -1,1 +1,13 @@
-This API involves purchasing reserved instances for a number of months
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:PurchaseReservedInstancesOffering"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

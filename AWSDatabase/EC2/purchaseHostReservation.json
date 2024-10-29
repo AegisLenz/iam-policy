@@ -1,1 +1,13 @@
-purchaseHostReservation
+{
+    "policy": [
+        {
+            "Action": [
+                "ec2:PurchaseHostReservation"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

@@ -5,7 +5,9 @@
                 "ec2:DescribeTrafficMirrorSessions"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

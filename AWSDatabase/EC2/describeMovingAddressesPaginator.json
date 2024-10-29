@@ -5,7 +5,9 @@
                 "ec2:DescribeMovingAddresses"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

@@ -5,7 +5,9 @@
                 "ec2:DescribeDhcpOptions"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

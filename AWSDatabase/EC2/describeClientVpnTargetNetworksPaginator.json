@@ -5,7 +5,9 @@
                 "ec2:DescribeClientVpnTargetNetworks"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

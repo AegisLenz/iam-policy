@@ -1,1 +1,11 @@
-No API availble to create Instance Event Start Time
+{
+    "policy": {
+        "Action": [
+            "ec2:ModifyInstanceEventStartTime"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}"
+        ]
+    }
+}

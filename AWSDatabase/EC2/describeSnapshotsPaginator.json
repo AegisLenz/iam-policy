@@ -5,7 +5,9 @@
                 "ec2:DescribeSnapshots"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

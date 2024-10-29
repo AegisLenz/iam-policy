@@ -5,7 +5,9 @@
                 "ec2:DescribeHosts"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

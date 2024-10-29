@@ -5,7 +5,9 @@
                 "ec2:DescribeTransitGatewayPeeringAttachments"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}:{account_id}:volume/vol-049304f3116417955"
+                "arn:aws:ec2:{region}:{account_id}:volume/{volume_id}"
             ]
         }
     ]
