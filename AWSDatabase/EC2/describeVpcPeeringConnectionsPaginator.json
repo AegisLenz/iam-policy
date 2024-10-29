@@ -5,7 +5,9 @@
                 "ec2:DescribeVpcPeeringConnections"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

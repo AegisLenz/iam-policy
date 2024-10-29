@@ -5,7 +5,9 @@
                 "ec2:DescribeCoipPools"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

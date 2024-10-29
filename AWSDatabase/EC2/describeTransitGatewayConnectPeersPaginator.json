@@ -5,7 +5,9 @@
                 "ec2:DescribeTransitGatewayConnectPeers"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

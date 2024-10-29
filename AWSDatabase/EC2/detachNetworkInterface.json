@@ -7,7 +7,7 @@
             "Effect": "Allow",
             "Resource": [
                 "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}",
-                "arn:aws:ec2:{region}:{account_id}:network_interface/{network_interface_id}-09178b11158dfca70"
+                "arn:aws:ec2:{region}:{account_id}:network_interface/{attachment_id}"
             ]
         }
     ]

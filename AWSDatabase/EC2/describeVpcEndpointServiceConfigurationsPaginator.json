@@ -5,7 +5,9 @@
                 "ec2:DescribeVpcEndpointServiceConfigurations"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

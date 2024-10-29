@@ -5,7 +5,9 @@
                 "ec2:DescribeFlowLogs"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

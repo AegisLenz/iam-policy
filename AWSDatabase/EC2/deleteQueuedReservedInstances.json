@@ -5,7 +5,9 @@
                 "ec2:DeleteQueuedReservedInstances"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

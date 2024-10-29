@@ -5,7 +5,9 @@
                 "ec2:DescribeManagedPrefixLists"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

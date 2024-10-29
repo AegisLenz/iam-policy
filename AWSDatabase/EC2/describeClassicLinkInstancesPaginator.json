@@ -5,7 +5,9 @@
                 "ec2:DescribeClassicLinkInstances"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

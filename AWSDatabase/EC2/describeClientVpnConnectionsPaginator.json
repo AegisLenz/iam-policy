@@ -5,7 +5,9 @@
                 "ec2:DescribeClientVpnConnections"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

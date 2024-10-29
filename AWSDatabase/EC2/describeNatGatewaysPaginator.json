@@ -5,7 +5,9 @@
                 "ec2:DescribeNatGateways"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

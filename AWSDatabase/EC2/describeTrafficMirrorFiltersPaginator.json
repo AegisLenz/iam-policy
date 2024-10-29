@@ -5,7 +5,9 @@
                 "ec2:DescribeTrafficMirrorFilters"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

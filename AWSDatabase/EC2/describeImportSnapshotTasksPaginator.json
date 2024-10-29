@@ -5,7 +5,9 @@
                 "ec2:DescribeImportSnapshotTasks"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }
