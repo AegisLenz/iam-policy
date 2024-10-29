@@ -7,7 +7,7 @@
             "Effect": "Allow",
             "Resource": [
                 "arn:aws:ec2:{region}:{account_id}:route_table/{route_table_id}",
-                "arn:aws:ec2:{region}:{account_id}:vpn-gateway/vgw-08c161cae31d7f7c2"
+                "arn:aws:ec2:{region}:{account_id}:vpn-gateway/{vpn_gateway_id}"
             ]
         }
     ]
