@@ -5,7 +5,9 @@
                 "ec2:PurchaseScheduledInstances"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }
