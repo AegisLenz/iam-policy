@@ -9,7 +9,7 @@
                 "arn:aws:ec2:{region}:{account_id}:security_group/{security_group_id}",
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
                 "arn:aws:ec2:{region}:{account_id}:spot-instances-request/*",
-                "arn:aws:ec2:{region}:{account_id}:key-pair/test-key-pair",
+                "arn:aws:ec2:{region}:{account_id}:key-pair/{key_pair_name}",
                 "arn:aws:ec2:{region}::image/{image_id}"
             ]
         },
