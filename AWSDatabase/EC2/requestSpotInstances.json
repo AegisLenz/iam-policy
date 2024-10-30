@@ -10,7 +10,7 @@
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
                 "arn:aws:ec2:{region}:{account_id}:spot-instances-request/*",
                 "arn:aws:ec2:{region}:{account_id}:key-pair/test-key-pair",
-                "arn:aws:ec2:{region}::image/ami-0029f0b4ea5bb8ee1"
+                "arn:aws:ec2:{region}::image/{image_id}"
             ]
         },
         {

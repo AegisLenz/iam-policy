@@ -1,0 +1,12 @@
+{
+    "policy": {
+        "Action": [
+            "ec2:ReplaceIamInstanceProfileAssociation"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}",
+            "arn:aws:iam::{account_id}:instance-profile/{instance_profile_name}"
+        ]
+    }
+}
