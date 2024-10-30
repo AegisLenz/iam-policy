@@ -5,7 +5,9 @@
                 "ec2:WithdrawByoipCidr"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 }

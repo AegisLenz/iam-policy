@@ -17,7 +17,7 @@
                 "arn:aws:ec2:{region}:{account_id}:elastic-gpu/*",
                 "arn:aws:ec2:{region}:{account_id}:placement-group/*",
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
-                "arn:aws:ec2:{region}:{account_id}:key-pair/test-key-pair",
+                "arn:aws:ec2:{region}:{account_id}:key-pair/{key_pair_name}",
                 "arn:aws:ec2:{region}::image/{image_id}"
             ]
         },
