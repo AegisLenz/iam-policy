@@ -18,7 +18,7 @@
                 "arn:aws:ec2:{region}:{account_id}:placement-group/*",
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
                 "arn:aws:ec2:{region}:{account_id}:key-pair/test-key-pair",
-                "arn:aws:ec2:{region}::image/ami-013ad70ab73da1ff2"
+                "arn:aws:ec2:{region}::image/{image_id}"
             ]
         },
         {
