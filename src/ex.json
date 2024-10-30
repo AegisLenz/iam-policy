@@ -1,34 +1,142 @@
-{
-    "Records": [
-        {
-            "eventName": "CreateVpc",
-            "userIdentity": {
-                "accountId": "123456789012"
-            },
-            "awsRegion": "us-west-2",
-            "requestParameters": {
-                "VpcId": "vpc-0abcd1234"
+[
+    {
+        "eventVersion": "1.09",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAEXAMPLE1234",
+            "arn": "arn:aws:iam::123456789012:user/dev_user",
+            "accountId": "123456789012",
+            "accessKeyId": "AKIAEXAMPLE1234",
+            "userName": "dev_user"
+        },
+        "eventTime": "2024-10-29T11:25:14Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "Startinstances",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "198.51.100.10",
+        "userAgent": "aws-cli/2.0.30 Python/3.7.4 Windows/10",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
             }
         },
-        {
-            "eventName": "CreateVpc",
-            "userIdentity": {
-                "accountId": "123456789012"
-            },
-            "awsRegion": "us-west-2",
-            "requestParameters": {
-                "VpcId": "vpc-0efgh5678"
-            }
-        },
-        {
-            "eventName": "DeleteVpc",
-            "userIdentity": {
-                "accountId": "123456789012"
-            },
-            "awsRegion": "us-west-2",
-            "requestParameters": {
-                "VpcId": "vpc-0ijkl9012"
+        "responseElements": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
             }
         }
-    ]
-}
+    },
+    {
+        "eventVersion": "1.09",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAEXAMPLE5678",
+            "arn": "arn:aws:iam::123456789012:user/test_user",
+            "accountId": "123456789012",
+            "accessKeyId": "AKIAEXAMPLE5678",
+            "userName": "test_user"
+        },
+        "eventTime": "2024-10-29T13:15:20Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "Stopinstances",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "203.0.113.10",
+        "userAgent": "aws-cli/2.1.24 Python/3.8.8 Linux/5.8.0-53-generic",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
+            }
+        },
+        "responseElements": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "eventVersion": "1.09",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAEXAMPLE8901",
+            "arn": "arn:aws:iam::123456789012:user/admin_user",
+            "accountId": "123456789012",
+            "accessKeyId": "AKIAEXAMPLE8901",
+            "userName": "admin_user"
+        },
+        "eventTime": "2024-10-29T14:45:32Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "Terminateinstances",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "192.0.2.15",
+        "userAgent": "aws-sdk-go/1.44.157 (go1.16.4; linux; amd64)",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
+            }
+        },
+        "responseElements": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "eventVersion": "1.09",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAEXAMPLE4567",
+            "arn": "arn:aws:iam::123456789012:user/dev_user_2",
+            "accountId": "123456789012",
+            "accessKeyId": "AKIAEXAMPLE4567",
+            "userName": "dev_user_2"
+        },
+        "eventTime": "2024-10-29T16:03:41Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "Rebootinstances",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "198.51.100.20",
+        "userAgent": "aws-sdk-java/1.11.1000 Linux/5.10.16-200.fc33.x86_64 OpenJDK_64-Bit_Server_VM/11.0.10+9-LTS",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
+            }
+        },
+        "responseElements": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-0abcd1234efgh5678"
+                    }
+                ]
+            }
+        }
+    }
+]

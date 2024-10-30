@@ -18,7 +18,6 @@ def map_resource(policy_data, log):
         "attachment_id": log.get("requestParameters", {}).get("TransitGatewayAttachmentId") if log.get("requestParameters") else None,
         "route_table_id": log.get("requestParameters", {}).get("RouteTableId") if log.get("requestParameters") else None,
         "subnet_id": log.get("requestParameters", {}).get("SubnetId") if log.get("requestParameters") else None,
-        "instance_id": log.get("requestParameters", {}).get("InstanceId") if log.get("requestParameters") else None,
         "volume_id": log.get("requestParameters", {}).get("VolumeId") if log.get("requestParameters") else None,
         "image_id": log.get("requestParameters", {}).get("ImageId") if log.get("requestParameters") else None,
         "launch_template_id": log.get("requestParameters", {}).get("LaunchTemplateId") if log.get("requestParameters") else None,
@@ -31,7 +30,13 @@ def map_resource(policy_data, log):
         "network_interface_id": log.get("requestParameters", {}).get("NetworkInterfaceId") if log.get("requestParameters") else None,
         "object_key": log.get("requestParameters", {}).get("Key") if log.get("requestParameters") else None,
         "customer_gateway_id": log.get("requestParameters", {}).get("CustomerGatewayId") if log.get("requestParameters") else None,
-        "parameter_name": log.get("requestParameters", {}).get("Name") if log.get("requestParameters") else None
+        "parameter_name": log.get("requestParameters", {}).get("Name") if log.get("requestParameters") else None,
+        "instance_id": (
+            log.get("requestParameters", {}).get("InstanceId") or  # 단일 인스턴스 ID가 있을 경우
+            (log.get("requestParameters", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("requestParameters", {}).get("instancesSet") else None) or
+            (log.get("responseElements", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("responseElements", {}).get("instancesSet") else None)
+        )
+
     }
 
     for statement in policy_data.get("policy", []):
@@ -59,80 +64,22 @@ def load_json(file_path):
         print(f"Error: The file '{file_path}' contains invalid JSON.")
         return None
     
-def format_policy(merged_policy):
-    policies = {"policy": []}
-    policy_data = merged_policy.get("policy",{})
-    for action in policy_data.keys():
-        effect = policy_data[action].get("Effect")
-        resource = policy_data[action].get("Resource")
-        policies["policy"].append({
-            "Action": action,
-            "Effect": effect,
-            "Resource": resource
-        })
 
-    return policies
-
-def merge_policies(policy_data_list):
-    # 중복되지 않게 정책을 병합하는 함수
-    merged_policy = {"policy": {}}
-    unique_action = set()
-
-    for policy_data in policy_data_list:
-        for statement in policy_data.get("policy", []):
-            # Resource가 리스트가 아닌 경우 리스트로 변환
-            resources = statement.get("Resource", [])
-            if not isinstance(resources, list):
-                resources = [resources]
-
-            actions = statement.get("Action")
-            effect = statement.get("Effect")
-
-            # action별로 Resource 목록을 병합하여 저장
-            for action in actions:
-                if action not in unique_action:
-                    merged_policy["policy"][action] = {
-                        "Effect": effect,
-                        "Resource": list(set(resources))  # 중복 제거 후 추가
-                    }
-                    unique_action.add(action)
-                else:
-                    # 이미 action이 있다면 기존 Resource 목록에 중복되지 않게 추가
-                    existing_resources = set(merged_policy["policy"][action]["Resource"])
-                    merged_policy["policy"][action]["Resource"] = list(existing_resources.union(resources))
-
-    return format_policy(merged_policy)
-
-def save_mapped_policy(policy_data, output_path):
-    try:
-        with open(output_path, 'w') as file:
-            json.dump(policy_data, file, indent=4)
-        print(f"Mapped policy saved to {output_path}")
-    except IOError:
-        print(f"Error: Could not write to file {output_path}")
-
-def main():
-    log_path = './ex.json'
+def ec2_policy_mapper(log):
+    #log_path = './ex.json'
+    #output_path ='./'
+    #logs = load_json(log_path)
     database_path = './../AWSDatabase/EC2'
-    output_path ='./'
-    logs = load_json(log_path)
     policy_path = database_path
 
-    if logs is not None:
-        all_policies = []
+    eventName = log.get("eventName")
+    specific_policy_path = os.path.join(policy_path, f'{eventName}.json')
+    policy = load_json(specific_policy_path)
 
-        for log in logs:
-            eventName = log.get("eventName")
-            specific_policy_path = os.path.join(policy_path, f'{eventName}.json')
-            policy = load_json(specific_policy_path)
-
-            if policy is not None:
-                map_resource(policy, log)
-                all_policies.append(policy)
-
-        merged_policy = merge_policies(all_policies)
-        print(json.dumps(merged_policy, indent=4))
+    if policy is not None:
+        map_resource(policy, log)
+        return policy
+        #merged_policy = merge_policies(all_policies)
+        #print(json.dumps(merged_policy, indent=4))
         #save_mapped_policy(merged_policy, output_path)
 
-if __name__ == "__main__":
-    main()
