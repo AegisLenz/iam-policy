@@ -74,15 +74,9 @@ def main():
     merged_policy = merge_policies(all_policies)
     print(json.dumps(merged_policy, indent=4))
 
-# 여러 정책 병합 함수
-def merge_policies(policies):
-    merged_policy = {
-        "Version": "2012-10-17",
-        "Statement": []
-    }
-    for policy in policies:
-        merged_policy["Statement"].extend(policy["Statement"])
-    return merged_policy
+
+
+
 
 if __name__ == "__main__":
     main()
