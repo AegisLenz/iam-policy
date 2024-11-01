@@ -63,13 +63,3 @@ def s3_policy_mapper(log, policy_data):
     }
     
     return final_policy
-
-# Step 5: 여러 정책 병합 함수
-def merge_policies(policies):
-    merged_policy = {
-        "Version": "2012-10-17",
-        "Statement": []
-    }
-    for policy in policies:
-        merged_policy["Statement"].extend(policy["Statement"])
-    return merged_policy
