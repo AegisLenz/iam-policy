@@ -2,6 +2,7 @@ import os
 import json
 from s3_policy_mapper import s3_policy_mapper
 from ec2_policy_mapper import ec2_policy_mapper
+from iam_policy_mapper import iam_policy_mapper
 
 # JSON 파일 로드 함수
 def load_json(file_path):
@@ -44,7 +45,6 @@ def merge_policies(policies):
     return merged_policy
 
 
-
 def main():
     file_path = "/home/yjeongc/Downloads/iam-policy/src/ec2_sample_log.json"
 
@@ -81,8 +81,10 @@ def main():
                 if policy:
                     all_policies.append(policy)
                     
-        #elif event_source == 'iam.amazonaws.com':
-            #추가해야 할 부분
+        elif event_source == 'iam.amazonaws.com':
+            policy = iam_policy_mapper(log_entry)
+            if policy:
+                    all_policies.append(policy)
 
         else :
             print(f"Unsupported event source: {event_source}")
