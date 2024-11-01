@@ -1,26 +1,88 @@
-#main.py
-from cloudtrail_parser import load_and_extract_cloudtrail_logs
-from policy_mapper import map_event_to_permissions, make_policy_from_resource
+import os
 import json
+from s3_policy_mapper import s3_policy_mapper
+from ec2_policy_mapper import ec2_policy_mapper
 
-# 정책 생성 및 저장을 위한 실행 코드
-policy_folder = "정책_템플릿_폴더경로"
-cloudtrail_log_filepath = "CloudTrail_Log_파일경로"
-output_json_file = "sample_정책_저장경로"
 
-# CloudTrail 로그를 분석하여 필요한 데이터를 추출
-logs = load_and_extract_cloudtrail_logs(cloudtrail_log_filepath)
+# Step 1: JSON 파일 로드 함수
+# JSON 파일을 로드하고, CloudTrail 로그 혹은 정책 템플릿으로 반환하는 함수
+def load_json(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            # 로그 파일 또는 정책 파일 반환
+            return data
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: The file '{file_path}' contains invalid JSON.")
+        return None
 
-# 이벤트와 리소스를 매핑하여 정책 생성
-resource_policies = map_event_to_permissions(logs, policy_folder)
+# Step 5: 여러 정책 병합 함수
+def merge_policies(policies):
+    merged_policy = {
+        "Version": "2012-10-17",
+        "Statement": []
+    }
+    for policy in policies:
+        merged_policy["Statement"].extend(policy["Statement"])
+    return merged_policy
 
-# 최종 정책 생성 및 저장
-policies = {"Statement": []}
-for resource, policy_data in resource_policies.items():
-    actions = policy_data["Action"]
-    policy = make_policy_from_resource(resource, actions)
-    policies["Statement"].append(policy)
 
-with open(output_json_file, 'w', encoding='utf-8') as file:
-    json.dump(policies, file, indent=4)
-    print(f"Policies have been saved to {output_json_file}")
+def main():
+    file_path = "/home/yjeongc/Downloads/iam-policy/src/ec2_sample_log.json"
+    #file_path = "/home/yjeongc/Downloads/iam-policy/src/s3_sample_log.json"
+    logs = load_json(file_path)
+    if not isinstance(logs, list):
+        print("Error: The log file does not contain a valid list of log entries.")
+        return
+
+    policy_folder_s3 = "/home/yjeongc/Downloads/iam-policy/AWSDatabase/S3"
+    policy_folder_ec2 = "/home/yjeongc/Downloads/iam-policy/AWSDatabase/EC2"
+    
+    all_policies = []
+    
+    # 각 로그 항목에 대해 정책 파일을 로드하여 policy_data에 추가
+    for log_entry in logs:
+        if not isinstance(log_entry, dict):
+            print("Error: Log entry is not a valid dictionary.")
+            continue
+
+        event_source = log_entry.get("eventSource")
+
+        if event_source and event_source.startswith('s3'):
+            event_name = log_entry.get("eventName")
+            specific_policy_path = os.path.join(policy_folder_s3, f'{event_name}.json')
+            policy_data = load_json(specific_policy_path)
+            if policy_data is not None:
+                policy = s3_policy_mapper(log_entry, policy_data)
+                if policy:
+                    all_policies.append(policy)
+        
+        elif event_source and event_source.startswith('ec2'):
+            event_name = log_entry.get("eventName")
+            specific_policy_path = os.path.join(policy_folder_ec2, f'{event_name}.json')
+            policy_data = load_json(specific_policy_path)
+            if policy_data is not None:
+                policy = ec2_policy_mapper(log_entry, policy_data)
+                if policy:
+                    all_policies.append(policy)
+        else:
+            print(f"Unsupported event source: {event_source}")
+
+    merged_policy = merge_policies(all_policies)
+    print(json.dumps(merged_policy, indent=4))
+
+# 여러 정책 병합 함수
+def merge_policies(policies):
+    merged_policy = {
+        "Version": "2012-10-17",
+        "Statement": []
+    }
+    for policy in policies:
+        merged_policy["Statement"].extend(policy["Statement"])
+    return merged_policy
+
+if __name__ == "__main__":
+    main()

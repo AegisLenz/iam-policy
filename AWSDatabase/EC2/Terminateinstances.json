@@ -2,7 +2,7 @@
     "policy": [
         {
             "Action": [
-                "ec2:terminateInstances"
+                "ec2:TerminateInstances"
             ],
             "Effect": "Allow",
             "Resource": [

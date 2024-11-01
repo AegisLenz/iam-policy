@@ -1,0 +1,52 @@
+[
+    {
+        "eventVersion": "1.08",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDA54WIGG6CRC3JGUUGF",
+            "arn": "arn:aws:iam::123456789012:user/test_user",
+            "accountId": "123456789012",
+            "accessKeyId": "AKIA54WIGG6CVQ3RELLM",
+            "userName": "test_user"
+        },
+        "eventTime": "2024-10-01T12:00:00Z",
+        "eventSource": "s3.amazonaws.com",
+        "eventName": "GetObject",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "192.0.2.0",
+        "userAgent": "aws-cli/2.0.30 Python/3.7.4 Windows/10",
+        "requestParameters": {
+            "bucketName": "example-bucket",
+            "key": "example-object"
+        },
+        "responseElements": {
+            "x-amz-request-id": "C3D13FE58DE4C810",
+            "x-amz-id-2": "FMyUVURI8Uo/4fG8vclcXIF8RXrW/V+FJDzGmiUeE3N0z9iL/gVq/8wv4v7PL9/6"
+        }
+    },
+    {
+        "eventVersion": "1.08",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDA54WIGG6CRC3JGUUGF",
+            "arn": "arn:aws:iam::123456789012:user/test_user",
+            "accountId": "123456789012",
+            "accessKeyId": "AKIA54WIGG6CVQ3RELLM",
+            "userName": "test_user"
+        },
+        "eventTime": "2024-10-01T13:00:00Z",
+        "eventSource": "s3.amazonaws.com",
+        "eventName": "PutObject",
+        "awsRegion": "us-west-2",
+        "sourceIPAddress": "192.0.2.1",
+        "userAgent": "aws-cli/2.1.24 Python/3.8.8 Linux/5.8.0-53-generic",
+        "requestParameters": {
+            "bucketName": "example-bucket",
+            "key": "new-object"
+        },
+        "responseElements": {
+            "x-amz-request-id": "A12345BCDEFGH6789",
+            "x-amz-id-2": "kjhdsfkjh32h4kjh32h4kjh234kjh234lkj2h34"
+        }
+    }
+]

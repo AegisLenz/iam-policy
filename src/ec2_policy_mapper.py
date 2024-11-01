@@ -2,7 +2,8 @@ import json
 import re
 import os
 
-def map_resource(policy_data, log):
+
+def ec2_map_resource(policy_data, log):
     #리소스 매핑 필드 정의
     mapping = {
         "account_id": log.get("userIdentity").get("accountId") if log.get("userIdentity") else None,
@@ -39,47 +40,58 @@ def map_resource(policy_data, log):
 
     }
 
+    resource_list = []
+    resources = log.get('resources', [])
+    # 리소스 필드에 ARN이 있는지 확인
+    if resources:
+        for resource in resources:
+            if 'ARN' in resource:
+                resource_list.append(resource['ARN'])
+                return resource_list
+    
+    # 정책 데이터의 리소스를 순회하며 로그에서 추출한 값을 사용해 리소스를 매핑
     for statement in policy_data.get("policy", []):
         for i, resource in enumerate(statement.get("Resource", [])):
             for key, value in mapping.items():
-                if value is not None:  
-                    resource = resource.replace(f"{{{key}}}", str(value))
-            statement["Resource"][i] = resource
+                if value:
+                    resource = resource.replace(f"{{{key}}}", value)
+            resource_list.append(resource)
 
-def load_json(file_path):
-    try:
-        with open(file_path,'r') as file:
-            data = json.load(file)
-
-            # CloudTrail 로그 파일인 경우 "Records" 필드를 반환
-            if "Records" in data:
-                return data.get("Records", [])
-            # 정책 파일인 경우 그대로 반환
-            return data
-        
-    except FileNotFoundError:
-        print(f"Error: The file '{file_path}' was not found.")
-        return None
-    except json.JSONDecodeError:
-        print(f"Error: The file '{file_path}' contains invalid JSON.")
-        return None
+    # 지원되지 않는 이벤트에 대한 기본 리소스 설정
+    if not resource_list:
+        resource_list.append("*")
     
+    return resource_list    
 
-def ec2_policy_mapper(log):
-    #log_path = './ex.json'
-    #output_path ='./'
-    #logs = load_json(log_path)
-    database_path = './../AWSDatabase/EC2'
-    policy_path = database_path
 
-    eventName = log.get("eventName")
-    specific_policy_path = os.path.join(policy_path, f'{eventName}.json')
-    policy = load_json(specific_policy_path)
+# Step 3: 최소 권한 정책 생성 함수
+def generate_least_privilege_policy(policy_data, resource_list):
+    least_privilege_policies = []
+    for statement in policy_data.get("policy", []):
+        actions = statement.get("Action", [])
+        for resource in resource_list:
+            policy_template = {
+                "Action": actions,
+                "Resource": [resource],
+                "Effect": "Allow",
+                "Sid": f"policy-{resource}"
+            }
+            least_privilege_policies.append(policy_template)
+    return least_privilege_policies
 
-    if policy is not None:
-        map_resource(policy, log)
-        return policy
-        #merged_policy = merge_policies(all_policies)
-        #print(json.dumps(merged_policy, indent=4))
-        #save_mapped_policy(merged_policy, output_path)
 
+# Step 4: EC2 정책 템플릿 로드 및 최소 권한 정책 생성 함수
+def ec2_policy_mapper(log, policy_data):
+    # 로그에서 필요한 필드 추출 및 리소스 매핑
+    resource_list = ec2_map_resource(policy_data, log)
+    
+    # 최소 권한 정책 생성
+    least_privilege_policies = generate_least_privilege_policy(policy_data, resource_list)
+    
+    # 최종 정책 구성 및 저장
+    final_policy = {
+        "Version": "2012-10-17",
+        "Statement": least_privilege_policies
+    }
+    
+    return final_policy
