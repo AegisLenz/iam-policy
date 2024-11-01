@@ -93,5 +93,5 @@ def ec2_policy_mapper(log, policy_data):
         "Version": "2012-10-17",
         "Statement": least_privilege_policies
     }
-    
+
     return final_policy

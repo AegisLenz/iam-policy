@@ -1,6 +1,19 @@
-from ec2_policy_mapper import ec2_policy_mapper, load_json
+from ec2_policy_mapper import ec2_policy_mapper
 import os
 import json
+
+def load_json(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            # 로그 파일 또는 정책 파일 반환
+            return data
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: The file '{file_path}' contains invalid JSON.")
+        return None
 
 def save_mapped_policy(policy_data, output_path):
     try:
@@ -73,6 +86,6 @@ def make_policy(log_path):
     policy = merge_policies(all_policies)
     return policy
 
-path = "./ex.json"
-policy = make_policy(path)
-print(json.dumps(policy, indent= 4))
+#path = "./ex.json"
+#policy = make_policy(path)
+#print(json.dumps(policy, indent= 4))
