@@ -1,26 +1,112 @@
-#main.py
-from cloudtrail_parser import load_and_extract_cloudtrail_logs
-from policy_mapper import map_event_to_permissions, make_policy_from_resource
+import os
 import json
+from s3_policy_mapper import s3_policy_mapper
+from ec2_policy_mapper import ec2_policy_mapper
+from iam_policy_mapper import iam_policy_mapper
 
-# 정책 생성 및 저장을 위한 실행 코드
-policy_folder = "정책_템플릿_폴더경로"
-cloudtrail_log_filepath = "CloudTrail_Log_파일경로"
-output_json_file = "sample_정책_저장경로"
+# JSON 파일 로드 함수
+def load_json(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"Error: {e}")
+        return None
 
-# CloudTrail 로그를 분석하여 필요한 데이터를 추출
-logs = load_and_extract_cloudtrail_logs(cloudtrail_log_filepath)
+# 여러 정책 병합 함수
+def merge_policies(policies):
+    merged_policy = {
+        "Version": "2012-10-17",
+        "Statement": []
+    }
+    action_resource_map = {}
 
-# 이벤트와 리소스를 매핑하여 정책 생성
-resource_policies = map_event_to_permissions(logs, policy_folder)
+    for policy in policies:
+        for statement in policy.get("Statement", []):
+            actions = statement.get("Action", [])
+            resources = statement.get("Resource", [])
+            actions = [actions] if isinstance(actions, str) else actions
+            resources = [resources] if isinstance(resources, str) else resources
 
-# 최종 정책 생성 및 저장
-policies = {"Statement": []}
-for resource, policy_data in resource_policies.items():
-    actions = policy_data["Action"]
-    policy = make_policy_from_resource(resource, actions)
-    policies["Statement"].append(policy)
+            for action in actions:
+                if action not in action_resource_map:
+                    action_resource_map[action] = set(resources)
+                else:
+                    action_resource_map[action].update(resources)
 
-with open(output_json_file, 'w', encoding='utf-8') as file:
-    json.dump(policies, file, indent=4)
-    print(f"Policies have been saved to {output_json_file}")
+    for action, resources in action_resource_map.items():
+        merged_policy["Statement"].append({
+            "Action": action,
+            "Resource": list(resources),
+            "Effect": "Allow",
+            "Sid": f"policy-{action}"
+        })
+    
+    return merged_policy
+
+
+def main():
+    file_path = "/home/yjeongc/Downloads/iam-policy/src/ec2_sample_log.json"
+
+    logs = load_json(file_path)
+    if not isinstance(logs, list):
+        print("Error: The log file does not contain a valid list of log entries.")
+        return
+
+    all_policies = []
+
+    for log_entry in logs:
+        if not isinstance(log_entry, dict):
+            print("Error: Log entry is not a valid dictionary.")
+            continue
+
+        event_source = log_entry.get("eventSource")
+        event_name = log_entry.get("eventName")
+        user_identity = log_entry.get('userIdentity', {})
+        user_name = log_entry.get('requestParameters', {}).get('userName')
+
+        if event_source == 's3.amazonaws.com':
+            specific_policy_path = os.path.join("/home/yjeongc/Downloads/iam-policy/AWSDatabase/S3", f'{event_name}.json')
+            policy_data = load_json(specific_policy_path)
+            if policy_data is not None:
+                policy = s3_policy_mapper(log_entry, policy_data)
+                if policy:
+                    all_policies.append(policy)
+        
+        elif event_source == 'ec2.amazonaws.com':
+            specific_policy_path = os.path.join("/home/yjeongc/Downloads/iam-policy/AWSDatabase/EC2", f'{event_name}.json')
+            policy_data = load_json(specific_policy_path)
+            if policy_data is not None:
+                policy = ec2_policy_mapper(log_entry, policy_data)
+                if policy:
+                    all_policies.append(policy)
+                    
+        elif event_source == 'iam.amazonaws.com':
+            policy = iam_policy_mapper(log_entry)
+            if policy:
+                    all_policies.append(policy)
+
+        else :
+            action = f"{event_source.split('.')[0]}:{event_name}"
+            policy = {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Action": action,
+                        "Resource": "*",
+                        "Effect": "Allow",
+                        "Sid": f"policy-{action}"
+                    }
+                ]
+            }
+            all_policies.append(policy)
+
+    if not all_policies:
+        print("No valid policies were generated.")
+        return
+
+    final_policy = merge_policies(all_policies)
+    print(json.dumps(final_policy, indent=4))
+
+if __name__ == "__main__":
+    main()

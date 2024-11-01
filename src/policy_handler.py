@@ -1,78 +1,91 @@
-#poliy_handler.py
+from ec2_policy_mapper import ec2_policy_mapper
 import os
 import json
 
-# 특정 이벤트 이름에 해당하는 정책 템플릿 파일을 로드하는 함수
-# 현재는 S3 및 IAM 이벤트에 대해 정책 템플릿을 로드함
-def load_policy_template(event_name, policy_folder_path, event_source):
-    # 지원되는 이벤트 소스 목록
-    supported_event_sources = ['s3.amazonaws.com']
-
-    # 이벤트 소스가 지원되는 경우에만 정책 템플릿 로드
-    if event_source not in supported_event_sources:
+def load_json(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            # 로그 파일 또는 정책 파일 반환
+            return data
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: The file '{file_path}' contains invalid JSON.")
         return None
 
-    policy_file_path = os.path.join(policy_folder_path, f'{event_name}.json')
-    if os.path.exists(policy_file_path):
-        try:
-            with open(policy_file_path, 'r', encoding='utf-8') as file:
-                policy_data = json.load(file)
-                return policy_data
-        except json.JSONDecodeError:
-            print(f"Error decoding JSON from policy file: {policy_file_path}")
-    else:
-        print(f"Policy file not found: {policy_file_path}")
-    return None
+def save_mapped_policy(policy_data, output_path):
+    try:
+        with open(output_path, 'w') as file:
+            json.dump(policy_data, file, indent=4)
+        print(f"Mapped policy saved to {output_path}")
+    except IOError:
+        print(f"Error: Could not write to file {output_path}")
 
+def format_policy(merged_policy):
+    policies = {"policy": []}
+    policy_data = merged_policy.get("policy",{})
+    for action in policy_data.keys():
+        effect = policy_data[action].get("Effect")
+        resource = policy_data[action].get("Resource")
+        policies["policy"].append({
+            "Sid": f"policy-{resource}",
+            "Action": action,
+            "Effect": effect,
+            "Resource": resource
+            
+        })
 
-# 로그 항목과 정책 템플릿을 사용해 필요한 리소스를 생성하는 함수
-def generate_resource(log_entry, policy_template, context_data):
-    resource_list = []
-    resources = log_entry.get('resources', [])
+    return policies
 
-    # 1. resources 필드에 ARN이 있는지 확인
-    if resources:
-        for resource in resources:
-            if 'ARN' in resource:
-                resource_list.append(resource['ARN'])
-                return resource_list
+def merge_policies(policy_data_list):
+    # 중복되지 않게 정책을 병합하는 함수
+    merged_policy = {"policy": {}}
+    unique_action = set()
 
-    # 정책 템플릿에 리소스 필드가 있는 경우 자리 표시자를 채워 리소스 생성
-    if policy_template and "Resource" in policy_template["policy"]:
-        for resource in policy_template["policy"]["Resource"]:
-            if '{bucket_name}' in resource:
-                bucket_name = log_entry.get('requestParameters', {}).get('bucketName')
-                if not bucket_name:
-                    bucket_name = context_data.get(log_entry.get('eventName'), {}).get('bucketName')
-                if bucket_name:
-                    resource = resource.replace('{bucket_name}', bucket_name)
-            if '{object_key}' in resource:
-                object_key = log_entry.get('requestParameters', {}).get('key')
-                if not object_key:
-                    object_key = context_data.get(log_entry.get('eventName'), {}).get('key')
-                if object_key:
-                    resource = resource.replace('{object_key}', object_key)
-            if '{key_prefix}' in resource:
-                key_prefix = log_entry.get('requestParameters', {}).get('keyPrefix')
-                if not key_prefix:
-                    key_prefix = context_data.get(log_entry.get('eventName'), {}).get('keyPrefix')
-                if key_prefix:
-                    resource = resource.replace('{key_prefix}', key_prefix)
-            resource_list.append(resource)
+    for policy_data in policy_data_list:
+        for statement in policy_data.get("policy", []):
+            # Resource가 리스트가 아닌 경우 리스트로 변환
+            resources = statement.get("Resource", [])
+            if not isinstance(resources, list):
+                resources = [resources]
 
-    # IAM 관련 이벤트 처리 (event_source가 'iam.amazonaws.com'인 경우)
-    if log_entry.get('eventSource') == 'iam.amazonaws.com':
-        user_identity = log_entry.get('userIdentity', {})
-        user_name = log_entry.get('requestParameters', {}).get('userName')
-        if user_name:
-            resource_arn = f"arn:aws:iam::{user_identity.get('accountId', log_entry.get('recipientAccountId', 'unknown'))}:user/{user_name}"
-            if resource_arn not in resource_list:
-                resource_list.append(resource_arn)
+            actions = statement.get("Action")
+            effect = statement.get("Effect")
 
-    # 그 외의 이벤트 처리
-    if not resource_list:
-        general_resource = f"*"
-        if general_resource not in resource_list:
-            resource_list.append(general_resource)
+            # action별로 Resource 목록을 병합하여 저장
+            for action in actions:
+                if action not in unique_action:
+                    merged_policy["policy"][action] = {
+                        "Effect": effect,
+                        "Resource": list(set(resources))  # 중복 제거 후 추가
+                    }
+                    unique_action.add(action)
+                else:
+                    # 이미 action이 있다면 기존 Resource 목록에 중복되지 않게 추가
+                    existing_resources = set(merged_policy["policy"][action]["Resource"])
+                    merged_policy["policy"][action]["Resource"] = list(existing_resources.union(resources))
 
-    return resource_list
+    return format_policy(merged_policy)
+
+def make_policy(log_path):
+    logs = load_json(log_path)
+    all_policies = []
+
+    for log in logs:
+        resource = log.get("eventSource").split(".")[0]
+        if resource == "ec2":
+            policy_buf = ec2_policy_mapper(log)
+
+        else:
+            #policy_buf = 유정햄 함수
+            print(2)
+
+        all_policies.append(policy_buf)
+    policy = merge_policies(all_policies)
+    return policy
+
+#path = "./ex.json"
+#policy = make_policy(path)
+#print(json.dumps(policy, indent= 4))
