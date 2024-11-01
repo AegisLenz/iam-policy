@@ -25,8 +25,26 @@ def merge_policies(policies):
         "Version": "2012-10-17",
         "Statement": []
     }
+    action_resource_map = {}
+
     for policy in policies:
-        merged_policy["Statement"].extend(policy["Statement"])
+        for statement in policy["Statement"]:
+            action_tuple = tuple(statement["Action"])
+            resource = statement["Resource"][0]
+
+            if action_tuple in action_resource_map:
+                action_resource_map[action_tuple].append(resource)
+            else:
+                action_resource_map[action_tuple] = [resource]
+
+    for actions, resources in action_resource_map.items():
+        merged_policy["Statement"].append({
+            "Action": list(actions),
+            "Resource": resources,
+            "Effect": "Allow",
+            "Sid": f"policy-{resources[0]}"
+        })
+
     return merged_policy
 
 
@@ -71,11 +89,8 @@ def main():
         else:
             print(f"Unsupported event source: {event_source}")
 
-    merged_policy = merge_policies(all_policies)
-    print(json.dumps(merged_policy, indent=4))
-
-
-
+    final_policy = merge_policies(all_policies)
+    print(json.dumps(final_policy, indent=4))
 
 
 if __name__ == "__main__":
