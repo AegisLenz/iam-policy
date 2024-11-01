@@ -52,14 +52,16 @@ def ec2_map_resource(policy_data, log):
     # 정책 데이터의 리소스를 순회하며 로그에서 추출한 값을 사용해 리소스를 매핑
     for statement in policy_data.get("policy", []):
         for i, resource in enumerate(statement.get("Resource", [])):
+            original_resource = resource
             for key, value in mapping.items():
                 if value:
                     resource = resource.replace(f"{{{key}}}", value)
             resource_list.append(resource)
 
-    # 지원되지 않는 이벤트에 대한 기본 리소스 설정
-    if not resource_list:
-        resource_list.append("*")
+            if resource == original_resource:
+                resource_list.append("*")
+            else:
+                resource_list.append(resource)
     
     return resource_list    
 

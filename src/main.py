@@ -87,7 +87,19 @@ def main():
                     all_policies.append(policy)
 
         else :
-            print(f"Unsupported event source: {event_source}")
+            action = f"{event_source.split('.')[0]}:{event_name}"
+            policy = {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Action": action,
+                        "Resource": "*",
+                        "Effect": "Allow",
+                        "Sid": f"policy-{action}"
+                    }
+                ]
+            }
+            all_policies.append(policy)
 
     if not all_policies:
         print("No valid policies were generated.")

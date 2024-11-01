@@ -3,6 +3,8 @@ import json
 
 # Step 2: 리소스를 매핑하는 함수 (S3)
 # 로그의 정보를 정책 템플릿에 매핑하여 최소 권한 정책을 생성
+# Step 2: 리소스를 매핑하는 함수 (S3)
+# 로그의 정보를 정책 템플릿에 매핑하여 최소 권한 정책을 생성
 def s3_map_resource(policy_data, log):
     mapping = {
         "bucket_name": log.get("requestParameters", {}).get("bucketName"),
@@ -12,6 +14,7 @@ def s3_map_resource(policy_data, log):
     
     resource_list = []
     resources = log.get('resources', [])
+    
     # 리소스 필드에 ARN이 있는지 확인
     if resources:
         for resource in resources:
@@ -22,16 +25,18 @@ def s3_map_resource(policy_data, log):
     # 정책 데이터의 리소스를 순회하며 로그에서 추출한 값을 사용해 리소스를 매핑
     for statement in policy_data.get("policy", []):
         for i, resource in enumerate(statement.get("Resource", [])):
+            original_resource = resource
             for key, value in mapping.items():
                 if value:
                     resource = resource.replace(f"{{{key}}}", value)
-            resource_list.append(resource)
 
-    # 지원되지 않는 이벤트에 대한 기본 리소스 설정
-    if not resource_list:
-        resource_list.append("*")
+            if resource == original_resource:
+                resource_list.append("*")
+            else:
+                resource_list.append(resource)
     
     return resource_list
+
 
 # Step 3: 최소 권한 정책 생성 함수
 def generate_least_privilege_policy(policy_data, resource_list):
