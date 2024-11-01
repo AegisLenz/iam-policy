@@ -1,5 +1,6 @@
 import os
 import json
+from collections import defaultdict
 from s3_policy_mapper import s3_policy_mapper
 from ec2_policy_mapper import ec2_policy_mapper
 
@@ -20,31 +21,31 @@ def load_json(file_path):
         return None
 
 # Step 5: 여러 정책 병합 함수
+# 여러 정책 병합 함수
 def merge_policies(policies):
     merged_policy = {
         "Version": "2012-10-17",
         "Statement": []
     }
-    action_resource_map = {}
+    action_resource_map = defaultdict(set)
 
     for policy in policies:
-        for statement in policy["Statement"]:
-            action_tuple = tuple(statement["Action"])
-            resource = statement["Resource"][0]
+        for statement in policy.get("Statement", []):
+            actions = statement.get("Action", [])
+            resources = statement.get("Resource", [])
+            if isinstance(actions, str):
+                actions = [actions]
+            for action in actions:
+                action_resource_map[action].update(resources)
 
-            if action_tuple in action_resource_map:
-                action_resource_map[action_tuple].append(resource)
-            else:
-                action_resource_map[action_tuple] = [resource]
-
-    for actions, resources in action_resource_map.items():
+    for action, resources in action_resource_map.items():
         merged_policy["Statement"].append({
-            "Action": list(actions),
-            "Resource": resources,
+            "Action": action,
+            "Resource": list(resources),
             "Effect": "Allow",
-            "Sid": f"policy-{resources[0]}"
+            "Sid": f"policy-{action}"
         })
-
+    
     return merged_policy
 
 
