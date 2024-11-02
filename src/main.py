@@ -7,7 +7,7 @@ from ec2_policy_mapper import ec2_policy_mapper
 from iam_policy_mapper import iam_policy_mapper
 
 def main():
-    file_path = "/home/yjeongc/Downloads/iam-policy/src/ec2_sample_log.json"
+    file_path = "./ec2_sample_log.json"
     logs = load_json(file_path)
     if not isinstance(logs, list):
         print("Error: The log file does not contain a valid list of log entries.")
@@ -23,14 +23,14 @@ def main():
         event_name = log_entry.get("eventName")
 
         if event_source == 's3.amazonaws.com':
-            specific_policy_path = os.path.join("/home/yjeongc/Downloads/iam-policy/AWSDatabase/S3", f'{event_name}.json')
+            specific_policy_path = os.path.join("./../AWSDatabase/S3", f'{event_name}.json')
             policy_data = load_json(specific_policy_path)
             if policy_data is not None:
                 policy = s3_policy_mapper(log_entry, policy_data)
                 if policy:
                     all_policies.append(policy)
         elif event_source == 'ec2.amazonaws.com':
-            specific_policy_path = os.path.join("/home/yjeongc/Downloads/iam-policy/AWSDatabase/EC2", f'{event_name}.json')
+            specific_policy_path = os.path.join("./../AWSDatabase/EC2", f'{event_name}.json')
             policy_data = load_json(specific_policy_path)
             if policy_data is not None:
                 policy = ec2_policy_mapper(log_entry, policy_data)
