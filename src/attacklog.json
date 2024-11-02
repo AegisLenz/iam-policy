@@ -1,0 +1,2447 @@
+{
+    "Records": [
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T11:03:41Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketCors",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_25679e2e-fe8c-483e-b592-cdaad9c31084 HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchCORSConfiguration",
+            "errorMessage": "The CORS configuration does not exist",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-zltxnyfdgt",
+                "Host": "stratus-red-team-cloudtraild-bucket-zltxnyfdgt.s3.amazonaws.com",
+                "cors": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "HVJPZrsFcOm1hdQ5aKuW4o+WrrHzkcD3HSS7AmB/dJZtbsprUvTelxzYVmfdCQvKbRWEWMZJfu8jqTkz5OXsSYtl6j9y9x+tUWteQue3ir4=",
+                "bytesTransferredOut": 381
+            },
+            "requestID": "D6NJG50JEDSFJ9ER",
+            "eventID": "1bb94591-235c-438e-98d5-5eb296a650d1",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-zltxnyfdgt"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-zltxnyfdgt.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T11:03:40Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketAcl",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_25679e2e-fe8c-483e-b592-cdaad9c31084 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-zltxnyfdgt",
+                "Host": "stratus-red-team-cloudtraild-bucket-zltxnyfdgt.s3.amazonaws.com",
+                "acl": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "GOfZ5TPJTN9BRoBr0V7g2qbRZJhCWe7eeK30CIcyzI/j5Ndtz7LTJC+U/o8k0CecpBlqSPhoif4=",
+                "bytesTransferredOut": 548
+            },
+            "requestID": "E4T361E03XPK3Q10",
+            "eventID": "6ec5b8ec-e696-4ba1-877a-f9e4d324fb2e",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-zltxnyfdgt"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-zltxnyfdgt.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T11:03:27Z",
+            "eventSource": "iam.amazonaws.com",
+            "eventName": "GetUser",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_25679e2e-fe8c-483e-b592-cdaad9c31084 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": null,
+            "responseElements": null,
+            "requestID": "364898cd-2290-49f5-bce5-6e07218f2fad",
+            "eventID": "9dadd2e2-d0d7-4e1d-a109-b17f513024eb",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "iam.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:51Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "DeleteBucket",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "wk2FZEP1QMftCiUh7ObBiIBwS5P0o0+sJTHtjaKlCsieuDox8poVR39PyjVq3ATL5nQ+me36vbgcLbZ8tWmwDlIkj8oZJK/K",
+                "bytesTransferredOut": 0
+            },
+            "requestID": "XTGMMAA7BV7V8YAG",
+            "eventID": "1dea8683-ad84-4616-a827-ed33dec0cec5",
+            "readOnly": false,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0005 - Defense Evasion",
+            "mitreAttackTechnique": "T1070 - Indicator Removal on Host"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:47Z",
+            "eventSource": "iam.amazonaws.com",
+            "eventName": "GetUser",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": null,
+            "responseElements": null,
+            "requestID": "76e10536-3512-4593-99e0-4835efd2ff37",
+            "eventID": "202f29de-3a88-4a1f-a6c6-e6a84a72631a",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "iam.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:47Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "DeleteBucket",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "BucketNotEmpty",
+            "errorMessage": "The bucket you tried to delete is not empty",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "jdwPAWNXKnXvxiHgq2y61h58xfYwyUCxG0/uReSuxgOLXXSDfkiqJ+QXyPX4qczrE4AJd6JJ6LM=",
+                "bytesTransferredOut": 346
+            },
+            "requestID": "7Z6ZXVGSAS81VA0V",
+            "eventID": "a3a7cda9-a8e4-4947-a3cf-fed605188f8f",
+            "readOnly": false,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0005 - Defense Evasion",
+            "mitreAttackTechnique": "T1070 - Indicator Removal on Host"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:45Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "DescribeTrails",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": {
+                "trailNameList": [
+                    "stratus-red-team-cloudtraild-trail-lkkgtlhasr"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "0e766a10-ee4b-48aa-8e69-a44118ce6546",
+            "eventID": "ca7a4308-6e0f-4170-897f-382379a3756b",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:44Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketTagging",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "tagging": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "U2/QE9+Bflz9dcDmqhjygydMfUfU9xxbf94VCXMjoK9WLqmnYxWUuzb4WXOCfSdcLN/f2pWAmaA=",
+                "bytesTransferredOut": 178
+            },
+            "requestID": "Q82TAE5ZN76DTM8C",
+            "eventID": "7f9f8245-44ad-4d0c-b9ab-372e6b541d5d",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:42Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketObjectLockConfiguration",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "ObjectLockConfigurationNotFoundError",
+            "errorMessage": "Object Lock configuration does not exist for this bucket",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "object-lock": "",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "JKoN570/IUHircDDTE9JfGGwDxCy0JxBaZt3LJsciJv/4pJkcA5W8WhVlLnjtSKziYEQLZq3sOg=",
+                "bytesTransferredOut": 381
+            },
+            "requestID": "65TCN1QEDM6MA0WR",
+            "eventID": "44011b49-1d41-4e3d-b568-697b52867092",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:41Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketReplication",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "ReplicationConfigurationNotFoundError",
+            "errorMessage": "The replication configuration was not found",
+            "requestParameters": {
+                "replication": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "oWd+98GLmAoQlyEyYGRkw4GINL90lPnilhTY57fDR4X0eOlxhphWuwJuj5jtyKVOPeWHDtV+dgXpZAL95caosIzE1HzMS3Zd",
+                "bytesTransferredOut": 389
+            },
+            "requestID": "KXGYHMJQTH710WCJ",
+            "eventID": "4a8e669b-3632-4776-973f-ddc9b4f067f4",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:41Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketEncryption",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "encryption": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "zMkV2Z8pnTQGj6MO8Xw6NCln7Rf/f3EabHQUl3GhBCFHGz3i45oYG4oFjENFTA/J+m4pmwDDaX0=",
+                "bytesTransferredOut": 321
+            },
+            "requestID": "KXGYMGXGZJ07DEHG",
+            "eventID": "e503f7a1-d94a-476b-bac4-9c51cef25efb",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:40Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketLifecycle",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchLifecycleConfiguration",
+            "errorMessage": "The lifecycle configuration does not exist",
+            "requestParameters": {
+                "lifecycle": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "7+Wq9B1RvUFU23XPkOcXqxlZR1jxE0VvSjeL1DMnGnylZ53BEgL78pY6G8KHq2YRCoJBR/cGkok=",
+                "bytesTransferredOut": 320
+            },
+            "requestID": "CH7WYP59842HW9FH",
+            "eventID": "e22f8324-6f6c-425b-ad6d-e47f205a824a",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:39Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketLogging",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "logging": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "QyW1T+D5GvMWzaDOSWrXREL3GTpw8yAsJaMHgtJdn9HZOCzzOa0div7evdFmpxXgmML4GMhWPVc=",
+                "bytesTransferredOut": 289
+            },
+            "requestID": "3M7EA5P4PDJWKDEJ",
+            "eventID": "c9f5b6e8-d9b3-4f3b-b6cf-4367765adf34",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:38Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketRequestPayment",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "requestPayment": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "si0B6v40l2focf3xnYaLfvS+ED5x6NseZDnIX0GO7O0BVLXsRKb26Gq2ay6/VWptP2JlOuGG8aM=",
+                "bytesTransferredOut": 172
+            },
+            "requestID": "07YXXPP1HM9HTQKM",
+            "eventID": "27651839-70b3-4cf4-8ff7-181ad64d8f9c",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:37Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketVersioning",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "versioning": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "odbU9MeHgBMbZouLL64AF1TWMFocR/Pyvh5TET8jgvRGfDqzebJl4Ux1fCOE9fn5dTKTDCE/dQw=",
+                "bytesTransferredOut": 113
+            },
+            "requestID": "6ZKC6WGW3XXRY3KJ",
+            "eventID": "6bc6b67c-ed1b-41cb-8710-494b5681f6e0",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:37Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetAccelerateConfiguration",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "accelerate": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "FuLXJQoWat+WMQGS9lETix3cqJId899C83pDpHQASjIIq4b85o/9m4QwanPOGvKQHFHCV+BMO8g=",
+                "bytesTransferredOut": 113
+            },
+            "requestID": "SF9RQRWPGXFSCQ2G",
+            "eventID": "8a020a4b-f197-44c4-8448-bf5c124a581c",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1016 - System Network Configuration Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:36Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketWebsite",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchWebsiteConfiguration",
+            "errorMessage": "The specified bucket does not have a website configuration",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "website": "",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "RKvlL9etdqUF9MhrFTRCivPClc/StHg+biVMTgOPIOL9LFfi9Li+jlJvDbbtM5fZ8MTzn/m8dgXIpe/w+VFis1eS3BO+0BIQZMnbqr8nkew=",
+                "bytesTransferredOut": 405
+            },
+            "requestID": "6ZK9A53S27XEC1K6",
+            "eventID": "f58277f1-2ed5-47cb-95a6-b9e66b73072e",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:35Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketCors",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchCORSConfiguration",
+            "errorMessage": "The CORS configuration does not exist",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "cors": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "qOcZzy62MGiPfk4bCyapZGuInWx1msJLAljAE5fV3JklwxVsit8oGPiujp51ZCTHFTAFsSOzacBo9gw2wZv0fA==",
+                "bytesTransferredOut": 361
+            },
+            "requestID": "J42S6S6EX3X06545",
+            "eventID": "98ea916b-2f39-400d-88ff-1541d6c44907",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:34Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketAcl",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "acl": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "pUlvrL4jidqVP3pSgAnQi9ztxu1mHRoG9Ta6GwYXYHwl0Trg0j1kc4vRW+BUOYF0AqWR0jX/ss8=",
+                "bytesTransferredOut": 548
+            },
+            "requestID": "Z9WZD3J54W8ND48X",
+            "eventID": "841326ac-4ebf-4900-9be7-2e230c050c65",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:33Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketPolicy",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "policy": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "/CyGl+mNIjVzDLhFiR3OAGE2nPDqyXrjccM9zt/eDoCbF0BTVyCkTlPWni8cxHEYW3c+xFe+8ghWjk0UxGqBFF7nZU9feIff",
+                "bytesTransferredOut": 508
+            },
+            "requestID": "N6ZY7KD2Q7RYVZ6F",
+            "eventID": "f76846a0-875c-42de-b170-40275f606f54",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:32Z",
+            "eventSource": "iam.amazonaws.com",
+            "eventName": "GetUser",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": null,
+            "responseElements": null,
+            "requestID": "23e260ee-9baa-4def-97bb-3fbcaa6751bf",
+            "eventID": "a13401d4-2e6a-4da8-ae98-71a4d38ca697",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "iam.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:30Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "LookupEvents",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "aws-cli/2.17.46 md/awscrt#0.21.2 ua/2.0 os/macos#24.1.0 md/arch#arm64 lang/python#3.11.10 md/pyimpl#CPython cfg/retry-mode#standard md/installer#source md/prompt#off md/command#cloudtrail.lookup-events",
+            "requestParameters": {
+                "lookupAttributes": [
+                    {
+                        "attributeKey": "Username",
+                        "attributeValue": "attack_user_04"
+                    }
+                ],
+                "startTime": "Sep 22, 2024, 9:25:40 AM",
+                "endTime": "Sep 22, 2024, 1:25:40 PM",
+                "nextToken": "DrbZ2nIRKwH8GlOckEg5EeDUJtmp8BqsaPvGy1VylKop1iBK8No9Zalw6X2OS1L5"
+            },
+            "responseElements": null,
+            "requestID": "f420a90e-fc43-44dd-a521-e1d959807a89",
+            "eventID": "a28453c6-cc39-4f56-8703-f9c670023b7b",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0009 - Collection",
+            "mitreAttackTechnique": "T1020 - Automated Exfiltration"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:29Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "LookupEvents",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "aws-cli/2.17.46 md/awscrt#0.21.2 ua/2.0 os/macos#24.1.0 md/arch#arm64 lang/python#3.11.10 md/pyimpl#CPython cfg/retry-mode#standard md/installer#source md/prompt#off md/command#cloudtrail.lookup-events",
+            "requestParameters": {
+                "lookupAttributes": [
+                    {
+                        "attributeKey": "Username",
+                        "attributeValue": "attack_user_04"
+                    }
+                ],
+                "startTime": "Sep 22, 2024, 9:25:40 AM",
+                "endTime": "Sep 22, 2024, 1:25:40 PM"
+            },
+            "responseElements": null,
+            "requestID": "b0f1c229-2ee8-434d-83f8-94d7baa2b5c1",
+            "eventID": "2e74b6f9-056c-464c-aea7-53d7a3d1e2bc",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0009 - Collection",
+            "mitreAttackTechnique": "T1020 - Automated Exfiltration"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:27Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "DeleteTrail",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009",
+            "requestParameters": {
+                "name": "stratus-red-team-cloudtraild-trail-lkkgtlhasr"
+            },
+            "responseElements": null,
+            "requestID": "cd5dc2f3-f4f5-4e80-8d12-6a1ba28e1eec",
+            "eventID": "fb92c3f1-9851-4af4-9b63-23f03426cc06",
+            "readOnly": false,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0005 - Defense Evasion",
+            "mitreAttackTechnique": "T1070 - Indicator Removal on Host"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:26Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "GetEventSelectors",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": {
+                "trailName": "stratus-red-team-cloudtraild-trail-lkkgtlhasr"
+            },
+            "responseElements": null,
+            "requestID": "429cd049-2bda-44b6-8df8-d8fdc16c7891",
+            "eventID": "d5a1b1c0-657d-4370-9324-161c11f96fe2",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:25Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "GetTrailStatus",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": {
+                "name": "stratus-red-team-cloudtraild-trail-lkkgtlhasr"
+            },
+            "responseElements": null,
+            "requestID": "4344de72-9e1b-42d6-93b0-ede475a84ea1",
+            "eventID": "30fa37b7-4232-40a2-8dab-68e8b8935b40",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0005 - Defense Evasion",
+            "mitreAttackTechnique": "T1070 - Indicator Removal on Host"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:24Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "ListTags",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": {
+                "resourceIdList": [
+                    "arn:aws:cloudtrail:us-east-1:064029096479:trail/stratus-red-team-cloudtraild-trail-lkkgtlhasr"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "58d39cae-0942-440d-af87-6c53189ee2b6",
+            "eventID": "0bff4821-7ad8-4e3f-9a74-54566e7fac56",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:23Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "DescribeTrails",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": {
+                "trailNameList": [
+                    "stratus-red-team-cloudtraild-trail-lkkgtlhasr"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "260430f0-25b2-4ba0-b871-ba17d9020e8c",
+            "eventID": "38c90ed9-a449-43d4-b485-d169b75c04bc",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:21Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "StartLogging",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": {
+                "name": "stratus-red-team-cloudtraild-trail-lkkgtlhasr"
+            },
+            "responseElements": null,
+            "requestID": "b6b73279-9188-4171-9319-702c731e8b3c",
+            "eventID": "83fde59c-bcdc-42f7-867b-4b75f9ed197a",
+            "readOnly": false,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:20Z",
+            "eventSource": "cloudtrail.amazonaws.com",
+            "eventName": "CreateTrail",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": {
+                "name": "stratus-red-team-cloudtraild-trail-lkkgtlhasr",
+                "s3BucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "includeGlobalServiceEvents": true,
+                "tagsList": [
+                    {
+                        "key": "StratusRedTeam",
+                        "value": "true"
+                    }
+                ]
+            },
+            "responseElements": {
+                "name": "stratus-red-team-cloudtraild-trail-lkkgtlhasr",
+                "s3BucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "includeGlobalServiceEvents": true,
+                "isMultiRegionTrail": false,
+                "trailARN": "arn:aws:cloudtrail:us-east-1:064029096479:trail/stratus-red-team-cloudtraild-trail-lkkgtlhasr",
+                "logFileValidationEnabled": false,
+                "isOrganizationTrail": false
+            },
+            "requestID": "235352ef-6b0a-4e73-b8af-1d7b9490539c",
+            "eventID": "2c85897d-0af8-4161-a679-ec75f39ed80a",
+            "readOnly": false,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "cloudtrail.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:19Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketTagging",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "tagging": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "6EA24pFF7VOWMUyA0OFF/ivjFTrwTZU8a3TSQv3TGCXYe+6q+I7oKA77+VV8iTOBF767CirYpt4=",
+                "bytesTransferredOut": 178
+            },
+            "requestID": "E6TDNXGPHQ8HTQ5C",
+            "eventID": "17f5b057-ce1f-4911-9234-69d56c8f55a7",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:17Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketObjectLockConfiguration",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "ObjectLockConfigurationNotFoundError",
+            "errorMessage": "Object Lock configuration does not exist for this bucket",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "object-lock": "",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "tl4Hp/Ue9iim2OuXjfNnw/crXunCRipOOjqIpFWB1qxaqOGqf4ZB3JZC8PDzm2Gj2KvC168ghaovfEEmUKIR/uVhpKEYIAO9ikGS0HF9hCA=",
+                "bytesTransferredOut": 413
+            },
+            "requestID": "RRTKB5875511QWNS",
+            "eventID": "bfa0f96c-7ffb-443b-af8c-743fa5d3f755",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:16Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketEncryption",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "encryption": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "svR9qPyTWR7maphKHcBe6Nea0opplJ3dN8POR4lohkYLy2eFAgYCJMWoN5gokJivIlC+4MYSd70=",
+                "bytesTransferredOut": 321
+            },
+            "requestID": "K34V6FMQQD12370P",
+            "eventID": "88af7cdb-e28f-44ad-81df-7a7dbfdec932",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:15Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketReplication",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "ReplicationConfigurationNotFoundError",
+            "errorMessage": "The replication configuration was not found",
+            "requestParameters": {
+                "replication": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "+96p400N9qzLOB8MO+kmANXXcd8Xx0HQujZlFmb5GY9DdwC363g6I3LuHl1X6t6plk/DqmEfyFc=",
+                "bytesTransferredOut": 369
+            },
+            "requestID": "DK1C0PKQ6RK4DX9Z",
+            "eventID": "5192606b-7b6d-4a18-94db-ad64bd679eae",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:15Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketLifecycle",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchLifecycleConfiguration",
+            "errorMessage": "The lifecycle configuration does not exist",
+            "requestParameters": {
+                "lifecycle": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "nKnU9eWL3degyQknwgm49hcfXy3tg5T1IjiCbvTM4NZwHhfJKusY/dY3F5kr9EDesquLaKgPUUcBZAuARMS3sD6HpnlH7Z4ADJPirr6HHZM=",
+                "bytesTransferredOut": 352
+            },
+            "requestID": "DK13AK8B4WWQVGWR",
+            "eventID": "ed4ffb5b-3afa-4099-a4e7-c2debfce784f",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:14Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketLogging",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "logging": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "Qy9av/1T/d3UCpE1paj8gidPSCnhjBTm27/WTHGQ3vBCPv2BJ0H40dHmhPp1SC+2R0ejCg8BmAU=",
+                "bytesTransferredOut": 289
+            },
+            "requestID": "TJTSY7YH5PHC909E",
+            "eventID": "1abe9352-da03-407b-af23-82621cf0c801",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:13Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketRequestPayment",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "requestPayment": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "phj3YUSEZUlHcIOyppYe3yBoTsrF2MuiFEzwK4nnL6r2H49M4ZdnYUjwI/De/6iET/gfHFHw6Jg=",
+                "bytesTransferredOut": 172
+            },
+            "requestID": "S4B9EMDRJRDJ4B2F",
+            "eventID": "bf61ca8c-de3e-4d6b-ab7f-4079eedb1be5",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:12Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketVersioning",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "versioning": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "MoTVPzYN0Xaq7aYBWzmXeJ42mAKFVUIz3YUkv3yHG4QYnYFymvNZ+rNNZF1x5dpBkQmLWgFBL2II3eFaEcrijLdLEhMoalZrhaKKeF/rSA0=",
+                "bytesTransferredOut": 113
+            },
+            "requestID": "F20JEP91YNYSKFFR",
+            "eventID": "15db465e-6bb3-46ea-a9ac-1f813227564a",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:12Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetAccelerateConfiguration",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "accelerate": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "kxYVf2QlUOL7XM63tX7HTBYuHs/uEGdREbVghkM++QoxT60ZrJprCmMLYNbnRSvZmafe2UXrYf75+PIpwTlUOw==",
+                "bytesTransferredOut": 113
+            },
+            "requestID": "F20HGT8Y667TSEKR",
+            "eventID": "85f9ef92-f041-4ab9-8b19-bd9384c5b243",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1016 - System Network Configuration Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:11Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketWebsite",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchWebsiteConfiguration",
+            "errorMessage": "The specified bucket does not have a website configuration",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "website": "",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "1J/8Mie7scgVup5UthnSO0O63IXiyRzAk/noKzrPokaUJ5lncsBkIlGkqgm3XgANbIS7OkpjNUM=",
+                "bytesTransferredOut": 373
+            },
+            "requestID": "BDRQBAEQVSPZXJ7J",
+            "eventID": "835c58bb-ea0c-42e5-ac7d-f56b0d5fa01b",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:10Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketCors",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchCORSConfiguration",
+            "errorMessage": "The CORS configuration does not exist",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "cors": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "gJTCL+HRzE7WAyAGOIM0BJciyF5Iw9to2Llo+JNHsGc2f0fdydYo0mhxcGo3DjsUfENYhodjPqo=",
+                "bytesTransferredOut": 349
+            },
+            "requestID": "WJCPJMQQ20C6YAED",
+            "eventID": "e0552ec9-6775-41ce-885a-cbb1278893de",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:09Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketAcl",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "acl": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "Mf1GvYCkI6lwS0qtUq5IZqo1OMq/QqA3Va1GECJcbPe5KaQRdYj/DJ8qmCgYRvokL99BVRaRjp0=",
+                "bytesTransferredOut": 548
+            },
+            "requestID": "PXRY0BHGRH00ZABZ",
+            "eventID": "071a323f-2b01-4e42-8d03-d38e97f5fde8",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:08Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketPolicy",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "policy": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "7DUYdWNR5RQTfHxNFMf6zXBCxbbmlW/QCtqcC52pOstVuVKZ/33dnC2sT7CPQytvCBnXaEtCp/kveBDdpOSseQ==",
+                "bytesTransferredOut": 508
+            },
+            "requestID": "7VTDH6VYC9VHQ9P3",
+            "eventID": "f46a7661-ae3a-4f56-882d-89e9c3c78321",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:02Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "PutBucketPolicy",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketPolicy": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Action": "s3:GetBucketAcl",
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "cloudtrail.amazonaws.com"
+                            },
+                            "Resource": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                            "Sid": "AWSCloudTrailAclCheck"
+                        },
+                        {
+                            "Action": "s3:PutObject",
+                            "Condition": {
+                                "StringEquals": {
+                                    "s3:x-amz-acl": "bucket-owner-full-control"
+                                }
+                            },
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "cloudtrail.amazonaws.com"
+                            },
+                            "Resource": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr/*",
+                            "Sid": "AWSCloudTrailWrite"
+                        }
+                    ]
+                },
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "policy": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 508,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "IgykEucZihkhPUlAGs9GpBvsTy6431qhn8hWKIK7ggvE8y2v6uZuv79lcVF+ltfp6o8wAmbqA2k=",
+                "bytesTransferredOut": 0
+            },
+            "requestID": "77T8BMDQWC1TZ5KS",
+            "eventID": "ab0a1cb9-80cd-498e-9bbc-ee7fc61df091",
+            "readOnly": false,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0003 - Persistence",
+            "mitreAttackTechnique": "T1098 - Account Manipulation"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:01Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "PutBucketTagging",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "Tagging": {
+                    "xmlns": "http://s3.amazonaws.com/doc/2006-03-01/",
+                    "TagSet": {
+                        "Tag": {
+                            "Value": true,
+                            "Key": "StratusRedTeam"
+                        }
+                    }
+                },
+                "tagging": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 139,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "A9swNvPwpv30EP5ixlnZ9ydCQdhTkvZh38MF99pQ7igPc9mlF+MvXc37bhCWl6A2pgkKCQQFa2M=",
+                "bytesTransferredOut": 0
+            },
+            "requestID": "77T0FX8F2N0FQYBC",
+            "eventID": "8aa77da5-b3b2-4631-97b1-fda5afd3e58d",
+            "readOnly": false,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:26:00Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketTagging",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "errorCode": "NoSuchTagSet",
+            "errorMessage": "The TagSet does not exist",
+            "requestParameters": {
+                "tagging": "",
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "XE7xM9erhNtWP0wFzBHEvaIG7xmCqf/K8ANEXJ9z+fKIB4T70z2sXuM47s57la6ycxELXZeuQcg=",
+                "bytesTransferredOut": 326
+            },
+            "requestID": "QT0ZWXPN7PA4NRQ7",
+            "eventID": "26bf4c31-d5b2-41f9-ae8e-13e5c6d61249",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "064029096479",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::stratus-red-team-cloudtraild-bucket-lkkgtlhasr"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:25:59Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "CreateBucket",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "[APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3]",
+            "requestParameters": {
+                "bucketName": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr",
+                "Host": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com",
+                "x-amz-acl": "private"
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "TLS_AES_128_GCM_SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "9/dqvGG+cuYidvqA+Vtjr6mPOgramB/Al41sbtJLAV4j4J5ZvHUp5/xL11DKJl9CV1y2jLeVmdSXUZP6fBwfEfdL+0hkLY8JQ//n+CkPzxA=",
+                "bytesTransferredOut": 0
+            },
+            "requestID": "39Z3GTPW15BWJQ5F",
+            "eventID": "99280e7d-aee7-4266-b549-5ea3c5a220fa",
+            "readOnly": false,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "stratus-red-team-cloudtraild-bucket-lkkgtlhasr.s3.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0006 - Credential Access",
+            "mitreAttackTechnique": "T1552 - Unsecured Credentials"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:25:58Z",
+            "eventSource": "iam.amazonaws.com",
+            "eventName": "GetUser",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": null,
+            "responseElements": null,
+            "requestID": "a5c5c324-d61b-4158-b2df-699a3acc37ce",
+            "eventID": "22eff1eb-13b0-4c54-9199-39eb5d790b5c",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "iam.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:25:56Z",
+            "eventSource": "iam.amazonaws.com",
+            "eventName": "GetUser",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.1.2 (+https://www.terraform.io) terraform-provider-aws/3.76.1 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.157 (go1.19.3; darwin; arm64) stratus-red-team_a2b27575-75be-40c2-a4db-a1ce8a405009 HashiCorp-terraform-exec/0.17.3",
+            "requestParameters": null,
+            "responseElements": null,
+            "requestID": "525bc32e-32e2-4e35-8a85-e42613bfb946",
+            "eventID": "fdf9acc0-a2ca-4c5d-b972-45fb0f16984c",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "iam.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.10",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:25:43Z",
+            "eventSource": "ec2.amazonaws.com",
+            "eventName": "DescribeAccountAttributes",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "stratus-red-team_e4bed8f3-dda6-4216-a5e9-c809888eac1b",
+            "requestParameters": {
+                "accountAttributeNameSet": {},
+                "filterSet": {}
+            },
+            "responseElements": null,
+            "requestID": "17c93745-8120-4152-8973-655da977bd89",
+            "eventID": "bb060665-c55e-4553-b746-03c102a774fc",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "AIDAQ52DOPIP2QBY3YLHA",
+                "arn": "arn:aws:iam::064029096479:user/attack_user_04",
+                "accountId": "064029096479",
+                "accessKeyId": "AKIAQ52DOPIPTJWXUUAE",
+                "userName": "attack_user_04"
+            },
+            "eventTime": "2024-09-22T10:25:41Z",
+            "eventSource": "sts.amazonaws.com",
+            "eventName": "GetCallerIdentity",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "120.50.90.68",
+            "userAgent": "aws-cli/2.17.46 md/awscrt#0.21.2 ua/2.0 os/macos#24.1.0 md/arch#arm64 lang/python#3.11.10 md/pyimpl#CPython cfg/retry-mode#standard md/installer#source md/prompt#off md/command#sts.get-caller-identity",
+            "requestParameters": null,
+            "responseElements": null,
+            "requestID": "d7ed798e-a41a-4b91-84d5-9b420adf4267",
+            "eventID": "d02c8517-1840-46fa-a607-9c0b6525c586",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "064029096479",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.3",
+                "cipherSuite": "TLS_AES_128_GCM_SHA256",
+                "clientProvidedHostHeader": "sts.us-east-1.amazonaws.com"
+            },
+            "mitreAttackTactic": "TA0007 - Discovery",
+            "mitreAttackTechnique": "T1087 - Account Discovery"
+        }
+    ]
+}

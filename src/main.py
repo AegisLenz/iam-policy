@@ -1,14 +1,14 @@
 # main.py
 import os
 import json
-from common_utils import load_json, merge_policies
+from common_utils import load_json, merge_policies, map_etc
 from s3_policy_mapper import s3_policy_mapper
 from ec2_policy_mapper import ec2_policy_mapper
 from iam_policy_mapper import iam_policy_mapper
 
 def main():
-    file_path = "./ec2_sample_log.json"
-    logs = load_json(file_path)
+    file_path = "./attacklog.json"
+    logs = load_json(file_path).get("Records",[])
     if not isinstance(logs, list):
         print("Error: The log file does not contain a valid list of log entries.")
         return
@@ -23,36 +23,33 @@ def main():
         event_name = log_entry.get("eventName")
 
         if event_source == 's3.amazonaws.com':
-            specific_policy_path = os.path.join("./../AWSDatabase/S3", f'{event_name}.json')
-            policy_data = load_json(specific_policy_path)
-            if policy_data is not None:
+            specific_policy_path = os.path.join("./../AWSDatabase/S3", f'{event_name.casefold()}.json')
+            if os.path.exists(specific_policy_path):
+                policy_data = load_json(specific_policy_path)
                 policy = s3_policy_mapper(log_entry, policy_data)
-                if policy:
+            else:
+                policy = map_etc(event_source, event_name)
+
+            if policy:
                     all_policies.append(policy)
+
         elif event_source == 'ec2.amazonaws.com':
-            specific_policy_path = os.path.join("./../AWSDatabase/EC2", f'{event_name}.json')
+            specific_policy_path = os.path.join("./../AWSDatabase/EC2", f'{event_name.casefold()}.json')
             policy_data = load_json(specific_policy_path)
-            if policy_data is not None:
-                policy = ec2_policy_mapper(log_entry, policy_data)
-                if policy:
+            if os.path.exists(specific_policy_path):
+                policy_data = load_json(specific_policy_path)
+            else:
+                policy = map_etc(event_source, event_name)
+
+            if policy:
                     all_policies.append(policy)
+                    
         elif event_source == 'iam.amazonaws.com':
             policy = iam_policy_mapper(log_entry)
             if policy:
                 all_policies.append(policy)
         else:
-            action = f"{event_source.split('.')[0]}:{event_name}"
-            policy = {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Sid": f"policy-{action}",
-                        "Action": action,
-                        "Resource": "*",
-                        "Effect": "Allow",
-                    }
-                ]
-            }
+            policy = map_etc(event_source, event_name)
             all_policies.append(policy)
 
     if not all_policies:

@@ -53,3 +53,20 @@ def merge_policies(policies):
         })
     
     return merged_policy
+
+
+def map_etc(event_source, event_name):
+    action = f"{event_source.split('.')[0]}:{event_name}"
+    policy = {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": f"policy-{action}",
+                "Action": action,
+                "Resource": "*",
+                "Effect": "Allow",
+            }
+        ]
+    }
+
+    return policy
