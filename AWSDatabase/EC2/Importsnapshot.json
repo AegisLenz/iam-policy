@@ -11,7 +11,8 @@
         },
         {
             "Action": [
-                "ec2:ImportSnapshot"
+                "ec2:ImportSnapshot",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [

@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:RegisterImage"
+                "ec2:RegisterImage",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [

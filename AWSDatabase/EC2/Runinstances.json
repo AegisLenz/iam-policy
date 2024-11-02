@@ -29,6 +29,29 @@
             "Resource": [
                 "arn:aws:ec2:{region}:{account_id}:instance/*"
             ]
+        },
+        {
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:iam::{account_id}:role/{role_name}"
+            ],
+            "Condition": {
+                "StringEqualsIfExists": {
+                    "iam:PassedToService": "ec2.amazonaws.com"
+                }
+            }
+        },
+        {
+            "Action": [
+                "ssm:GetParameters"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ssm:{region}:{account_id}:parameter/*"
+            ]
         }
     ]
 }
