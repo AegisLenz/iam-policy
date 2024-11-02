@@ -8,7 +8,7 @@
             "Resource": [
                 "arn:aws:ec2:{region}:{account_id}:instance/{instance_id}",
                 "arn:aws:ec2:{region}:{account_id}:volume/{volume_id}",
-                "arn:aws:ec2:{region}:{account_id}:snapshot/*"
+                "arn:aws:ec2:{region}::snapshot/*"
             ]
         },
         {
@@ -33,7 +33,7 @@
                 "arn:aws:ec2:{region}:{account_id}:client-vpn-endpoint/*",
                 "arn:aws:ec2:{region}:{account_id}:local-gateway/*",
                 "arn:aws:ec2:{region}:{account_id}:reserved-instances/*",
-                "arn:aws:ec2:{region}:{account_id}:image/*",
+                "arn:aws:ec2:{region}::image/*",
                 "arn:aws:ec2:{region}:{account_id}:volume/*"
             ]
         }
