@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:ImportImage"
+                "ec2:ImportImage",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [

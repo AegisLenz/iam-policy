@@ -2,7 +2,8 @@
     "policy": [
         {
             "Action": [
-                "ec2:RequestSpotFleet"
+                "ec2:RequestSpotFleet",
+                "ec2:CreateTags"
             ],
             "Effect": "Allow",
             "Resource": [
@@ -37,6 +38,15 @@
             "Effect": "Allow",
             "Resource": [
                 "arn:aws:iam::{account_id}:role/*"
+            ]
+        },
+        {
+            "Action": [
+                "ssm:GetParameters"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ssm:{region}:{account_id}:parameter/*"
             ]
         }
     ]

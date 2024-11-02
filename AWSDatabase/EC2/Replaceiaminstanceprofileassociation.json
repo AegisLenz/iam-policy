@@ -1,7 +1,8 @@
 {
     "policy": {
         "Action": [
-            "ec2:ReplaceIamInstanceProfileAssociation"
+            "ec2:ReplaceIamInstanceProfileAssociation",
+            "iam:PassRole"
         ],
         "Effect": "Allow",
         "Resource": [
