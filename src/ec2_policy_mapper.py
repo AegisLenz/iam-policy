@@ -33,7 +33,29 @@ def ec2_map_resource(policy_data, log):
             log.get("requestParameters", {}).get("InstanceId") or
             (log.get("requestParameters", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("requestParameters", {}).get("instancesSet") else None) or
             (log.get("responseElements", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("responseElements", {}).get("instancesSet") else None)
-        )
+        ),
+        "snap_id": log.get("requestParameters", {}).get("SnapshotId") if log.get("requestParameters") else None,
+        "snapshot_id": log.get("requestParameters", {}).get("SnapshotId") if log.get("requestParameters") else None,
+        "transit_gateway_route_table_id": log.get("requestParameters", {}).get("TransitGatewayRouteTableId") if log.get("requestParameters") else None,    
+        "vpn_gateway_id": log.get("requestParameters", {}).get("VpnGatewayId") if log.get("requestParameters") else None,
+        "capacity_reservation_id": log.get("requestParameters", {}).get("CapacityReservationId") if log.get("requestParameters") else None,
+        "dedicated_host_id": log.get("requestParameters", {}).get("HostId") if log.get("requestParameters") else None,
+        "prefix_list_id": log.get("requestParameters", {}).get("PrefixListId") if log.get("requestParameters") else None,
+        "vpc_flow_log_id": log.get("requestParameters", {}).get("FlowLogId") if log.get("requestParameters") else None,
+        "reserved_instances_id": log.get("requestParameters", {}).get("ReservedInstancesId") if log.get("requestParameters") else None,
+        "spot_fleet_request_id": log.get("requestParameters", {}).get("SpotFleetRequestId") if log.get("requestParameters") else None,
+        "traffic_mirror_filter_id": log.get("requestParameters", {}).get("TrafficMirrorFilterId") if log.get("requestParameters") else None,
+        "traffic_mirror_session_id": log.get("requestParameters", {}).get("TrafficMirrorSessionId") if log.get("requestParameters") else None,
+        "traffic_mirror_filter_rule_id": log.get("requestParameters", {}).get("TrafficMirrorFilterRuleId") if log.get("requestParameters") else None,
+        "traffic_mirror_target_id": log.get("requestParameters", {}).get("TrafficMirrorTargetId") if log.get("requestParameters") else None,
+        "internet_gateway_id": log.get("requestParameters", {}).get("InternetGatewayId") if log.get("requestParameters") else None,
+        "transit_gateway_id": log.get("requestParameters", {}).get("TransitGatewayId") if log.get("requestParameters") else None,
+        "vpn_connection_id": log.get("requestParameters", {}).get("VpnConnectionId") if log.get("requestParameters") else None,
+        "certificate_authority_id": log.get("requestParameters", {}).get("CertificateAuthorityId") if log.get("requestParameters") else None,
+        "bundle_task_id": log.get("requestParameters", {}).get("BundleId") if log.get("requestParameters") else None,
+        "network_acl_id": log.get("requestParameters", {}).get("NetworkAclId") if log.get("requestParameters") else None,
+        "reserved_instances_listing_id": log.get("requestParameters", {}).get("ReservedInstancesListingId") if log.get("requestParameters") else None,
+        "traffic_mirror_filtert_id": log.get("requestParameters", {}).get("TrafficMirrorFiltertId") if log.get("requestParameters") else None
     }
 
     resource_list = []
