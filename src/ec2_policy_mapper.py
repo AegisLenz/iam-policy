@@ -1,10 +1,7 @@
-import json
-import re
-import os
-
+# ec2_policy_mapper.py
+from common_utils import load_json, generate_least_privilege_policy
 
 def ec2_map_resource(policy_data, log):
-    #리소스 매핑 필드 정의
     mapping = {
         "account_id": log.get("userIdentity").get("accountId") if log.get("userIdentity") else None,
         "peering_connection_id": log.get("responseElements", {}).get("vpcPeeringConnectionId") if log.get("responseElements") else None,
@@ -33,67 +30,41 @@ def ec2_map_resource(policy_data, log):
         "customer_gateway_id": log.get("requestParameters", {}).get("CustomerGatewayId") if log.get("requestParameters") else None,
         "parameter_name": log.get("requestParameters", {}).get("Name") if log.get("requestParameters") else None,
         "instance_id": (
-            log.get("requestParameters", {}).get("InstanceId") or  # 단일 인스턴스 ID가 있을 경우
+            log.get("requestParameters", {}).get("InstanceId") or
             (log.get("requestParameters", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("requestParameters", {}).get("instancesSet") else None) or
             (log.get("responseElements", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("responseElements", {}).get("instancesSet") else None)
         )
-
     }
 
     resource_list = []
     resources = log.get('resources', [])
-    # 리소스 필드에 ARN이 있는지 확인
     if resources:
         for resource in resources:
             if 'ARN' in resource:
                 resource_list.append(resource['ARN'])
                 return resource_list
-    
-    # 정책 데이터의 리소스를 순회하며 로그에서 추출한 값을 사용해 리소스를 매핑
+
     for statement in policy_data.get("policy", []):
-        for i, resource in enumerate(statement.get("Resource", [])):
+        for resource in statement.get("Resource", []):
             original_resource = resource
             for key, value in mapping.items():
                 if value:
                     resource = resource.replace(f"{{{key}}}", value)
-            resource_list.append(resource)
 
-            if resource == original_resource:
+            if "{" in resource and "}" in resource:
                 resource_list.append("*")
             else:
                 resource_list.append(resource)
     
     return resource_list    
 
-
-# Step 3: 최소 권한 정책 생성 함수
-def generate_least_privilege_policy(policy_data, resource_list):
-    least_privilege_policies = []
-    for statement in policy_data.get("policy", []):
-        actions = statement.get("Action", [])
-        for resource in resource_list:
-            policy_template = {
-                "Action": actions,
-                "Resource": [resource],
-                "Effect": "Allow",
-                "Sid": f"policy-{resource}"
-            }
-            least_privilege_policies.append(policy_template)
-    return least_privilege_policies
-
-
-# Step 4: EC2 정책 템플릿 로드 및 최소 권한 정책 생성 함수
 def ec2_policy_mapper(log, policy_data):
-    # 로그에서 필요한 필드 추출 및 리소스 매핑
     resource_list = ec2_map_resource(policy_data, log)
-    
-    # 최소 권한 정책 생성
-    least_privilege_policies = generate_least_privilege_policy(policy_data, resource_list)
-    
-    # 최종 정책 구성 및 저장
+    actions = policy_data.get("policy", [{}])[0].get("Action", [])
+    least_privilege_policies = generate_least_privilege_policy(actions, resource_list)
+
     final_policy = {
         "Version": "2012-10-17",
         "Statement": least_privilege_policies
     }
-
     return final_policy
