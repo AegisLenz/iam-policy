@@ -11,10 +11,10 @@
                 "arn:aws:ec2:{region}:{account_id}:network-interface/*",
                 "arn:aws:ec2:{region}:{account_id}:fleet/*",
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
-                "arn:aws:ec2:{region}::{account_id}:snapshot/*",
+                "arn:aws:ec2:{region}::snapshot/*",
                 "arn:aws:ec2:{region}:{account_id}:key-pair/*",
                 "arn:aws:ec2:{region}:{account_id}:launch-template/{launch_template_id}",
-                "arn:aws:ec2:{region}::{account_id}:image/*"
+                "arn:aws:ec2:{region}::image/*"
             ]
         },
         {
@@ -29,14 +29,14 @@
                 "arn:aws:ec2:{region}:{account_id}:network-interface/*",
                 "arn:aws:ec2:{region}:{account_id}:security-group/*",
                 "arn:aws:ec2:{region}:{account_id}:capacity-reservation/*",
-                "arn:aws:ec2:{region}::{account_id}:snapshot/*",
+                "arn:aws:ec2:{region}::snapshot/*",
                 "arn:aws:ec2:{region}:{account_id}:launch-template/*",
                 "arn:aws:elastic-inference:{region}:{account_id}:elastic-inference-accelerator/*",
                 "arn:aws:ec2:{region}:{account_id}:elastic-gpu/*",
                 "arn:aws:ec2:{region}:{account_id}:placement-group/*",
                 "arn:aws:ec2:{region}:{account_id}:subnet/*",
                 "arn:aws:ec2:{region}:{account_id}:key-pair/*",
-                "arn:aws:ec2:{region}::{account_id}:image/*"
+                "arn:aws:ec2:{region}::image/*"
             ]
         },
         {

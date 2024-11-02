@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::{account_id}:image/*"
+                "arn:aws:ec2:{region}::image/*"
             ]
         },
         {
@@ -24,7 +24,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::{account_id}:snapshot/*"
+                "arn:aws:ec2:{region}::snapshot/*"
             ]
         },
         {
@@ -33,7 +33,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::{account_id}:snapshot/*"
+                "arn:aws:ec2:{region}::snapshot/*"
             ]
         },
         {
@@ -42,7 +42,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::{account_id}:snapshot/*"
+                "arn:aws:ec2:{region}::snapshot/*"
             ]
         },
         {
@@ -51,7 +51,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:ec2:{region}::{account_id}:image/*"
+                "arn:aws:ec2:{region}::image/*"
             ]
         }
     ]

@@ -6,7 +6,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:s3:::test-bucket-5461/snapshots/*"
+                "arn:aws:s3:::{bucket_name}/snapshots/*"
             ]
         },
         {
