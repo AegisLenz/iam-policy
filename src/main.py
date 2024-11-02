@@ -7,7 +7,7 @@ from ec2_policy_mapper import ec2_policy_mapper
 from iam_policy_mapper import iam_policy_mapper
 
 def main():
-    file_path = "./attacklog.json"
+    file_path = "src/attacklog.json"
     logs = load_json(file_path).get("Records",[])
     if not isinstance(logs, list):
         print("Error: The log file does not contain a valid list of log entries.")
@@ -35,9 +35,9 @@ def main():
 
         elif event_source == 'ec2.amazonaws.com':
             specific_policy_path = os.path.join("./../AWSDatabase/EC2", f'{event_name.casefold()}.json')
-            policy_data = load_json(specific_policy_path)
             if os.path.exists(specific_policy_path):
                 policy_data = load_json(specific_policy_path)
+                policy = ec2_policy_mapper(log_entry, policy_data)
             else:
                 policy = map_etc(event_source, event_name)
 
