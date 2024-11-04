@@ -9,6 +9,8 @@ AWS CloudTrail Log를 분석하여 사용자에게 적합한 최소권한 정책
 
 ## 코드 설명
 
+<<<<<<< HEAD
+
 # AWS 최소권한 정책 생성하기
 
 AWS CloudTrail Log를 분석하여 사용자에게 알맞는 최소권한 정책을 생성합니다.
