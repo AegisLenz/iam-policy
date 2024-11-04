@@ -31,8 +31,10 @@ def ec2_map_resource(policy_data, log):
         "parameter_name": log.get("requestParameters", {}).get("Name") if log.get("requestParameters") else None,
         "instance_id": (
             log.get("requestParameters", {}).get("InstanceId") or
-            (log.get("requestParameters", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("requestParameters", {}).get("instancesSet") else None) or
-            (log.get("responseElements", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId") if log.get("responseElements", {}).get("instancesSet") else None)
+            (log.get("requestParameters", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId")
+             if log.get("requestParameters") and isinstance(log.get("requestParameters").get("instancesSet"), dict) else None) or
+            (log.get("responseElements", {}).get("instancesSet", {}).get("items", [{}])[0].get("instanceId")
+             if log.get("responseElements") and isinstance(log.get("responseElements").get("instancesSet"), dict) else None)
         ),
         "snap_id": log.get("requestParameters", {}).get("SnapshotId") if log.get("requestParameters") else None,
         "snapshot_id": log.get("requestParameters", {}).get("SnapshotId") if log.get("requestParameters") else None,
