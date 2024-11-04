@@ -1,0 +1,119 @@
+{
+    "Records": [
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "EXAMPLE_PRINCIPAL_ID",
+                "arn": "arn:aws:iam::123456789012:user/ExampleUser",
+                "accountId": "123456789012",
+                "userName": "ExampleUser"
+            },
+            "eventTime": "2023-01-01T12:00:00Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "ListBuckets",
+            "awsRegion": "us-west-2",
+            "sourceIPAddress": "192.0.2.0",
+            "userAgent": "aws-sdk-go/1.15.8 (go1.9.2; darwin; amd64)",
+            "requestParameters": null,
+            "responseElements": null,
+            "requestID": "EXAMPLE-REQUEST-ID-1",
+            "eventID": "EXAMPLE-EVENT-ID-1",
+            "resources": [
+                {
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::example-bucket"
+                }
+            ]
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "EXAMPLE_PRINCIPAL_ID",
+                "arn": "arn:aws:iam::123456789012:user/ExampleUser",
+                "accountId": "123456789012",
+                "userName": "ExampleUser"
+            },
+            "eventTime": "2023-01-01T12:05:00Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetObject",
+            "awsRegion": "us-west-2",
+            "sourceIPAddress": "192.0.2.0",
+            "userAgent": "aws-sdk-go/1.15.8 (go1.9.2; darwin; amd64)",
+            "requestParameters": {
+                "bucketName": "example-bucket",
+                "key": "example-object"
+            },
+            "responseElements": null,
+            "requestID": "EXAMPLE-REQUEST-ID-2",
+            "eventID": "EXAMPLE-EVENT-ID-2",
+            "resources": [
+                {
+                    "type": "AWS::S3::Object",
+                    "ARN": "arn:aws:s3:::example-bucket/example-object"
+                }
+            ]
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "EXAMPLE_PRINCIPAL_ID",
+                "arn": "arn:aws:iam::123456789012:user/ExampleUser",
+                "accountId": "123456789012",
+                "userName": "ExampleUser"
+            },
+            "eventTime": "2023-01-01T13:00:00Z",
+            "eventSource": "ec2.amazonaws.com",
+            "eventName": "DescribeInstances",
+            "awsRegion": "us-west-2",
+            "sourceIPAddress": "198.51.100.0",
+            "userAgent": "aws-sdk-go/1.15.8 (go1.9.2; darwin; amd64)",
+            "requestParameters": {
+                "instanceIds": [
+                    "i-1234567890abcdef0"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "EXAMPLE-REQUEST-ID-3",
+            "eventID": "EXAMPLE-EVENT-ID-3",
+            "resources": [
+                {
+                    "type": "AWS::EC2::Instance",
+                    "ARN": "arn:aws:ec2:us-west-2:123456789012:instance/i-1234567890abcdef0"
+                }
+            ]
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "IAMUser",
+                "principalId": "EXAMPLE_PRINCIPAL_ID",
+                "arn": "arn:aws:iam::123456789012:user/ExampleUser",
+                "accountId": "123456789012",
+                "userName": "ExampleUser"
+            },
+            "eventTime": "2023-01-01T13:10:00Z",
+            "eventSource": "ec2.amazonaws.com",
+            "eventName": "StartInstances",
+            "awsRegion": "us-west-2",
+            "sourceIPAddress": "198.51.100.0",
+            "userAgent": "aws-sdk-go/1.15.8 (go1.9.2; darwin; amd64)",
+            "requestParameters": {
+                "instanceIds": [
+                    "i-1234567890abcdef0"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "EXAMPLE-REQUEST-ID-4",
+            "eventID": "EXAMPLE-EVENT-ID-4",
+            "resources": [
+                {
+                    "type": "AWS::EC2::Instance",
+                    "ARN": "arn:aws:ec2:us-west-2:123456789012:instance/i-1234567890abcdef0"
+                }
+            ]
+        }
+    ]
+}

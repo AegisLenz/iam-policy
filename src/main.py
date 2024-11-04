@@ -4,8 +4,8 @@ from common_utils import load_json
 import json
 
 def main():
-    log_path = "./sample_data/attacklog.json"
-    userPolicy_path = "./sample_data/userPolicy.json"
+    log_path = "./sample_data/event_history.json"
+    userPolicy_path = "./sample_data/sun_user.json"
     userPolicy = load_json(userPolicy_path)
 
     print("기존의 Policy: ")
