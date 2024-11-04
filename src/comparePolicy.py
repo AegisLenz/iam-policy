@@ -1,30 +1,28 @@
-
-#사용자측에서 지워야할 권한 및 리소스 변경사항 반환
+import fnmatch
 def comparePolicy(userPolicy, policy_by_cloudTrail):
-    #삭제해야할 Action 부분 반환
-    least_priviledge_action = set()
+    # 삭제해야 할 Action 부분 반환
+    least_privilege_action = set()
     should_remove_action = set()
 
-    for statement in policy_by_cloudTrail.get("Statement"):
-        actions = statement.get("Action")
+    # CloudTrail 정책에서 최소 권한 액션 수집
+    for statement in policy_by_cloudTrail.get("Statement", []):
+        actions = statement.get("Action", [])
+        if isinstance(actions, str):
+            actions = [actions]
         for action in actions:
-            least_priviledge_action.add(action)
+            least_privilege_action.add(action)
     
-    for statement in userPolicy.get("Statement"):
-        action = statement.get("Action")
+    # 사용자 정책과 최소 권한 액션 비교
+    for statement in userPolicy.get("Statement", []):
+        actions = statement.get("Action", [])
+        if isinstance(actions, str):
+            actions = [actions]
         for action in actions:
-            if action not in least_priviledge_action:
+            matched = any(
+                fnmatch.fnmatch(action, least_action) or least_action == '*'
+                for least_action in least_privilege_action
+            )
+            if not matched:
                 should_remove_action.add(action)
 
     return should_remove_action
-    #변경된 Resource 반환
-    #changed_resource = set()
-    #for statement_by_cloudTrail in policy_by_cloudTrail.get("Statement"):
-     #   action = statement_by_cloudTrail.get("Action")
-     #   for statement_by_user in userPolicy.get("Statement"):
-            
-            
-
-
-
-

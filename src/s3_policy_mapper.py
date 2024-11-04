@@ -2,10 +2,12 @@
 from common_utils import load_json, extract_resource_from_log, generate_least_privilege_policy
 
 def s3_policy_mapper(log, policy_data):
+    request_params = log.get("requestParameters") or {}
+
     mapping = {
-        "bucket_name": log.get("requestParameters", {}).get("bucketName"),
-        "object_key": log.get("requestParameters", {}).get("key"),
-        "key_prefix": log.get("requestParameters", {}).get("keyPrefix"),
+        "bucket_name": request_params.get("bucketName", None),
+        "object_key": request_params.get("key", None),
+        "key_prefix": request_params.get("keyPrefix", None)
     }
 
     resource_arn = f"arn:aws:s3:::{mapping['bucket_name']}"
