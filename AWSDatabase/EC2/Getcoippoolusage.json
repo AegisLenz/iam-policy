@@ -1,11 +1,13 @@
 {
-    "policy": {
-        "Action": [
-            "ec2:GetCoipPoolUsage"
-        ],
-        "Effect": "Allow",
-        "Resource": [
-            "arn:aws:ec2:{region}:{account_id}:coip-pool/{coip_pool_id}"
-        ]
-    }
+    "policy": [
+        {
+            "Action": [
+                "ec2:GetCoipPoolUsage"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:{region}:{account_id}:coip-pool/{coip_pool_id}"
+            ]
+        }
+    ]
 }
