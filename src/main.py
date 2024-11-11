@@ -1,11 +1,11 @@
 from extract_policy_by_cloudTrail import extract_policy_by_cloudTrail
-from comparePolicy import comparePolicy
+from comparePolicy import clustered_compare_policy
 from common_utils import load_json
 import json
 
 def main():
     log_path = "./sample_data/event_history.json"
-    userPolicy_path = "./sample_data/sun_user.json"
+    userPolicy_path = "./sample_data/userPolicy.json"
     userPolicy = load_json(userPolicy_path)
 
     print("기존의 Policy: ")
@@ -15,8 +15,9 @@ def main():
     print("최소권한 Policy: ")
     print(json.dumps(policy_by_cloudTrail, indent=4))
 
-    should_remove_action = comparePolicy(userPolicy, policy_by_cloudTrail)
-    print(f"삭제해야 할 action: {should_remove_action}")
+    should_remove_actions = clustered_compare_policy(userPolicy, policy_by_cloudTrail)
+    converted_actions = {k: [list(v) for v in val] for k, val in should_remove_actions.items()}
+    print(f"삭제해야 할 action: {json.dumps(converted_actions, indent=4, ensure_ascii=False)}")
 
 if __name__ == "__main__":
     main()
