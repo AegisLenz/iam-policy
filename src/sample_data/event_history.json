@@ -7,7 +7,7 @@
                 "principalId": "EXAMPLE_PRINCIPAL_ID",
                 "arn": "arn:aws:iam::123456789012:user/ExampleUser",
                 "accountId": "123456789012",
-                "userName": "Hyunjun_Park"
+                "userName": "Jiyun_Kim"
             },
             "eventTime": "2023-01-01T13:00:00Z",
             "eventSource": "ec2.amazonaws.com",
@@ -38,7 +38,7 @@
                 "principalId": "EXAMPLE_PRINCIPAL_ID",
                 "arn": "arn:aws:iam::123456789012:user/ExampleUser",
                 "accountId": "123456789012",
-                "userName": "Hyunjun_Park"
+                "userName": "Jiyun_Kim"
             },
             "eventTime": "2023-01-01T12:00:00Z",
             "eventSource": "s3.amazonaws.com",
@@ -65,7 +65,7 @@
                 "principalId": "EXAMPLE_PRINCIPAL_ID",
                 "arn": "arn:aws:iam::123456789012:user/ExampleUser",
                 "accountId": "123456789012",
-                "userName": "Hyunjun_Park"
+                "userName": "Jiyun_Kim"
             },
             "eventTime": "2023-01-01T12:00:00Z",
             "eventSource": "s3.amazonaws.com",
@@ -91,7 +91,7 @@
                 "principalId": "EXAMPLE_PRINCIPAL_ID",
                 "arn": "arn:aws:iam::123456789012:user/ExampleUser",
                 "accountId": "123456789012",
-                "userName": "Jiyun_Kim"
+                "userName": "Hyunjun_Park"
             },
             "eventTime": "2023-01-01T12:05:00Z",
             "eventSource": "s3.amazonaws.com",
@@ -120,7 +120,7 @@
                 "principalId": "EXAMPLE_PRINCIPAL_ID",
                 "arn": "arn:aws:iam::123456789012:user/ExampleUser",
                 "accountId": "123456789012",
-                "userName": "Jiyun_Kim"
+                "userName": "Hyunjun_Park"
             },
             "eventTime": "2023-01-01T13:10:00Z",
             "eventSource": "ec2.amazonaws.com",

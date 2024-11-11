@@ -8,16 +8,17 @@ from iam_policy_mapper import iam_policy_mapper
 
 
 def clustering_by_username(file_path):
-    logs = load_json(file_path).get("Records", [])
+    logs = load_json(file_path).get("Records",[])
     cluster = {}
     for log in logs:
-        userIdentity = log.get("userIdentity", {})
+        userIdentity = log.get("userIdentity",{})
         userName = userIdentity.get("userName")
         if userName not in cluster:
-            cluster[userName] = []  
+            cluster[userName] = [] 
         cluster[userName].append(log)
 
-    return cluster   
+    return cluster  
+
 
 def making_policy(log_entry):
     event_source = log_entry.get("eventSource")
@@ -55,22 +56,20 @@ def extract_policy_by_cloudTrail(file_path):
     
     normal_log = []
     all_policies = []
-    clustered_policy={}
     cluster = clustering_by_username(file_path)
-
-    for userName in cluster.keys():
+    policies = {}
+    for userName in cluster:
         #attack에서만 단독적으로 사용된 권한 제외
         for log_entry in cluster[userName]:
             if not isinstance(log_entry, dict):
                 print("Error: Log entry is not a valid dictionary.")
                 continue
 
-            isAttack = log_entry.get("mitreAttackTactic")
+            isAttack = log_entry.get("mitreAttackTactics")
             policy = making_policy(log_entry)
             if policy:
                 if isAttack is None:
                     normal_log.append(log_entry)
-
         #Attack고려한 최소권한 추출
         for log_entry in normal_log:
             if not isinstance(log_entry, dict):
@@ -83,15 +82,11 @@ def extract_policy_by_cloudTrail(file_path):
         if not all_policies:
             print("No valid policies were generated.")
             return
-
         final_policy = merge_policies(all_policies)
-        if userName not in clustered_policy:
-            clustered_policy[userName] = []
-        clustered_policy[userName].append(final_policy)
-    return clustered_policy
 
-
-
-
+        if userName not in policies:
+            policies[userName] = []
+        policies[userName].append(final_policy)
+    return policies
 
 
