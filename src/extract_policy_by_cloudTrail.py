@@ -16,8 +16,7 @@ def clustering_by_username(file_path):
         if userName not in cluster:
             cluster[userName] = [] 
         cluster[userName].append(log)
-
-    return cluster  
+    return cluster
 
 
 def making_policy(log_entry):
@@ -75,15 +74,12 @@ def extract_policy_by_cloudTrail(file_path):
             if not isinstance(log_entry, dict):
                 print("Error: Log entry is not a valid dictionary.")
                 continue
-
             policy = making_policy(log_entry)
             all_policies.append(policy)
-
         if not all_policies:
             print("No valid policies were generated.")
             return
         final_policy = merge_policies(all_policies)
-
         if userName not in policies:
             policies[userName] = []
         policies[userName].append(final_policy)
