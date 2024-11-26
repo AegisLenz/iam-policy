@@ -1,0 +1,36 @@
+{
+    "Hyunjun_Park": [
+        {
+            "PolicyName": "Aegislenz-Least-Privilege-Policy",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "policy-s3:ListBuckets",
+                        "Effect": "Allow",
+                        "Action": "s3:ListBuckets",
+                        "Resource": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-s3:GetObject",
+                        "Effect": "Allow",
+                        "Action": "s3:GetObject",
+                        "Resource": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-ec2:StartInstances",
+                        "Effect": "Allow",
+                        "Action": "ec2:StartInstances",
+                        "Resource": [
+                            "*"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

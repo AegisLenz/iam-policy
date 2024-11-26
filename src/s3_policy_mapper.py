@@ -30,10 +30,8 @@ def s3_policy_mapper(log, policy_data):
 
     actions = policy_data.get("policy", [{}])[0].get("Action", [])
     least_privilege_policies = generate_least_privilege_policy(actions, resource_list)
-
     final_policy = {
         "Version": "2012-10-17",
         "Statement": least_privilege_policies
     }
-
     return final_policy

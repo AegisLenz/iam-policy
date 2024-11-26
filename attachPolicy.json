@@ -1,0 +1,305 @@
+{
+    "Hyunjun_Park": [
+        {
+            "PolicyName": "Aegislenz-s3-queue",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "S3AndSQSAccess",
+                        "Effect": "Allow",
+                        "Action": [
+                            "s3:GetObject",
+                            "s3:ListBucket",
+                            "s3:PutObject",
+                            "s3:PutObjectAcl",
+                            "s3:GetBucketLocation",
+                            "logs:DescribeLogGroups",
+                            "logs:GetLogEvents",
+                            "logs:FilterLogEvents",
+                              "sqs:DeleteMessage",
+                            "sqs:ChangeMessageVisibility",
+                            "sqs:GetQueueAttributes",
+                            "sqs:ListQueues"
+                        ],
+                        "Resource": [
+                            "arn:aws:s3:::aegislenz-s3",
+                            "arn:aws:s3:::aegislenz-s3/*",
+                            "arn:aws:s3:::aegislenz-s3/AWSLogs/*",
+                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-s3-queue",
+                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-cloudtrail-queue",
+                            "arn:aws:s3:::aegislenz-s3/AWSLogs/713881791527/CloudTrail/*"
+                        ]
+                    },
+                    {
+                        "Sid": "EC2AndCloudTrailAccess",
+                        "Effect": "Allow",
+                        "Action": [
+                            "ec2:DescribeTags",
+                            "ec2:DescribeInstances",
+                            "cloudtrail:LookupEvents",
+                            "cloudtrail:GetTrailStatus"
+                        ],
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "S3BucketPolicyAccess",
+                        "Effect": "Allow",
+                        "Action": "s3:PutBucketPolicy",
+                        "Resource": "arn:aws:s3:::aegislenz-s3"
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "AmazonEC2FullAccess",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Action": "ec2:*",
+                        "Effect": "Allow",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "elasticloadbalancing:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "cloudwatch:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "autoscaling:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "iam:CreateServiceLinkedRole",
+                        "Resource": "*",
+                        "Condition": {
+                            "StringEquals": {
+                                "iam:AWSServiceName": [
+                                    "autoscaling.amazonaws.com",
+                                    "ec2scheduled.amazonaws.com",
+                                    "elasticloadbalancing.amazonaws.com",
+                                    "spot.amazonaws.com",
+                                    "spotfleet.amazonaws.com",
+                                    "transitgateway.amazonaws.com"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "AdministratorAccess",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Action": "*",
+                        "Resource": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "IAMUserChangePassword",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "iam:ChangePassword"
+                        ],
+                        "Resource": [
+                            "arn:aws:iam::*:user/${aws:username}"
+                        ]
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "iam:GetAccountPasswordPolicy"
+                        ],
+                        "Resource": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "AmazonS3FullAccess",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "s3:*",
+                            "s3-object-lambda:*"
+                        ],
+                        "Resource": "*"
+                    }
+                ]
+            }
+        }
+    ],
+    "Jiyun_Kim": [
+        {
+            "PolicyName": "Aegislenz-s3-queue",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "S3AndSQSAccess",
+                        "Effect": "Allow",
+                        "Action": [
+                            "s3:GetObject",
+                            "s3:ListBucket",
+                            "s3:PutObject",
+                            "s3:PutObjectAcl",
+                            "s3:GetBucketLocation",
+                            "logs:DescribeLogGroups",
+                            "logs:GetLogEvents",
+                            "logs:FilterLogEvents",
+                            "sqs:ReceiveMessage",
+                            "sqs:DeleteMessage",
+                            "sqs:ChangeMessageVisibility",
+                            "sqs:GetQueueAttributes",
+                            "sqs:ListQueues"
+                        ],
+                        "Resource": [
+                            "arn:aws:s3:::aegislenz-s3",
+                            "arn:aws:s3:::aegislenz-s3/*",
+                            "arn:aws:s3:::aegislenz-s3/AWSLogs/*",
+                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-s3-queue",
+                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-cloudtrail-queue",
+                            "arn:aws:s3:::aegislenz-s3/AWSLogs/713881791527/CloudTrail/*"
+                        ]
+                    },
+                    {
+                        "Sid": "EC2AndCloudTrailAccess",
+                        "Effect": "Allow",
+                        "Action": [
+                            "ec2:DescribeTags",
+                            "ec2:DescribeInstances",
+                            "cloudtrail:LookupEvents",
+                            "cloudtrail:GetTrailStatus"
+                        ],
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "S3BucketPolicyAccess",
+                        "Effect": "Allow",
+                        "Action": "s3:PutBucketPolicy",
+                        "Resource": "arn:aws:s3:::aegislenz-s3"
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "AmazonEC2FullAccess",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Action": "ec2:*",
+                        "Effect": "Allow",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "elasticloadbalancing:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "cloudwatch:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "autoscaling:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": "iam:CreateServiceLinkedRole",
+                        "Resource": "*",
+                        "Condition": {
+                            "StringEquals": {
+                                "iam:AWSServiceName": [
+                                    "autoscaling.amazonaws.com",
+                                    "ec2scheduled.amazonaws.com",
+                                    "elasticloadbalancing.amazonaws.com",
+                                    "spot.amazonaws.com",
+                                    "spotfleet.amazonaws.com",
+                                    "transitgateway.amazonaws.com"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "AdministratorAccess",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Action": "*",
+                        "Resource": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "IAMUserChangePassword",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "iam:ChangePassword"
+                        ],
+                        "Resource": [
+                            "arn:aws:iam::*:user/${aws:username}"
+                        ]
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "iam:GetAccountPasswordPolicy"
+                        ],
+                        "Resource": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "PolicyName": "AmazonS3FullAccess",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Action": [
+                            "s3:*",
+                            "s3-object-lambda:*"
+                        ],
+                        "Resource": "*"
+                    }
+                ]
+            }
+        }
+    ]
+}
