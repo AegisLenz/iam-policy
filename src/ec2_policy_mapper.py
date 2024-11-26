@@ -67,7 +67,7 @@ def ec2_map_resource(policy_data, log):
             if 'ARN' in resource:
                 resource_list.append(resource['ARN'])
                 return resource_list
-
+    
     for statement in policy_data.get("policy", []):
         for resource in statement.get("Resource", []):
             original_resource = resource
@@ -80,13 +80,12 @@ def ec2_map_resource(policy_data, log):
             else:
                 resource_list.append(resource)
     
-    return resource_list    
+    return resource_list
 
 def ec2_policy_mapper(log, policy_data):
     resource_list = ec2_map_resource(policy_data, log)
     actions = policy_data.get("policy", [{}])[0].get("Action", [])
     least_privilege_policies = generate_least_privilege_policy(actions, resource_list)
-
     final_policy = {
         "Version": "2012-10-17",
         "Statement": least_privilege_policies

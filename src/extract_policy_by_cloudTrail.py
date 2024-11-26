@@ -74,10 +74,8 @@ def extract_policy_by_cloudTrail(file_path):
             if not isinstance(log_entry, dict):
                 print("Error: Log entry is not a valid dictionary.")
                 continue
-
             policy = making_policy(log_entry)
             all_policies.append(policy)
-
         if not all_policies:
             print("No valid policies were generated.")
             return
