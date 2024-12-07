@@ -1,5 +1,5 @@
 {
-    "Hyunjun_Park": [
+    "root": [
         {
             "PolicyName": "Aegislenz-s3-queue",
             "PolicyDocument": {
