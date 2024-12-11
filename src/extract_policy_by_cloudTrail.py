@@ -25,14 +25,12 @@ def clustering_by_username(file_path):
     return cluster
 
 
-
-
 def making_policy(log_entry):
     event_source = log_entry.get("eventSource")
     event_name = log_entry.get("eventName")
 
     if event_source == 's3.amazonaws.com':
-        specific_policy_path = os.path.join("C:\Workspace\iam-policy\AWSDatabase\S3", f'{event_name.casefold()}.json')
+        specific_policy_path = os.path.join("AWSDatabase\S3", f'{event_name.casefold()}.json')
         if os.path.exists(specific_policy_path):
             policy_data = load_json(specific_policy_path)
             policy = s3_policy_mapper(log_entry, policy_data)
@@ -40,7 +38,7 @@ def making_policy(log_entry):
             policy = map_etc(event_source, event_name)
 
     elif event_source == 'ec2.amazonaws.com':
-        specific_policy_path = os.path.join("C:\Workspace\iam-policy\AWSDatabase\EC2", f'{event_name.casefold()}.json')
+        specific_policy_path = os.path.join("AWSDatabase\EC2", f'{event_name.casefold()}.json')
         if os.path.exists(specific_policy_path):
             policy_data = load_json(specific_policy_path)
             policy = ec2_policy_mapper(log_entry, policy_data)

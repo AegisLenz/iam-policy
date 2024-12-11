@@ -22,8 +22,8 @@ def comparePolicy(userPolicy, policy_by_cloudTrail):
     should_remove_action = set()
 
     # CloudTrail 정책에서 최소 권한 액션 수집
-    for policies in policy_by_cloudTrail:
-        for statement in policies.get("Statement", []):
+    for policy in policy_by_cloudTrail:
+        for statement in policy.get("PolicyDocument", {}).get("Statement", []):
             actions = statement.get("Action", [])
             if isinstance(actions, str):
                 actions = [actions]

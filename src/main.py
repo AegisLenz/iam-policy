@@ -4,7 +4,7 @@ from common_utils import load_json
 import json
 
 def main():
-    log_path = r"src\sample_data\logs.json"
+    log_path = r"src\sample_data\iam__backdoor_assume_O_1.json"
     userPolicy_path = r"src\sample_data\userPolicy.json"
     userPolicy = load_json(userPolicy_path)
 
