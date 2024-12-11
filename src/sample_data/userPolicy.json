@@ -1,303 +1,145 @@
 {
-    "root": [
+    "testAdmin": [
         {
-            "PolicyName": "Aegislenz-s3-queue",
+            "PolicyName": "Aegislenz-Least-Privilege-Policy",
             "PolicyDocument": {
                 "Version": "2012-10-17",
                 "Statement": [
                     {
-                        "Sid": "S3AndSQSAccess",
+                        "Sid": "policy-iam:ListGroupsForUser",
                         "Effect": "Allow",
-                        "Action": [
-                            "s3:GetObject",
-                            "s3:ListBucket",
-                            "s3:PutObject",
-                            "s3:PutObjectAcl",
-                            "s3:GetBucketLocation",
-                            "logs:DescribeLogGroups",
-                            "logs:GetLogEvents",
-                            "logs:FilterLogEvents",
-                            "sqs:ReceiveMessage",
-                            "sqs:DeleteMessage",
-                            "sqs:ChangeMessageVisibility",
-                            "sqs:GetQueueAttributes",
-                            "sqs:ListQueues"
-                        ],
+                        "Action": "iam:ListGroupsForUser",
                         "Resource": [
-                            "arn:aws:s3:::aegislenz-s3",
-                            "arn:aws:s3:::aegislenz-s3/*",
-                            "arn:aws:s3:::aegislenz-s3/AWSLogs/*",
-                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-s3-queue",
-                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-cloudtrail-queue",
-                            "arn:aws:s3:::aegislenz-s3/AWSLogs/713881791527/CloudTrail/*"
+                            "arn:aws:iam::891377205497:user/testAdmin"
                         ]
                     },
                     {
-                        "Sid": "EC2AndCloudTrailAccess",
+                        "Sid": "policy-iam:DeleteAccessKey",
                         "Effect": "Allow",
-                        "Action": [
-                            "ec2:DescribeTags",
-                            "ec2:DescribeInstances",
-                            "cloudtrail:LookupEvents",
-                            "cloudtrail:GetTrailStatus"
-                        ],
-                        "Resource": "*"
-                    },
-                    {
-                        "Sid": "S3BucketPolicyAccess",
-                        "Effect": "Allow",
-                        "Action": "s3:PutBucketPolicy",
-                        "Resource": "arn:aws:s3:::aegislenz-s3"
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "AmazonEC2FullAccess",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Action": "ec2:*",
-                        "Effect": "Allow",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "elasticloadbalancing:*",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "cloudwatch:*",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "autoscaling:*",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "iam:CreateServiceLinkedRole",
-                        "Resource": "*",
-                        "Condition": {
-                            "StringEquals": {
-                                "iam:AWSServiceName": [
-                                    "autoscaling.amazonaws.com",
-                                    "ec2scheduled.amazonaws.com",
-                                    "elasticloadbalancing.amazonaws.com",
-                                    "spot.amazonaws.com",
-                                    "spotfleet.amazonaws.com",
-                                    "transitgateway.amazonaws.com"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "AdministratorAccess",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Effect": "Allow",
-                        "Action": "*",
-                        "Resource": "*"
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "IAMUserChangePassword",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Effect": "Allow",
-                        "Action": [
-                            "iam:ChangePassword"
-                        ],
+                        "Action": "iam:DeleteAccessKey",
                         "Resource": [
-                            "arn:aws:iam::*:user/${aws:username}"
+                            "arn:aws:iam::891377205497:user/testAdmin"
                         ]
                     },
                     {
+                        "Sid": "policy-iam:DeleteUser",
                         "Effect": "Allow",
-                        "Action": [
-                            "iam:GetAccountPasswordPolicy"
-                        ],
-                        "Resource": "*"
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "AmazonS3FullAccess",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Effect": "Allow",
-                        "Action": [
-                            "s3:*",
-                            "s3-object-lambda:*"
-                        ],
-                        "Resource": "*"
-                    }
-                ]
-            }
-        }
-    ],
-    "Jiyun_Kim": [
-        {
-            "PolicyName": "Aegislenz-s3-queue",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Sid": "S3AndSQSAccess",
-                        "Effect": "Allow",
-                        "Action": [
-                            "s3:GetObject",
-                            "s3:ListBucket",
-                            "s3:PutObject",
-                            "s3:PutObjectAcl",
-                            "s3:GetBucketLocation",
-                            "logs:DescribeLogGroups",
-                            "logs:GetLogEvents",
-                            "logs:FilterLogEvents",
-                            "sqs:ReceiveMessage",
-                            "sqs:DeleteMessage",
-                            "sqs:ChangeMessageVisibility",
-                            "sqs:GetQueueAttributes",
-                            "sqs:ListQueues"
-                        ],
+                        "Action": "iam:DeleteUser",
                         "Resource": [
-                            "arn:aws:s3:::aegislenz-s3",
-                            "arn:aws:s3:::aegislenz-s3/*",
-                            "arn:aws:s3:::aegislenz-s3/AWSLogs/*",
-                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-s3-queue",
-                            "arn:aws:sqs:us-east-1:713881791527:AegisLenz-cloudtrail-queue",
-                            "arn:aws:s3:::aegislenz-s3/AWSLogs/713881791527/CloudTrail/*"
+                            "arn:aws:iam::891377205497:user/testAdmin"
                         ]
                     },
                     {
-                        "Sid": "EC2AndCloudTrailAccess",
+                        "Sid": "policy-iam:ListPolicyVersions",
                         "Effect": "Allow",
-                        "Action": [
-                            "ec2:DescribeTags",
-                            "ec2:DescribeInstances",
-                            "cloudtrail:LookupEvents",
-                            "cloudtrail:GetTrailStatus"
-                        ],
-                        "Resource": "*"
-                    },
-                    {
-                        "Sid": "S3BucketPolicyAccess",
-                        "Effect": "Allow",
-                        "Action": "s3:PutBucketPolicy",
-                        "Resource": "arn:aws:s3:::aegislenz-s3"
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "AmazonEC2FullAccess",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Action": "ec2:*",
-                        "Effect": "Allow",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "elasticloadbalancing:*",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "cloudwatch:*",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "autoscaling:*",
-                        "Resource": "*"
-                    },
-                    {
-                        "Effect": "Allow",
-                        "Action": "iam:CreateServiceLinkedRole",
-                        "Resource": "*",
-                        "Condition": {
-                            "StringEquals": {
-                                "iam:AWSServiceName": [
-                                    "autoscaling.amazonaws.com",
-                                    "ec2scheduled.amazonaws.com",
-                                    "elasticloadbalancing.amazonaws.com",
-                                    "spot.amazonaws.com",
-                                    "spotfleet.amazonaws.com",
-                                    "transitgateway.amazonaws.com"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "AdministratorAccess",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Effect": "Allow",
-                        "Action": "*",
-                        "Resource": "*"
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "IAMUserChangePassword",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Effect": "Allow",
-                        "Action": [
-                            "iam:ChangePassword"
-                        ],
+                        "Action": "iam:ListPolicyVersions",
                         "Resource": [
-                            "arn:aws:iam::*:user/${aws:username}"
+                            "arn:aws:iam::891377205497:user/testAdmin"
                         ]
                     },
                     {
+                        "Sid": "policy-iam:DetachUserPolicy",
                         "Effect": "Allow",
-                        "Action": [
-                            "iam:GetAccountPasswordPolicy"
-                        ],
-                        "Resource": "*"
-                    }
-                ]
-            }
-        },
-        {
-            "PolicyName": "AmazonS3FullAccess",
-            "PolicyDocument": {
-                "Version": "2012-10-17",
-                "Statement": [
+                        "Action": "iam:DetachUserPolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
                     {
+                        "Sid": "policy-iam:DeletePolicy",
                         "Effect": "Allow",
-                        "Action": [
-                            "s3:*",
-                            "s3-object-lambda:*"
-                        ],
-                        "Resource": "*"
+                        "Action": "iam:DeletePolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-sts:GetCallerIdentity",
+                        "Effect": "Allow",
+                        "Action": "sts:GetCallerIdentity",
+                        "Resource": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:ListAttachedRolePolicies",
+                        "Effect": "Allow",
+                        "Action": "iam:ListAttachedRolePolicies",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:ListAttachedUserPolicies",
+                        "Effect": "Allow",
+                        "Action": "iam:ListAttachedUserPolicies",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:GetPolicyVersion",
+                        "Effect": "Allow",
+                        "Action": "iam:GetPolicyVersion",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:GetUser",
+                        "Effect": "Allow",
+                        "Action": "iam:GetUser",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:GetPolicy",
+                        "Effect": "Allow",
+                        "Action": "iam:GetPolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:ListAccessKeys",
+                        "Effect": "Allow",
+                        "Action": "iam:ListAccessKeys",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:GetRole",
+                        "Effect": "Allow",
+                        "Action": "iam:GetRole",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:DeleteRole",
+                        "Effect": "Allow",
+                        "Action": "iam:DeleteRole",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:DetachRolePolicy",
+                        "Effect": "Allow",
+                        "Action": "iam:DetachRolePolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:UpdateAssumeRolePolicy",
+                        "Effect": "Allow",
+                        "Action": "iam:UpdateAssumeRolePolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
                     }
                 ]
             }
