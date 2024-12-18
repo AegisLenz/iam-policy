@@ -4,16 +4,16 @@ from common_utils import load_json
 import json
 
 def main():
-    log_path = "./sample_data/logs.json"
-    #r"src\sample_data\iam__backdoor_assume_O_1.json"
-    userPolicy_path = "./sample_data/userPolicy.json"
-    #userPolicy_path = r"src\sample_data\userPolicy.json"
+    log_path = r"src\sample_data\logs.json"
+    userPolicy_path = r"src\sample_data\userPolicy.json"
     userPolicy = load_json(userPolicy_path)
 
     print("기존의 Policy: ")
     print(json.dumps(userPolicy, indent=4))
 
     clustered_policy_by_cloudtrail = extract_policy_by_cloudTrail(log_path)
+    with open("C:\Workspace\iam-policy\src\clustered_policy_by_cloudtrail.json", 'w', encoding='utf-8') as file:
+        json.dump(clustered_policy_by_cloudtrail, file, ensure_ascii=False, indent=4)
     print("최소권한 Policy: ")
     print(json.dumps(clustered_policy_by_cloudtrail, indent=4))
 
