@@ -1,0 +1,9 @@
+{
+    "servicePrefix": "ssm-guiconnect",
+    "AllowActions": [
+        "CancelConnection",
+        "GetConnection",
+        "ListConnections",
+        "StartConnection"
+    ]
+}

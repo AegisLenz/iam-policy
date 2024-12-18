@@ -1,0 +1,12 @@
+{
+    "servicePrefix": "cost-optimization-hub",
+    "AllowActions": [
+        "GetPreferences",
+        "GetRecommendation",
+        "ListEnrollmentStatuses",
+        "ListRecommendationSummaries",
+        "ListRecommendations",
+        "UpdateEnrollmentStatus",
+        "UpdatePreferences"
+    ]
+}

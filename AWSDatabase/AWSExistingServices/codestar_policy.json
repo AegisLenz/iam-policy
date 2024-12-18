@@ -1,0 +1,23 @@
+{
+    "servicePrefix": "codestar",
+    "AllowActions": [
+        "AssociateTeamMember",
+        "CreateProject",
+        "CreateUserProfile",
+        "DeleteProject",
+        "DeleteUserProfile",
+        "DescribeProject",
+        "DescribeUserProfile",
+        "DisassociateTeamMember",
+        "ListProjects",
+        "ListResources",
+        "ListTagsForProject",
+        "ListTeamMembers",
+        "ListUserProfiles",
+        "TagProject",
+        "UntagProject",
+        "UpdateProject",
+        "UpdateTeamMember",
+        "UpdateUserProfile"
+    ]
+}

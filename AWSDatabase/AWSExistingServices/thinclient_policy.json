@@ -1,0 +1,25 @@
+{
+    "servicePrefix": "thinclient",
+    "AllowActions": [
+        "CreateEnvironment",
+        "DeleteDevice",
+        "DeleteEnvironment",
+        "DeregisterDevice",
+        "GetDevice",
+        "GetDeviceDetails",
+        "GetEnvironment",
+        "GetSoftwareSet",
+        "ListDeviceSessions",
+        "ListDevices",
+        "ListEnvironments",
+        "ListSoftwareSets",
+        "ListTagsForResource",
+        "TagResource",
+        "environment",
+        "softwareset",
+        "UntagResource",
+        "UpdateDevice",
+        "UpdateEnvironment",
+        "UpdateSoftwareSet"
+    ]
+}

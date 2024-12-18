@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "finspace-api",
+    "AllowActions": [
+        "GetProgrammaticAccessCredentials"
+    ]
+}

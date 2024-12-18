@@ -1,0 +1,9 @@
+{
+    "servicePrefix": "codedeploy-commands-secure",
+    "AllowActions": [
+        "GetDeploymentSpecification",
+        "PollHostCommand",
+        "PutHostCommandAcknowledgement",
+        "PutHostCommandComplete"
+    ]
+}

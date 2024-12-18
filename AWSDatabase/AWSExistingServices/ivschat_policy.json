@@ -1,0 +1,23 @@
+{
+    "servicePrefix": "ivschat",
+    "AllowActions": [
+        "CreateChatToken",
+        "CreateLoggingConfiguration",
+        "CreateRoom",
+        "DeleteLoggingConfiguration",
+        "DeleteMessage",
+        "DeleteRoom",
+        "DisconnectUser",
+        "GetLoggingConfiguration",
+        "GetRoom",
+        "ListLoggingConfigurations",
+        "ListRooms",
+        "ListTagsForResource",
+        "SendEvent",
+        "TagResource",
+        "Room",
+        "UntagResource",
+        "UpdateLoggingConfiguration",
+        "UpdateRoom"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "social-messaging",
+    "AllowActions": [
+        "AssociateWhatsAppBusinessAccount",
+        "DeleteWhatsAppMessageMedia",
+        "DisassociateWhatsAppBusinessAccount",
+        "GetLinkedWhatsAppBusinessAccount",
+        "GetLinkedWhatsAppBusinessAccountPhoneNumber",
+        "GetWhatsAppMessageMedia",
+        "ListLinkedWhatsAppBusinessAccounts",
+        "ListTagsForResource",
+        "waba",
+        "PostWhatsAppMessageMedia",
+        "PutWhatsAppBusinessAccountEventDestinations",
+        "SendWhatsAppMessage",
+        "TagResource",
+        "UntagResource"
+    ]
+}

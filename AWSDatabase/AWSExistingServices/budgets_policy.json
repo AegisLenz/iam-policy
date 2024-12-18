@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "budgets",
+    "AllowActions": [
+        "CreateBudgetAction",
+        "DeleteBudgetAction",
+        "DescribeBudgetAction",
+        "DescribeBudgetActionHistories",
+        "DescribeBudgetActionsForAccount",
+        "DescribeBudgetActionsForBudget",
+        "ExecuteBudgetAction",
+        "ListTagsForResource",
+        "budgetAction",
+        "ModifyBudget",
+        "TagResource",
+        "UntagResource",
+        "UpdateBudgetAction",
+        "ViewBudget"
+    ]
+}

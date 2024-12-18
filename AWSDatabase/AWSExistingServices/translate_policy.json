@@ -1,0 +1,25 @@
+{
+    "servicePrefix": "translate",
+    "AllowActions": [
+        "CreateParallelData",
+        "DeleteParallelData",
+        "DeleteTerminology",
+        "DescribeTextTranslationJob",
+        "GetParallelData",
+        "GetTerminology",
+        "ImportTerminology",
+        "ListLanguages",
+        "ListParallelData",
+        "ListTagsForResource",
+        "terminology",
+        "ListTerminologies",
+        "ListTextTranslationJobs",
+        "StartTextTranslationJob",
+        "StopTextTranslationJob",
+        "TagResource",
+        "TranslateDocument",
+        "TranslateText",
+        "UntagResource",
+        "UpdateParallelData"
+    ]
+}

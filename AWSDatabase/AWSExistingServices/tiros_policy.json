@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "tiros",
+    "AllowActions": [
+        "CreateQuery",
+        "ExtendQuery",
+        "GetQueryAnswer",
+        "GetQueryExplanation",
+        "GetQueryExtensionAccounts"
+    ]
+}

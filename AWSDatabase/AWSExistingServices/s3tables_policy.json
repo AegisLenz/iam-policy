@@ -1,0 +1,33 @@
+{
+    "servicePrefix": "s3tables",
+    "AllowActions": [
+        "CreateNamespace",
+        "CreateTable",
+        "CreateTableBucket",
+        "DeleteNamespace",
+        "DeleteTable",
+        "DeleteTableBucket",
+        "DeleteTableBucketPolicy",
+        "DeleteTablePolicy",
+        "GetNamespace",
+        "GetTable",
+        "GetTableBucket",
+        "GetTableBucketMaintenanceConfiguration",
+        "GetTableBucketPolicy",
+        "GetTableData",
+        "GetTableMaintenanceConfiguration",
+        "GetTableMaintenanceJobStatus",
+        "GetTableMetadataLocation",
+        "GetTablePolicy",
+        "ListNamespaces",
+        "ListTableBuckets",
+        "ListTables",
+        "PutTableBucketMaintenanceConfiguration",
+        "PutTableBucketPolicy",
+        "PutTableData",
+        "PutTableMaintenanceConfiguration",
+        "PutTablePolicy",
+        "RenameTable",
+        "UpdateTableMetadataLocation"
+    ]
+}

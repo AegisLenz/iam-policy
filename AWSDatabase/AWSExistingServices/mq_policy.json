@@ -1,0 +1,30 @@
+{
+    "servicePrefix": "mq",
+    "AllowActions": [
+        "CreateBroker",
+        "CreateConfiguration",
+        "CreateReplicaBroker",
+        "CreateTags",
+        "configurations",
+        "CreateUser",
+        "DeleteBroker",
+        "DeleteTags",
+        "DeleteUser",
+        "DescribeBroker",
+        "DescribeBrokerEngineTypes",
+        "DescribeBrokerInstanceOptions",
+        "DescribeConfiguration",
+        "DescribeConfigurationRevision",
+        "DescribeUser",
+        "ListBrokers",
+        "ListConfigurationRevisions",
+        "ListConfigurations",
+        "ListTags",
+        "ListUsers",
+        "Promote",
+        "RebootBroker",
+        "UpdateBroker",
+        "UpdateConfiguration",
+        "UpdateUser"
+    ]
+}

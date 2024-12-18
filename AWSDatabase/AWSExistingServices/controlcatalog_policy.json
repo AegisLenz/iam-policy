@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "controlcatalog",
+    "AllowActions": [
+        "GetControl",
+        "ListCommonControls",
+        "ListControls",
+        "ListDomains",
+        "ListObjectives"
+    ]
+}

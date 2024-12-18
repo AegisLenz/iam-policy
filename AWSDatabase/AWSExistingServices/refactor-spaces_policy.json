@@ -1,0 +1,32 @@
+{
+    "servicePrefix": "refactor-spaces",
+    "AllowActions": [
+        "CreateApplication",
+        "CreateEnvironment",
+        "CreateRoute",
+        "CreateService",
+        "DeleteApplication",
+        "DeleteEnvironment",
+        "DeleteResourcePolicy",
+        "DeleteRoute",
+        "DeleteService",
+        "GetApplication",
+        "GetEnvironment",
+        "GetResourcePolicy",
+        "GetRoute",
+        "GetService",
+        "ListApplications",
+        "ListEnvironmentVpcs",
+        "ListEnvironments",
+        "ListRoutes",
+        "ListServices",
+        "ListTagsForResource",
+        "PutResourcePolicy",
+        "TagResource",
+        "environment",
+        "route",
+        "service",
+        "UntagResource",
+        "UpdateRoute"
+    ]
+}

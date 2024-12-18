@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "mediapackage-vod",
+    "AllowActions": [
+        "ConfigureLogs",
+        "CreateAsset",
+        "CreatePackagingConfiguration",
+        "CreatePackagingGroup",
+        "DeleteAsset",
+        "DeletePackagingConfiguration",
+        "DeletePackagingGroup",
+        "DescribeAsset",
+        "DescribePackagingConfiguration",
+        "DescribePackagingGroup",
+        "ListAssets",
+        "ListPackagingConfigurations",
+        "ListPackagingGroups",
+        "ListTagsForResource",
+        "packaging-configurations",
+        "packaging-groups",
+        "TagResource",
+        "UntagResource",
+        "UpdatePackagingGroup"
+    ]
+}

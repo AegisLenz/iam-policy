@@ -1,0 +1,17 @@
+{
+    "servicePrefix": "dsql",
+    "AllowActions": [
+        "CreateCluster",
+        "CreateMultiRegionClusters",
+        "DbConnect",
+        "DbConnectAdmin",
+        "DeleteCluster",
+        "DeleteMultiRegionClusters",
+        "GetCluster",
+        "ListClusters",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateCluster"
+    ]
+}

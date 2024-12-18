@@ -1,0 +1,13 @@
+{
+    "servicePrefix": "wickr",
+    "AllowActions": [
+        "CreateAdminSession",
+        "CreateNetwork",
+        "DeleteNetwork",
+        "ListNetworks",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateNetworkDetails"
+    ]
+}

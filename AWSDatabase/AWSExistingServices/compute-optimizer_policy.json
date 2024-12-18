@@ -1,0 +1,33 @@
+{
+    "servicePrefix": "compute-optimizer",
+    "AllowActions": [
+        "DeleteRecommendationPreferences",
+        "DescribeRecommendationExportJobs",
+        "ExportAutoScalingGroupRecommendations",
+        "ExportEBSVolumeRecommendations",
+        "ExportEC2InstanceRecommendations",
+        "ExportECSServiceRecommendations",
+        "ExportIdleRecommendations",
+        "ExportLambdaFunctionRecommendations",
+        "ExportLicenseRecommendations",
+        "ExportRDSDatabaseRecommendations",
+        "GetAutoScalingGroupRecommendations",
+        "GetEBSVolumeRecommendations",
+        "GetEC2InstanceRecommendations",
+        "GetEC2RecommendationProjectedMetrics",
+        "GetECSServiceRecommendationProjectedMetrics",
+        "GetECSServiceRecommendations",
+        "GetEffectiveRecommendationPreferences",
+        "GetEnrollmentStatus",
+        "GetEnrollmentStatusesForOrganization",
+        "GetIdleRecommendations",
+        "GetLambdaFunctionRecommendations",
+        "GetLicenseRecommendations",
+        "GetRDSDatabaseRecommendationProjectedMetrics",
+        "GetRDSDatabaseRecommendations",
+        "GetRecommendationPreferences",
+        "GetRecommendationSummaries",
+        "PutRecommendationPreferences",
+        "UpdateEnrollmentStatus"
+    ]
+}

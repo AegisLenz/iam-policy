@@ -1,0 +1,8 @@
+{
+    "servicePrefix": "execute-api",
+    "AllowActions": [
+        "InvalidateCache",
+        "Invoke",
+        "ManageConnections"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "servicePrefix": "scheduler",
+    "AllowActions": [
+        "CreateSchedule",
+        "CreateScheduleGroup",
+        "DeleteSchedule",
+        "DeleteScheduleGroup",
+        "GetSchedule",
+        "GetScheduleGroup",
+        "ListScheduleGroups",
+        "ListSchedules",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateSchedule"
+    ]
+}

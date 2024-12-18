@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "pi",
+    "AllowActions": [
+        "CreatePerformanceAnalysisReport",
+        "DeletePerformanceAnalysisReport",
+        "DescribeDimensionKeys",
+        "GetDimensionKeyDetails",
+        "GetPerformanceAnalysisReport",
+        "GetResourceMetadata",
+        "GetResourceMetrics",
+        "ListAvailableResourceDimensions",
+        "ListAvailableResourceMetrics",
+        "ListPerformanceAnalysisReports",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource"
+    ]
+}

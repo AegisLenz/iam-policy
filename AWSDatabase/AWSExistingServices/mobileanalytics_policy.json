@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "mobileanalytics",
+    "AllowActions": [
+        "PutEvents"
+    ]
+}

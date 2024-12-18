@@ -1,0 +1,8 @@
+{
+    "servicePrefix": "partnercentral-account-management",
+    "AllowActions": [
+        "AssociatePartnerAccount",
+        "AssociatePartnerUser",
+        "DisassociatePartnerUser"
+    ]
+}

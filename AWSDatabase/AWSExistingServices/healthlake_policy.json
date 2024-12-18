@@ -1,0 +1,29 @@
+{
+    "servicePrefix": "healthlake",
+    "AllowActions": [
+        "CancelFHIRExportJobWithDelete",
+        "CreateFHIRDatastore",
+        "CreateResource",
+        "DeleteFHIRDatastore",
+        "DeleteResource",
+        "DescribeFHIRDatastore",
+        "DescribeFHIRExportJob",
+        "DescribeFHIRExportJobWithGet",
+        "DescribeFHIRImportJob",
+        "GetCapabilities",
+        "ListFHIRDatastores",
+        "ListFHIRExportJobs",
+        "ListFHIRImportJobs",
+        "ListTagsForResource",
+        "ReadResource",
+        "SearchEverything",
+        "SearchWithGet",
+        "SearchWithPost",
+        "StartFHIRExportJob",
+        "StartFHIRExportJobWithPost",
+        "StartFHIRImportJob",
+        "TagResource",
+        "UntagResource",
+        "UpdateResource"
+    ]
+}

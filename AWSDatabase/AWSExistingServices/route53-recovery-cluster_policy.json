@@ -1,0 +1,9 @@
+{
+    "servicePrefix": "route53-recovery-cluster",
+    "AllowActions": [
+        "GetRoutingControlState",
+        "ListRoutingControls",
+        "UpdateRoutingControlState",
+        "UpdateRoutingControlStates"
+    ]
+}

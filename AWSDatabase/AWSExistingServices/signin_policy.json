@@ -1,0 +1,7 @@
+{
+    "servicePrefix": "signin",
+    "AllowActions": [
+        "CreateTrustedIdentityPropagationApplicationForConsole",
+        "ListTrustedIdentityPropagationApplicationsForConsole"
+    ]
+}

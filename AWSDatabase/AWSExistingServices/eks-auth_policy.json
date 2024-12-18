@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "eks-auth",
+    "AllowActions": [
+        "AssumeRoleForPodIdentity"
+    ]
+}

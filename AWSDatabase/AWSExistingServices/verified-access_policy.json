@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "verified-access",
+    "AllowActions": [
+        "AllowVerifiedAccess"
+    ]
+}

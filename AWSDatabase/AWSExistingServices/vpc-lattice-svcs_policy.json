@@ -1,0 +1,7 @@
+{
+    "servicePrefix": "vpc-lattice-svcs",
+    "AllowActions": [
+        "Connect",
+        "Invoke"
+    ]
+}

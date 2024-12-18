@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "cloudfront-keyvaluestore",
+    "AllowActions": [
+        "DeleteKey",
+        "DescribeKeyValueStore",
+        "GetKey",
+        "ListKeys",
+        "PutKey",
+        "UpdateKeys"
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "aws-marketplace",
+    "AllowActions": [
+        "GetSellerDashboard"
+    ]
+}

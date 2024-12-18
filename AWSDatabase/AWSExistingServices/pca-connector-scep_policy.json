@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "pca-connector-scep",
+    "AllowActions": [
+        "CreateChallenge",
+        "CreateConnector",
+        "DeleteChallenge",
+        "DeleteConnector",
+        "GetChallengeMetadata",
+        "GetChallengePassword",
+        "GetConnector",
+        "ListChallengeMetadata",
+        "ListConnectors",
+        "ListTagsForResource",
+        "TagResource",
+        "Connector",
+        "UntagResource"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "servicePrefix": "codeguru-security",
+    "AllowActions": [
+        "BatchGetFindings",
+        "CreateScan",
+        "CreateUploadUrl",
+        "DeleteScansByCategory",
+        "GetAccountConfiguration",
+        "GetFindings",
+        "GetMetricsSummary",
+        "GetScan",
+        "ListFindings",
+        "ListFindingsMetrics",
+        "ListScans",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateAccountConfiguration"
+    ]
+}

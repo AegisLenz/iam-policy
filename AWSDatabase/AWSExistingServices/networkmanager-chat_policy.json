@@ -1,0 +1,12 @@
+{
+    "servicePrefix": "networkmanager-chat",
+    "AllowActions": [
+        "CancelMessageResponse",
+        "CreateConversation",
+        "DeleteConversation",
+        "ListConversationMessages",
+        "ListConversations",
+        "NotifyConversationIsActive",
+        "SendConversationMessage"
+    ]
+}

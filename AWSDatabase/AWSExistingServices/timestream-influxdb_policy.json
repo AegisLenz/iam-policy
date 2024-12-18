@@ -1,0 +1,17 @@
+{
+    "servicePrefix": "timestream-influxdb",
+    "AllowActions": [
+        "CreateDbInstance",
+        "CreateDbParameterGroup",
+        "DeleteDbInstance",
+        "GetDbInstance",
+        "GetDbParameterGroup",
+        "ListDbInstances",
+        "ListDbParameterGroups",
+        "ListTagsForResource",
+        "TagResource",
+        "db-parameter-group",
+        "UntagResource",
+        "UpdateDbInstance"
+    ]
+}

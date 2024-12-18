@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "geo-routes",
+    "AllowActions": [
+        "CalculateIsolines",
+        "CalculateRouteMatrix",
+        "CalculateRoutes",
+        "OptimizeWaypoints",
+        "SnapToRoads"
+    ]
+}

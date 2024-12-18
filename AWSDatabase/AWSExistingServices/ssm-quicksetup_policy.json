@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "ssm-quicksetup",
+    "AllowActions": [
+        "CreateConfigurationManager",
+        "DeleteConfigurationManager",
+        "GetConfiguration",
+        "GetConfigurationManager",
+        "GetServiceSettings",
+        "ListConfigurationManagers",
+        "ListConfigurations",
+        "ListQuickSetupTypes",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateConfigurationDefinition",
+        "UpdateConfigurationManager",
+        "UpdateServiceSettings"
+    ]
+}

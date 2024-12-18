@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "identity-sync",
+    "AllowActions": [
+        "AllowVendedLogDeliveryForResource",
+        "CreateSyncFilter",
+        "CreateSyncProfile",
+        "CreateSyncTarget",
+        "DeleteSyncFilter",
+        "DeleteSyncProfile",
+        "DeleteSyncTarget",
+        "SyncTargetResource*",
+        "GetSyncProfile",
+        "GetSyncTarget",
+        "ListSyncFilters",
+        "StartSync",
+        "StopSync",
+        "UpdateSyncTarget"
+    ]
+}

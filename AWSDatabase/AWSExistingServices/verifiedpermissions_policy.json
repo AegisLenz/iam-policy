@@ -1,0 +1,29 @@
+{
+    "servicePrefix": "verifiedpermissions",
+    "AllowActions": [
+        "CreateIdentitySource",
+        "CreatePolicy",
+        "CreatePolicyStore",
+        "CreatePolicyTemplate",
+        "DeleteIdentitySource",
+        "DeletePolicy",
+        "DeletePolicyStore",
+        "DeletePolicyTemplate",
+        "GetIdentitySource",
+        "GetPolicy",
+        "GetPolicyStore",
+        "GetPolicyTemplate",
+        "GetSchema",
+        "IsAuthorized",
+        "IsAuthorizedWithToken",
+        "ListIdentitySources",
+        "ListPolicies",
+        "ListPolicyStores",
+        "ListPolicyTemplates",
+        "PutSchema",
+        "UpdateIdentitySource",
+        "UpdatePolicy",
+        "UpdatePolicyStore",
+        "UpdatePolicyTemplate"
+    ]
+}

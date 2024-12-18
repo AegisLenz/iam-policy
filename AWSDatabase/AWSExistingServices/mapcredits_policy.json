@@ -1,0 +1,8 @@
+{
+    "servicePrefix": "mapcredits",
+    "AllowActions": [
+        "ListAssociatedPrograms",
+        "ListQuarterCredits",
+        "ListQuarterSpend"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "servicePrefix": "emr-containers",
+    "AllowActions": [
+        "CancelJobRun",
+        "CreateJobTemplate",
+        "CreateManagedEndpoint",
+        "CreateSecurityConfiguration",
+        "CreateVirtualCluster",
+        "DeleteJobTemplate",
+        "DeleteManagedEndpoint",
+        "DeleteVirtualCluster",
+        "DescribeJobRun",
+        "DescribeJobTemplate",
+        "DescribeManagedEndpoint",
+        "DescribeSecurityConfiguration",
+        "DescribeVirtualCluster",
+        "GetManagedEndpointSessionCredentials",
+        "ListJobRuns",
+        "ListJobTemplates",
+        "ListManagedEndpoints",
+        "ListSecurityConfigurations",
+        "ListTagsForResource",
+        "jobTemplate",
+        "managedEndpoint",
+        "virtualCluster",
+        "ListVirtualClusters",
+        "StartJobRun",
+        "TagResource",
+        "UntagResource"
+    ]
+}

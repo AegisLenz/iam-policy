@@ -1,0 +1,23 @@
+{
+    "servicePrefix": "cassandra",
+    "AllowActions": [
+        "Alter",
+        "table",
+        "AlterMultiRegionResource",
+        "Create",
+        "CreateMultiRegionResource",
+        "Drop",
+        "DropMultiRegionResource",
+        "Modify",
+        "ModifyMultiRegionResource",
+        "Restore",
+        "RestoreMultiRegionTable",
+        "Select",
+        "SelectMultiRegionResource",
+        "TagMultiRegionResource",
+        "TagResource",
+        "UnTagMultiRegionResource",
+        "UntagResource",
+        "UpdatePartitioner"
+    ]
+}

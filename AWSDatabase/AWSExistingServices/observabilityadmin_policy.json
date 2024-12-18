@@ -1,0 +1,13 @@
+{
+    "servicePrefix": "observabilityadmin",
+    "AllowActions": [
+        "GetTelemetryEvaluationStatus",
+        "GetTelemetryEvaluationStatusForOrganization",
+        "ListResourceTelemetry",
+        "ListResourceTelemetryForOrganization",
+        "StartTelemetryEvaluation",
+        "StartTelemetryEvaluationForOrganization",
+        "StopTelemetryEvaluation",
+        "StopTelemetryEvaluationForOrganization"
+    ]
+}

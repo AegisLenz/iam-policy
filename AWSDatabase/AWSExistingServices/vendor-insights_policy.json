@@ -1,0 +1,30 @@
+{
+    "servicePrefix": "vendor-insights",
+    "AllowActions": [
+        "ActivateSecurityProfile",
+        "AssociateDataSource",
+        "CreateDataSource",
+        "CreateSecurityProfile",
+        "DeactivateSecurityProfile",
+        "DeleteDataSource",
+        "DisassociateDataSource",
+        "GetDataSource",
+        "GetEntitledSecurityProfileSnapshot",
+        "GetProfileAccessTerms",
+        "GetSecurityProfile",
+        "GetSecurityProfileSnapshot",
+        "ListDataSources",
+        "ListEntitledSecurityProfileSnapshots",
+        "ListEntitledSecurityProfiles",
+        "ListSecurityProfileSnapshots",
+        "ListSecurityProfiles",
+        "ListTagsForResource",
+        "SecurityProfile",
+        "TagResource",
+        "UntagResource",
+        "UpdateDataSource",
+        "UpdateSecurityProfile",
+        "UpdateSecurityProfileSnapshotCreationConfiguration",
+        "UpdateSecurityProfileSnapshotReleaseConfiguration"
+    ]
+}

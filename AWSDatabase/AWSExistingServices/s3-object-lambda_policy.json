@@ -1,0 +1,31 @@
+{
+    "servicePrefix": "s3-object-lambda",
+    "AllowActions": [
+        "AbortMultipartUpload",
+        "DeleteObject",
+        "DeleteObjectTagging",
+        "DeleteObjectVersion",
+        "DeleteObjectVersionTagging",
+        "GetObject",
+        "GetObjectAcl",
+        "GetObjectLegalHold",
+        "GetObjectRetention",
+        "GetObjectTagging",
+        "GetObjectVersion",
+        "GetObjectVersionAcl",
+        "GetObjectVersionTagging",
+        "ListBucket",
+        "ListBucketMultipartUploads",
+        "ListBucketVersions",
+        "ListMultipartUploadParts",
+        "PutObject",
+        "PutObjectAcl",
+        "PutObjectLegalHold",
+        "PutObjectRetention",
+        "PutObjectTagging",
+        "PutObjectVersionAcl",
+        "PutObjectVersionTagging",
+        "RestoreObject",
+        "WriteGetObjectResponse"
+    ]
+}

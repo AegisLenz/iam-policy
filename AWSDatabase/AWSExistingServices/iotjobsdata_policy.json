@@ -1,0 +1,9 @@
+{
+    "servicePrefix": "iotjobsdata",
+    "AllowActions": [
+        "DescribeJobExecution",
+        "GetPendingJobExecutions",
+        "StartNextPendingJobExecution",
+        "UpdateJobExecution"
+    ]
+}

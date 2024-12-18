@@ -1,0 +1,20 @@
+{
+    "servicePrefix": "backup-storage",
+    "AllowActions": [
+        "CommitBackupJob",
+        "DeleteObjects",
+        "DescribeBackupJob",
+        "GetBaseBackup",
+        "GetChunk",
+        "GetIncrementalBaseBackup",
+        "GetObjectMetadata",
+        "ListChunks",
+        "ListObjects",
+        "MountCapsule",
+        "NotifyObjectComplete",
+        "PutChunk",
+        "PutObject",
+        "StartObject",
+        "UpdateObjectComplete"
+    ]
+}

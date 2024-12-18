@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "importexport",
+    "AllowActions": [
+        "CancelJob",
+        "CreateJob",
+        "GetShippingLabel",
+        "GetStatus",
+        "ListJobs",
+        "UpdateJob"
+    ]
+}

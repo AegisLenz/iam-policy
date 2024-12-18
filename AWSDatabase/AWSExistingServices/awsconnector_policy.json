@@ -1,0 +1,8 @@
+{
+    "servicePrefix": "awsconnector",
+    "AllowActions": [
+        "GetConnectorHealth",
+        "RegisterConnector",
+        "ValidateConnectorId"
+    ]
+}

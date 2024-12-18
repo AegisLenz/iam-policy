@@ -1,0 +1,30 @@
+{
+    "servicePrefix": "support",
+    "AllowActions": [
+        "AddAttachmentsToSet",
+        "AddCommunicationToCase",
+        "CreateCase",
+        "DescribeAttachment",
+        "DescribeCaseAttributes",
+        "DescribeCases",
+        "DescribeCommunication",
+        "DescribeCommunications",
+        "DescribeCreateCaseOptions",
+        "DescribeIssueTypes",
+        "DescribeServices",
+        "DescribeSeverityLevels",
+        "DescribeSupportLevel",
+        "DescribeSupportedLanguages",
+        "DescribeTrustedAdvisorCheckRefreshStatuses",
+        "DescribeTrustedAdvisorCheckResult",
+        "DescribeTrustedAdvisorCheckSummaries",
+        "DescribeTrustedAdvisorChecks",
+        "InitiateCallForCase",
+        "InitiateChatForCase",
+        "PutCaseAttributes",
+        "RateCaseCommunication",
+        "RefreshTrustedAdvisorCheck",
+        "ResolveCase",
+        "SearchForCases"
+    ]
+}

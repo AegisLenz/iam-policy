@@ -1,0 +1,26 @@
+{
+    "servicePrefix": "docdb-elastic",
+    "AllowActions": [
+        "ApplyPendingMaintenanceAction",
+        "CopyClusterSnapshot",
+        "CreateCluster",
+        "CreateClusterSnapshot",
+        "cluster-snapshot*",
+        "DeleteCluster",
+        "DeleteClusterSnapshot",
+        "GetCluster",
+        "GetClusterSnapshot",
+        "GetPendingMaintenanceAction",
+        "ListClusterSnapshots",
+        "ListClusters",
+        "ListPendingMaintenanceActions",
+        "ListTagsForResource",
+        "cluster-snapshot",
+        "RestoreClusterFromSnapshot",
+        "StartCluster",
+        "StopCluster",
+        "TagResource",
+        "UntagResource",
+        "UpdateCluster"
+    ]
+}

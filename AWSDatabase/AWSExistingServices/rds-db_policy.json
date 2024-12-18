@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "rds-db",
+    "AllowActions": [
+        "connect"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "route53profiles",
+    "AllowActions": [
+        "AssociateProfile",
+        "AssociateResourceToProfile",
+        "CreateProfile",
+        "DeleteProfile",
+        "DisassociateProfile",
+        "DisassociateResourceFromProfile",
+        "GetProfile",
+        "GetProfileAssociation",
+        "GetProfilePolicy",
+        "GetProfileResourceAssociation",
+        "ListProfileAssociations",
+        "ListProfileResourceAssociations",
+        "ListProfiles",
+        "ListTagsForResource",
+        "PutProfilePolicy",
+        "TagResource",
+        "profile-association",
+        "UntagResource",
+        "UpdateProfileResourceAssociation"
+    ]
+}

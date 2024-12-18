@@ -1,0 +1,23 @@
+{
+    "servicePrefix": "elastictranscoder",
+    "AllowActions": [
+        "CancelJob",
+        "CreateJob",
+        "preset*",
+        "CreatePipeline",
+        "CreatePreset",
+        "DeletePipeline",
+        "DeletePreset",
+        "ListJobsByPipeline",
+        "ListJobsByStatus",
+        "ListPipelines",
+        "ListPresets",
+        "ReadJob",
+        "ReadPipeline",
+        "ReadPreset",
+        "TestRole",
+        "UpdatePipeline",
+        "UpdatePipelineNotifications",
+        "UpdatePipelineStatus"
+    ]
+}

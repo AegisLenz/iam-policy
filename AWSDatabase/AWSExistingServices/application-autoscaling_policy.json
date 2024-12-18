@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "application-autoscaling",
+    "AllowActions": [
+        "DeleteScalingPolicy",
+        "DeleteScheduledAction",
+        "DeregisterScalableTarget",
+        "DescribeScalableTargets",
+        "DescribeScalingActivities",
+        "DescribeScalingPolicies",
+        "DescribeScheduledActions",
+        "GetPredictiveScalingForecast",
+        "ListTagsForResource",
+        "PutScalingPolicy",
+        "PutScheduledAction",
+        "RegisterScalableTarget",
+        "TagResource",
+        "UntagResource"
+    ]
+}

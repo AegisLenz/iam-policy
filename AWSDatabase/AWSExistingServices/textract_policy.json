@@ -1,0 +1,31 @@
+{
+    "servicePrefix": "textract",
+    "AllowActions": [
+        "AnalyzeDocument",
+        "AnalyzeExpense",
+        "AnalyzeID",
+        "CreateAdapter",
+        "CreateAdapterVersion",
+        "DeleteAdapter",
+        "DeleteAdapterVersion",
+        "DetectDocumentText",
+        "GetAdapter",
+        "GetAdapterVersion",
+        "GetDocumentAnalysis",
+        "GetDocumentTextDetection",
+        "GetExpenseAnalysis",
+        "GetLendingAnalysis",
+        "GetLendingAnalysisSummary",
+        "ListAdapterVersions",
+        "ListAdapters",
+        "ListTagsForResource",
+        "adapterversion",
+        "StartDocumentAnalysis",
+        "StartDocumentTextDetection",
+        "StartExpenseAnalysis",
+        "StartLendingAnalysis",
+        "TagResource",
+        "UntagResource",
+        "UpdateAdapter"
+    ]
+}

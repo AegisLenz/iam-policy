@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "autoscaling-plans",
+    "AllowActions": [
+        "CreateScalingPlan",
+        "DeleteScalingPlan",
+        "DescribeScalingPlanResources",
+        "DescribeScalingPlans",
+        "GetScalingPlanResourceForecastData",
+        "UpdateScalingPlan"
+    ]
+}

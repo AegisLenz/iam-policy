@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "redshift-data",
+    "AllowActions": [
+        "BatchExecuteStatement",
+        "workgroup",
+        "CancelStatement",
+        "DescribeStatement",
+        "DescribeTable",
+        "workgroup*",
+        "ExecuteStatement",
+        "GetStagingBucketLocation",
+        "GetStatementResult",
+        "ListDatabases",
+        "ListSchemas",
+        "ListStatements",
+        "ListTables"
+    ]
+}

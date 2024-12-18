@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "arc-zonal-shift",
+    "AllowActions": [
+        "CancelZonalShift",
+        "NLB*",
+        "CreatePracticeRunConfiguration",
+        "DeletePracticeRunConfiguration",
+        "GetAutoshiftObserverNotificationStatus",
+        "GetManagedResource",
+        "ListAutoshifts",
+        "ListManagedResources",
+        "ListZonalShifts",
+        "StartZonalShift",
+        "UpdateAutoshiftObserverNotificationStatus",
+        "UpdatePracticeRunConfiguration",
+        "UpdateZonalAutoshiftConfiguration",
+        "UpdateZonalShift"
+    ]
+}

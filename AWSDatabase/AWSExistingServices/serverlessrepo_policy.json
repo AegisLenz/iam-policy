@@ -1,0 +1,20 @@
+{
+    "servicePrefix": "serverlessrepo",
+    "AllowActions": [
+        "CreateApplication",
+        "CreateApplicationVersion",
+        "CreateCloudFormationChangeSet",
+        "CreateCloudFormationTemplate",
+        "DeleteApplication",
+        "GetApplication",
+        "GetApplicationPolicy",
+        "GetCloudFormationTemplate",
+        "ListApplicationDependencies",
+        "ListApplicationVersions",
+        "ListApplications",
+        "PutApplicationPolicy",
+        "SearchApplications",
+        "UnshareApplication",
+        "UpdateApplication"
+    ]
+}

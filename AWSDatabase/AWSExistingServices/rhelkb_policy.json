@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "rhelkb",
+    "AllowActions": [
+        "GetRhelURL"
+    ]
+}

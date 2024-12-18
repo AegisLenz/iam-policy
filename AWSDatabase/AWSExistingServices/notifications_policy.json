@@ -1,0 +1,26 @@
+{
+    "servicePrefix": "notifications",
+    "AllowActions": [
+        "AssociateChannel",
+        "CreateEventRule",
+        "CreateNotificationConfiguration",
+        "DeleteEventRule",
+        "DeleteNotificationConfiguration",
+        "DeregisterNotificationHub",
+        "DisassociateChannel",
+        "GetEventRule",
+        "GetNotificationConfiguration",
+        "GetNotificationEvent",
+        "ListChannels",
+        "ListEventRules",
+        "ListNotificationConfigurations",
+        "ListNotificationEvents",
+        "ListNotificationHubs",
+        "ListTagsForResource",
+        "RegisterNotificationHub",
+        "TagResource",
+        "UntagResource",
+        "UpdateEventRule",
+        "UpdateNotificationConfiguration"
+    ]
+}

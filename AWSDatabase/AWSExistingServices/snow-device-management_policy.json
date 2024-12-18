@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "snow-device-management",
+    "AllowActions": [
+        "CancelTask",
+        "CreateTask",
+        "DescribeDevice",
+        "DescribeDeviceEc2Instances",
+        "DescribeExecution",
+        "DescribeTask",
+        "ListDeviceResources",
+        "ListDevices",
+        "ListExecutions",
+        "ListTagsForResource",
+        "ListTasks",
+        "TagResource",
+        "task",
+        "UntagResource"
+    ]
+}

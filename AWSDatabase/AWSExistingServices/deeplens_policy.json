@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "deeplens",
+    "AllowActions": [
+        "project*"
+    ]
+}

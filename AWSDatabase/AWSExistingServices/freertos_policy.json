@@ -1,0 +1,25 @@
+{
+    "servicePrefix": "freertos",
+    "AllowActions": [
+        "CreateSoftwareConfiguration",
+        "CreateSubscription",
+        "DeleteSoftwareConfiguration",
+        "DescribeHardwarePlatform",
+        "DescribeSoftwareConfiguration",
+        "DescribeSubscription",
+        "GetEmpPatchUrl",
+        "GetSoftwareURL",
+        "GetSoftwareURLForConfiguration",
+        "GetSubscriptionBillingAmount",
+        "ListFreeRTOSVersions",
+        "ListHardwarePlatforms",
+        "ListHardwareVendors",
+        "ListSoftwareConfigurations",
+        "ListSoftwarePatches",
+        "ListSubscriptionEmails",
+        "ListSubscriptions",
+        "UpdateEmailRecipients",
+        "UpdateSoftwareConfiguration",
+        "VerifyEmail"
+    ]
+}

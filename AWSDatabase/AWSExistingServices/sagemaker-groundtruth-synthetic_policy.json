@@ -1,0 +1,17 @@
+{
+    "servicePrefix": "sagemaker-groundtruth-synthetic",
+    "AllowActions": [
+        "CreateProject",
+        "DeleteProject",
+        "GetAccountDetails",
+        "GetBatch",
+        "GetProject",
+        "ListBatchDataTransfers",
+        "ListBatchSummaries",
+        "ListProjectDataTransfers",
+        "ListProjectSummaries",
+        "StartBatchDataTransfer",
+        "StartProjectDataTransfer",
+        "UpdateBatch"
+    ]
+}

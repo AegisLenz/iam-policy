@@ -1,0 +1,26 @@
+{
+    "servicePrefix": "sagemaker-geospatial",
+    "AllowActions": [
+        "DeleteEarthObservationJob",
+        "DeleteVectorEnrichmentJob",
+        "ExportEarthObservationJob",
+        "ExportVectorEnrichmentJob",
+        "GetEarthObservationJob",
+        "GetRasterDataCollection",
+        "GetTile",
+        "GetVectorEnrichmentJob",
+        "ListEarthObservationJobs",
+        "ListRasterDataCollections",
+        "ListTagsForResource",
+        "RasterDataCollection",
+        "VectorEnrichmentJob",
+        "ListVectorEnrichmentJobs",
+        "SearchRasterDataCollection",
+        "StartEarthObservationJob",
+        "StartVectorEnrichmentJob",
+        "StopEarthObservationJob",
+        "StopVectorEnrichmentJob",
+        "TagResource",
+        "UntagResource"
+    ]
+}

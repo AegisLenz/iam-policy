@@ -1,0 +1,13 @@
+{
+    "servicePrefix": "sms-voice",
+    "AllowActions": [
+        "CreateConfigurationSet",
+        "CreateConfigurationSetEventDestination",
+        "DeleteConfigurationSet",
+        "DeleteConfigurationSetEventDestination",
+        "GetConfigurationSetEventDestinations",
+        "ListConfigurationSets",
+        "SendVoiceMessage",
+        "UpdateConfigurationSetEventDestination"
+    ]
+}

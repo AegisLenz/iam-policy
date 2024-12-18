@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "account",
+    "AllowActions": [
+        "AcceptPrimaryEmailUpdate",
+        "CloseAccount",
+        "DeleteAlternateContact",
+        "accountInOrganization",
+        "DisableRegion",
+        "EnableRegion",
+        "GetAccountInformation",
+        "GetAlternateContact",
+        "GetChallengeQuestions",
+        "GetContactInformation",
+        "GetPrimaryEmail",
+        "GetRegionOptStatus",
+        "ListRegions",
+        "PutAlternateContact",
+        "PutChallengeQuestions",
+        "PutContactInformation",
+        "StartPrimaryEmailUpdate"
+    ]
+}

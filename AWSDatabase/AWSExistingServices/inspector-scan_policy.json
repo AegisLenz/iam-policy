@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "inspector-scan",
+    "AllowActions": [
+        "ScanSbom"
+    ]
+}

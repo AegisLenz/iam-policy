@@ -1,0 +1,32 @@
+{
+    "servicePrefix": "pca-connector-ad",
+    "AllowActions": [
+        "CreateConnector",
+        "CreateDirectoryRegistration",
+        "CreateServicePrincipalName",
+        "CreateTemplate",
+        "CreateTemplateGroupAccessControlEntry",
+        "DeleteConnector",
+        "DeleteDirectoryRegistration",
+        "DeleteServicePrincipalName",
+        "DeleteTemplate",
+        "DeleteTemplateGroupAccessControlEntry",
+        "GetConnector",
+        "GetDirectoryRegistration",
+        "GetServicePrincipalName",
+        "GetTemplate",
+        "GetTemplateGroupAccessControlEntry",
+        "ListConnectors",
+        "ListDirectoryRegistrations",
+        "ListServicePrincipalNames",
+        "ListTagsForResource",
+        "ListTemplateGroupAccessControlEntries",
+        "ListTemplates",
+        "TagResource",
+        "DirectoryRegistration",
+        "Template",
+        "UntagResource",
+        "UpdateTemplate",
+        "UpdateTemplateGroupAccessControlEntry"
+    ]
+}

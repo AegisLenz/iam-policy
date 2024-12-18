@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "codeguru-reviewer",
+    "AllowActions": [
+        "AssociateRepository",
+        "CreateCodeReview",
+        "CreateConnectionToken",
+        "DescribeCodeReview",
+        "DescribeRecommendationFeedback",
+        "DescribeRepositoryAssociation",
+        "DisassociateRepository",
+        "GetMetricsData",
+        "ListCodeReviews",
+        "ListRecommendationFeedback",
+        "ListRecommendations",
+        "ListRepositoryAssociations",
+        "ListTagsForResource",
+        "ListThirdPartyRepositories",
+        "PutRecommendationFeedback",
+        "TagResource",
+        "UnTagResource"
+    ]
+}

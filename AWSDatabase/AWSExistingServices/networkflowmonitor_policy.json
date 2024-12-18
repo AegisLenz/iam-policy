@@ -1,0 +1,32 @@
+{
+    "servicePrefix": "networkflowmonitor",
+    "AllowActions": [
+        "CreateMonitor",
+        "CreateScope",
+        "DeleteMonitor",
+        "DeleteScope",
+        "GetMonitor",
+        "GetQueryResultsMonitorTopContributors",
+        "GetQueryResultsWorkloadInsightsTopContributors",
+        "GetQueryResultsWorkloadInsightsTopContributorsData",
+        "GetQueryStatusMonitorTopContributors",
+        "GetQueryStatusWorkloadInsightsTopContributors",
+        "GetQueryStatusWorkloadInsightsTopContributorsData",
+        "GetScope",
+        "ListMonitors",
+        "ListScopes",
+        "ListTagsForResource",
+        "scope",
+        "Publish",
+        "StartQueryMonitorTopContributors",
+        "StartQueryWorkloadInsightsTopContributors",
+        "StartQueryWorkloadInsightsTopContributorsData",
+        "StopQueryMonitorTopContributors",
+        "StopQueryWorkloadInsightsTopContributors",
+        "StopQueryWorkloadInsightsTopContributorsData",
+        "TagResource",
+        "UntagResource",
+        "UpdateMonitor",
+        "UpdateScope"
+    ]
+}

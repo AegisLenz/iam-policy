@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "kafka-cluster",
+    "AllowActions": [
+        "AlterCluster",
+        "AlterClusterDynamicConfiguration",
+        "AlterGroup",
+        "AlterTopic",
+        "AlterTopicDynamicConfiguration",
+        "AlterTransactionalId",
+        "Connect",
+        "CreateTopic",
+        "DeleteGroup",
+        "DeleteTopic",
+        "DescribeCluster",
+        "DescribeClusterDynamicConfiguration",
+        "DescribeGroup",
+        "DescribeTopic",
+        "DescribeTopicDynamicConfiguration",
+        "DescribeTransactionalId",
+        "ReadData",
+        "WriteData",
+        "WriteDataIdempotently"
+    ]
+}

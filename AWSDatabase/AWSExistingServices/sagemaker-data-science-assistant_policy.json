@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "sagemaker-data-science-assistant",
+    "AllowActions": [
+        "SendConversation"
+    ]
+}

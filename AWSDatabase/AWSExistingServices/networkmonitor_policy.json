@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "networkmonitor",
+    "AllowActions": [
+        "CreateMonitor",
+        "CreateProbe",
+        "DeleteMonitor",
+        "DeleteProbe",
+        "GetMonitor",
+        "GetProbe",
+        "ListMonitors",
+        "ListTagsForResource",
+        "probe",
+        "TagResource",
+        "UntagResource",
+        "UpdateMonitor",
+        "UpdateProbe"
+    ]
+}

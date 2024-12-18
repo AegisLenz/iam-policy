@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "supportplans",
+    "AllowActions": [
+        "CreateSupportPlanSchedule",
+        "GetSupportPlan",
+        "GetSupportPlanUpdateStatus",
+        "ListSupportPlanModifiers",
+        "StartSupportPlanUpdate"
+    ]
+}
