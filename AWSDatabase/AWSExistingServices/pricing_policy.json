@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "pricing",
+    "AllowActions": [
+        "DescribeServices",
+        "GetAttributeValues",
+        "GetPriceListFileUrl",
+        "GetProducts",
+        "ListPriceLists"
+    ]
+}

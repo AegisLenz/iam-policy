@@ -1,0 +1,15 @@
+{
+    "servicePrefix": "rbin",
+    "AllowActions": [
+        "CreateRule",
+        "DeleteRule",
+        "GetRule",
+        "ListRules",
+        "ListTagsForResource",
+        "LockRule",
+        "TagResource",
+        "UnlockRule",
+        "UntagResource",
+        "UpdateRule"
+    ]
+}

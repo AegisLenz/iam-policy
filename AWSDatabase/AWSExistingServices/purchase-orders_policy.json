@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "purchase-orders",
+    "AllowActions": [
+        "AddPurchaseOrder",
+        "DeletePurchaseOrder",
+        "GetConsoleActionSetEnforced",
+        "GetPurchaseOrder",
+        "ListPurchaseOrderInvoices",
+        "ListPurchaseOrders",
+        "ListTagsForResource",
+        "ModifyPurchaseOrders",
+        "TagResource",
+        "UntagResource",
+        "UpdateConsoleActionSetEnforced",
+        "UpdatePurchaseOrder",
+        "UpdatePurchaseOrderStatus",
+        "ViewPurchaseOrders"
+    ]
+}

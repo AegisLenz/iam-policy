@@ -1,0 +1,7 @@
+{
+    "servicePrefix": "consolidatedbilling",
+    "AllowActions": [
+        "GetAccountBillingRole",
+        "ListLinkedAccounts"
+    ]
+}

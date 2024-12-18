@@ -1,0 +1,15 @@
+{
+    "servicePrefix": "cloudshell",
+    "AllowActions": [
+        "CreateEnvironment",
+        "CreateSession",
+        "DeleteEnvironment",
+        "DescribeEnvironments",
+        "GetEnvironmentStatus",
+        "GetFileDownloadUrls",
+        "GetFileUploadUrls",
+        "PutCredentials",
+        "StartEnvironment",
+        "StopEnvironment"
+    ]
+}

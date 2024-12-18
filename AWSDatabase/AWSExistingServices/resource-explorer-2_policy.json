@@ -1,0 +1,33 @@
+{
+    "servicePrefix": "resource-explorer-2",
+    "AllowActions": [
+        "AssociateDefaultView",
+        "BatchGetView",
+        "CreateIndex",
+        "CreateManagedView",
+        "CreateView",
+        "DeleteIndex",
+        "DeleteResourcePolicy",
+        "DeleteView",
+        "DisassociateDefaultView",
+        "GetAccountLevelServiceConfiguration",
+        "GetDefaultView",
+        "GetIndex",
+        "GetManagedView",
+        "GetResourcePolicy",
+        "GetView",
+        "ListIndexes",
+        "ListIndexesForMembers",
+        "ListManagedViews",
+        "ListSupportedResourceTypes",
+        "ListTagsForResource",
+        "view",
+        "ListViews",
+        "PutResourcePolicy",
+        "Search",
+        "TagResource",
+        "UntagResource",
+        "UpdateIndexType",
+        "UpdateView"
+    ]
+}

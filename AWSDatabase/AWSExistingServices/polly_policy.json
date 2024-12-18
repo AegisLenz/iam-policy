@@ -1,0 +1,14 @@
+{
+    "servicePrefix": "polly",
+    "AllowActions": [
+        "DeleteLexicon",
+        "DescribeVoices",
+        "GetLexicon",
+        "GetSpeechSynthesisTask",
+        "ListLexicons",
+        "ListSpeechSynthesisTasks",
+        "PutLexicon",
+        "StartSpeechSynthesisTask",
+        "SynthesizeSpeech"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "servicePrefix": "kendra-ranking",
+    "AllowActions": [
+        "CreateRescoreExecutionPlan",
+        "DeleteRescoreExecutionPlan",
+        "DescribeRescoreExecutionPlan",
+        "ListRescoreExecutionPlans",
+        "ListTagsForResource",
+        "Rescore",
+        "TagResource",
+        "UntagResource",
+        "UpdateRescoreExecutionPlan"
+    ]
+}

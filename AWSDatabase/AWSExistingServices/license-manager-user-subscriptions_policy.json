@@ -1,0 +1,25 @@
+{
+    "servicePrefix": "license-manager-user-subscriptions",
+    "AllowActions": [
+        "AssociateUser",
+        "CreateLicenseServerEndpoint",
+        "DeleteLicenseServerEndpoint",
+        "license-server-endpoint*",
+        "DeregisterIdentityProvider",
+        "DisassociateUser",
+        "instance-user*",
+        "ListIdentityProviders",
+        "ListInstances",
+        "ListLicenseServerEndpoints",
+        "ListProductSubscriptions",
+        "ListTagsForResource",
+        "product-subscription*",
+        "ListUserAssociations",
+        "RegisterIdentityProvider",
+        "StartProductSubscription",
+        "StopProductSubscription",
+        "TagResource",
+        "UntagResource",
+        "UpdateIdentityProviderSettings"
+    ]
+}

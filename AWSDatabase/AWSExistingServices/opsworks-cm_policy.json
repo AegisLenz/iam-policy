@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "opsworks-cm",
+    "AllowActions": [
+        "AssociateNode",
+        "CreateBackup",
+        "CreateServer",
+        "DeleteBackup",
+        "DeleteServer",
+        "DescribeAccountAttributes",
+        "DescribeBackups",
+        "DescribeEvents",
+        "DescribeNodeAssociationStatus",
+        "DescribeServers",
+        "DisassociateNode",
+        "ExportServerEngineAttribute",
+        "ListTagsForResource",
+        "RestoreServer",
+        "StartMaintenance",
+        "TagResource",
+        "UntagResource",
+        "UpdateServer",
+        "UpdateServerEngineAttributes"
+    ]
+}

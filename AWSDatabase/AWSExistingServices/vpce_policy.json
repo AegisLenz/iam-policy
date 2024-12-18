@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "vpce",
+    "AllowActions": [
+        "AllowMultiRegion"
+    ]
+}

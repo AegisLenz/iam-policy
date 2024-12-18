@@ -1,0 +1,20 @@
+{
+    "servicePrefix": "osis",
+    "AllowActions": [
+        "CreatePipeline",
+        "DeletePipeline",
+        "GetPipeline",
+        "GetPipelineBlueprint",
+        "GetPipelineChangeProgress",
+        "Ingest",
+        "ListPipelineBlueprints",
+        "ListPipelines",
+        "ListTagsForResource",
+        "StartPipeline",
+        "StopPipeline",
+        "TagResource",
+        "UntagResource",
+        "UpdatePipeline",
+        "ValidatePipeline"
+    ]
+}

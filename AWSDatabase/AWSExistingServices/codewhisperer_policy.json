@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "codewhisperer",
+    "AllowActions": [
+        "AllowVendedLogDeliveryForResource",
+        "AssociateCustomizationPermission",
+        "CreateCustomization",
+        "CreateProfile",
+        "DeleteCustomization",
+        "DeleteProfile",
+        "DisassociateCustomizationPermission",
+        "GenerateRecommendations",
+        "GetCustomization",
+        "ListCustomizationPermissions",
+        "ListCustomizationVersions",
+        "ListCustomizations",
+        "ListProfiles",
+        "ListTagsForResource",
+        "profile",
+        "TagResource",
+        "UntagResource",
+        "UpdateCustomization",
+        "UpdateProfile"
+    ]
+}

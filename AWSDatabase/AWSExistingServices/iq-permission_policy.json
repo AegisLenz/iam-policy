@@ -1,0 +1,14 @@
+{
+    "servicePrefix": "iq-permission",
+    "AllowActions": [
+        "ApproveAccessGrant",
+        "ApprovePermissionRequest",
+        "AssumePermissionRole",
+        "CreatePermissionRequest",
+        "GetPermissionRequest",
+        "ListPermissionRequests",
+        "RejectPermissionRequest",
+        "RevokePermissionRequest",
+        "WithdrawPermissionRequest"
+    ]
+}

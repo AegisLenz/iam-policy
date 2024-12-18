@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "health",
+    "AllowActions": [
+        "DescribeAffectedAccountsForOrganization",
+        "DescribeAffectedEntities",
+        "DescribeAffectedEntitiesForOrganization",
+        "DescribeEntityAggregates",
+        "DescribeEntityAggregatesForOrganization",
+        "DescribeEventAggregates",
+        "DescribeEventDetails",
+        "DescribeEventDetailsForOrganization",
+        "DescribeEventTypes",
+        "DescribeEvents",
+        "DescribeEventsForOrganization",
+        "DescribeHealthServiceStatusForOrganization",
+        "DisableHealthServiceAccessForOrganization",
+        "EnableHealthServiceAccessForOrganization"
+    ]
+}

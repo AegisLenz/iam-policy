@@ -1,0 +1,16 @@
+{
+    "servicePrefix": "license-manager-linux-subscriptions",
+    "AllowActions": [
+        "DeregisterSubscriptionProvider",
+        "GetRegisteredSubscriptionProvider",
+        "GetServiceSettings",
+        "ListLinuxSubscriptionInstances",
+        "ListLinuxSubscriptions",
+        "ListRegisteredSubscriptionProviders",
+        "ListTagsForResource",
+        "RegisterSubscriptionProvider",
+        "TagResource",
+        "UntagResource",
+        "UpdateServiceSettings"
+    ]
+}

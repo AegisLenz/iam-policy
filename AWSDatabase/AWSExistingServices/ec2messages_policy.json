@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "ec2messages",
+    "AllowActions": [
+        "AcknowledgeMessage",
+        "DeleteMessage",
+        "FailMessage",
+        "GetEndpoint",
+        "GetMessages",
+        "SendReply"
+    ]
+}

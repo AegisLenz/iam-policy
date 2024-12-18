@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "ebs",
+    "AllowActions": [
+        "CompleteSnapshot",
+        "GetSnapshotBlock",
+        "ListChangedBlocks",
+        "ListSnapshotBlocks",
+        "PutSnapshotBlock",
+        "StartSnapshot"
+    ]
+}

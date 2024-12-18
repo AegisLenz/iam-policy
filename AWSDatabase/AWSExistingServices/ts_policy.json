@@ -1,0 +1,14 @@
+{
+    "servicePrefix": "ts",
+    "AllowActions": [
+        "GetExecution",
+        "GetExecutionOutput",
+        "GetTool",
+        "ListExecutions",
+        "ListTagsForResource",
+        "ListTools",
+        "StartExecution",
+        "TagResource",
+        "UntagResource"
+    ]
+}

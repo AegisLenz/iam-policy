@@ -1,0 +1,20 @@
+{
+    "servicePrefix": "acm",
+    "AllowActions": [
+        "AddTagsToCertificate",
+        "DeleteCertificate",
+        "DescribeCertificate",
+        "ExportCertificate",
+        "GetAccountConfiguration",
+        "GetCertificate",
+        "ImportCertificate",
+        "ListCertificates",
+        "ListTagsForCertificate",
+        "PutAccountConfiguration",
+        "RemoveTagsFromCertificate",
+        "RenewCertificate",
+        "RequestCertificate",
+        "ResendValidationEmail",
+        "UpdateCertificateOptions"
+    ]
+}

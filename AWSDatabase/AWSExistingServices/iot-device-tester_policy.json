@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "iot-device-tester",
+    "AllowActions": [
+        "CheckVersion",
+        "DownloadTestSuite",
+        "LatestIdt",
+        "SendMetrics",
+        "SupportedVersion"
+    ]
+}

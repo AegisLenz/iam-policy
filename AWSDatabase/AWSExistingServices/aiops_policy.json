@@ -1,0 +1,27 @@
+{
+    "servicePrefix": "aiops",
+    "AllowActions": [
+        "CreateInvestigation",
+        "CreateInvestigationEvent",
+        "CreateInvestigationGroup",
+        "CreateInvestigationResource",
+        "DeleteInvestigation",
+        "DeleteInvestigationGroup",
+        "DeleteInvestigationGroupPolicy",
+        "GetInvestigation",
+        "GetInvestigationEvent",
+        "GetInvestigationGroup",
+        "GetInvestigationGroupPolicy",
+        "GetInvestigationResource",
+        "ListInvestigationEvents",
+        "ListInvestigationGroups",
+        "ListInvestigations",
+        "ListTagsForResource",
+        "PutInvestigationGroupPolicy",
+        "TagResource",
+        "UntagResource",
+        "UpdateInvestigation",
+        "UpdateInvestigationEvent",
+        "UpdateInvestigationGroup"
+    ]
+}

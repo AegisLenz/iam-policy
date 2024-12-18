@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "invoicing",
+    "AllowActions": [
+        "BatchGetInvoiceProfile",
+        "CreateInvoiceUnit",
+        "DeleteInvoiceUnit",
+        "GetInvoiceEmailDeliveryPreferences",
+        "GetInvoicePDF",
+        "GetInvoiceUnit",
+        "ListInvoiceSummaries",
+        "ListInvoiceUnits",
+        "ListTagsForResource",
+        "PutInvoiceEmailDeliveryPreferences",
+        "TagResource",
+        "UntagResource",
+        "UpdateInvoiceUnit"
+    ]
+}

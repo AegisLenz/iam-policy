@@ -1,0 +1,9 @@
+{
+    "servicePrefix": "a2c",
+    "AllowActions": [
+        "GetContainerizationJobDetails",
+        "GetDeploymentJobDetails",
+        "StartContainerizationJob",
+        "StartDeploymentJob"
+    ]
+}

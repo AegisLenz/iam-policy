@@ -1,0 +1,8 @@
+{
+    "servicePrefix": "freetier",
+    "AllowActions": [
+        "GetFreeTierAlertPreference",
+        "GetFreeTierUsage",
+        "PutFreeTierAlertPreference"
+    ]
+}

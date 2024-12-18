@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "sso-oauth",
+    "AllowActions": [
+        "CreateTokenWithIAM"
+    ]
+}

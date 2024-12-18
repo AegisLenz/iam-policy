@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "deepcomposer",
+    "AllowActions": [
+        "AssociateCoupon",
+        "CreateAudio",
+        "CreateComposition",
+        "CreateModel",
+        "DeleteComposition",
+        "DeleteModel",
+        "GetComposition",
+        "GetModel",
+        "GetSampleModel",
+        "ListCompositions",
+        "ListModels",
+        "ListSampleModels",
+        "ListTagsForResource",
+        "model",
+        "ListTrainingTopics",
+        "TagResource",
+        "UntagResource",
+        "UpdateComposition",
+        "UpdateModel"
+    ]
+}

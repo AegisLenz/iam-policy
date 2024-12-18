@@ -1,0 +1,32 @@
+{
+    "servicePrefix": "apptest",
+    "AllowActions": [
+        "CreateTestCase",
+        "CreateTestConfiguration",
+        "CreateTestSuite",
+        "DeleteTestCase",
+        "DeleteTestConfiguration",
+        "DeleteTestRun",
+        "DeleteTestSuite",
+        "GetTestCase",
+        "GetTestConfiguration",
+        "GetTestRunStep",
+        "GetTestSuite",
+        "ListTagsForResource",
+        "ListTestCases",
+        "ListTestConfigurations",
+        "ListTestRunSteps",
+        "ListTestRunTestCases",
+        "ListTestRuns",
+        "ListTestSuites",
+        "StartTestRun",
+        "TagResource",
+        "TestConfiguration",
+        "TestRun",
+        "TestSuite",
+        "UntagResource",
+        "UpdateTestCase",
+        "UpdateTestConfiguration",
+        "UpdateTestSuite"
+    ]
+}

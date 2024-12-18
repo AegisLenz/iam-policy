@@ -1,0 +1,29 @@
+{
+    "servicePrefix": "payments",
+    "AllowActions": [
+        "AcceptFinancingApplicationTerms",
+        "CreateFinancingApplication",
+        "CreatePaymentInstrument",
+        "DeletePaymentInstrument",
+        "GetFinancingApplication",
+        "GetFinancingLine",
+        "GetFinancingLineWithdrawal",
+        "GetFinancingOption",
+        "GetPaymentInstrument",
+        "GetPaymentStatus",
+        "ListFinancingApplications",
+        "ListFinancingLineWithdrawals",
+        "ListFinancingLines",
+        "ListPaymentInstruments",
+        "ListPaymentPreferences",
+        "ListPaymentProgramOptions",
+        "ListPaymentProgramStatus",
+        "ListTagsForResource",
+        "MakePayment",
+        "TagResource",
+        "UntagResource",
+        "UpdateFinancingApplication",
+        "UpdatePaymentInstrument",
+        "UpdatePaymentPreferences"
+    ]
+}

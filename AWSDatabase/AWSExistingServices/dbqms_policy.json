@@ -1,0 +1,17 @@
+{
+    "servicePrefix": "dbqms",
+    "AllowActions": [
+        "CreateFavoriteQuery",
+        "CreateTab",
+        "DeleteFavoriteQueries",
+        "DeleteQueryHistory",
+        "DeleteTab",
+        "DescribeFavoriteQueries",
+        "DescribeQueryHistory",
+        "DescribeTabs",
+        "GetQueryString",
+        "UpdateFavoriteQuery",
+        "UpdateQueryHistory",
+        "UpdateTab"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "servicePrefix": "simspaceweaver",
+    "AllowActions": [
+        "CreateSnapshot",
+        "DeleteApp",
+        "DeleteSimulation",
+        "DescribeApp",
+        "DescribeSimulation",
+        "ListApps",
+        "ListSimulations",
+        "ListTagsForResource",
+        "StartApp",
+        "StartClock",
+        "StartSimulation",
+        "StopApp",
+        "StopClock",
+        "StopSimulation",
+        "TagResource",
+        "UntagResource"
+    ]
+}

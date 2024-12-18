@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "elemental-support-cases",
+    "AllowActions": [
+        "AddCaseComment",
+        "CheckCasePermission",
+        "CompleteMultipartUpload",
+        "CreateCase",
+        "CreateS3CLIUploadCommand",
+        "CreateS3DownloadUrl",
+        "GetCase",
+        "GetCasePermission",
+        "GetCases",
+        "GetUICache",
+        "ListTagsForCase",
+        "StartMultipartUpload",
+        "TagCase",
+        "UntagCase",
+        "UpdateCase",
+        "UpdateCaseStatus",
+        "UpdateMultipartUpload"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "servicePrefix": "activate",
+    "AllowActions": [
+        "CreateForm",
+        "GetAccountContact",
+        "GetContentInfo",
+        "GetCosts",
+        "GetCredits",
+        "GetMemberInfo",
+        "GetProgram",
+        "PutMemberInfo"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "servicePrefix": "managedblockchain-query",
+    "AllowActions": [
+        "BatchGetTokenBalance",
+        "GetAssetContract",
+        "GetTokenBalance",
+        "GetTransaction",
+        "ListAssetContracts",
+        "ListFilteredTransactionEvents",
+        "ListTokenBalances",
+        "ListTransactionEvents",
+        "ListTransactions"
+    ]
+}

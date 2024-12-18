@@ -1,0 +1,8 @@
+{
+    "servicePrefix": "identitystore-auth",
+    "AllowActions": [
+        "BatchDeleteSession",
+        "BatchGetSession",
+        "ListSessions"
+    ]
+}

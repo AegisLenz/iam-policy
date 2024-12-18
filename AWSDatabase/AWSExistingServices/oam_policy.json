@@ -1,0 +1,21 @@
+{
+    "servicePrefix": "oam",
+    "AllowActions": [
+        "CreateLink",
+        "CreateSink",
+        "DeleteLink",
+        "DeleteSink",
+        "GetLink",
+        "GetSink",
+        "GetSinkPolicy",
+        "ListAttachedLinks",
+        "ListLinks",
+        "ListSinks",
+        "ListTagsForResource",
+        "Sink",
+        "PutSinkPolicy",
+        "TagResource",
+        "UntagResource",
+        "UpdateLink"
+    ]
+}

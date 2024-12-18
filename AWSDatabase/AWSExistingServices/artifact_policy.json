@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "artifact",
+    "AllowActions": [
+        "AcceptAgreement",
+        "AcceptNdaForAgreement",
+        "DownloadAgreement",
+        "customer-agreement",
+        "Get",
+        "GetAccountSettings",
+        "GetAgreement",
+        "GetCustomerAgreement",
+        "GetNdaForAgreement",
+        "GetReport",
+        "GetReportMetadata",
+        "GetTermForReport",
+        "ListAgreements",
+        "ListCustomerAgreements",
+        "ListReports",
+        "PutAccountSettings",
+        "TerminateAgreement"
+    ]
+}

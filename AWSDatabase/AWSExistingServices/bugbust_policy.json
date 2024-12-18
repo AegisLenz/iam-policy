@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "bugbust",
+    "AllowActions": [
+        "CreateEvent",
+        "EvaluateProfilingGroups",
+        "GetEvent",
+        "GetJoinEventStatus",
+        "JoinEvent",
+        "ListBugs",
+        "ListEventParticipants",
+        "ListEventScores",
+        "ListEvents",
+        "ListProfilingGroups",
+        "ListPullRequests",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateEvent",
+        "UpdateWorkItem",
+        "UpdateWorkItemAdmin"
+    ]
+}

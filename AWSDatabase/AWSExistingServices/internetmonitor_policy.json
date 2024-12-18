@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "internetmonitor",
+    "AllowActions": [
+        "CreateMonitor",
+        "DeleteMonitor",
+        "GetHealthEvent",
+        "GetInternetEvent",
+        "GetMonitor",
+        "GetQueryResults",
+        "GetQueryStatus",
+        "Link",
+        "ListHealthEvents",
+        "ListInternetEvents",
+        "ListMonitors",
+        "ListTagsForResource",
+        "StartQuery",
+        "StopQuery",
+        "TagResource",
+        "UntagResource",
+        "UpdateMonitor"
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "elemental-support-content",
+    "AllowActions": [
+        "Query"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "servicePrefix": "identitystore",
+    "AllowActions": [
+        "CreateGroup",
+        "CreateGroupMembership",
+        "Identitystore*",
+        "User*",
+        "CreateUser",
+        "DeleteGroup",
+        "DeleteGroupMembership",
+        "GroupMembership*",
+        "DeleteUser",
+        "DescribeGroup",
+        "DescribeGroupMembership",
+        "DescribeUser",
+        "GetGroupId",
+        "GetGroupMembershipId",
+        "GetUserId",
+        "IsMemberInGroups",
+        "Group*",
+        "ListGroupMemberships",
+        "ListGroupMembershipsForMember",
+        "ListGroups",
+        "ListUsers",
+        "UpdateGroup",
+        "UpdateUser"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "rum",
+    "AllowActions": [
+        "BatchCreateRumMetricDefinitions",
+        "BatchDeleteRumMetricDefinitions",
+        "BatchGetRumMetricDefinitions",
+        "CreateAppMonitor",
+        "DeleteAppMonitor",
+        "DeleteRumMetricsDestination",
+        "GetAppMonitor",
+        "GetAppMonitorData",
+        "ListAppMonitors",
+        "ListRumMetricsDestinations",
+        "ListTagsForResource",
+        "PutRumEvents",
+        "PutRumMetricsDestination",
+        "TagResource",
+        "UntagResource",
+        "UpdateAppMonitor",
+        "UpdateRumMetricDefinition"
+    ]
+}

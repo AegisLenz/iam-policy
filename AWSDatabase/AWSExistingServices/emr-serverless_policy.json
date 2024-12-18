@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "emr-serverless",
+    "AllowActions": [
+        "AccessInteractiveEndpoints",
+        "AccessLivyEndpoints",
+        "CancelJobRun",
+        "CreateApplication",
+        "DeleteApplication",
+        "GetApplication",
+        "GetDashboardForJobRun",
+        "GetJobRun",
+        "ListApplications",
+        "ListJobRunAttempts",
+        "ListJobRuns",
+        "ListTagsForResource",
+        "jobRun",
+        "StartApplication",
+        "StartJobRun",
+        "StopApplication",
+        "TagResource",
+        "UntagResource",
+        "UpdateApplication"
+    ]
+}

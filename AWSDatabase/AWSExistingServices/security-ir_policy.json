@@ -1,0 +1,28 @@
+{
+    "servicePrefix": "security-ir",
+    "AllowActions": [
+        "BatchGetMemberAccountDetails",
+        "CancelMembership",
+        "CloseCase",
+        "CreateCase",
+        "CreateCaseComment",
+        "CreateMembership",
+        "GetCase",
+        "GetCaseAttachmentDownloadUrl",
+        "GetCaseAttachmentUploadUrl",
+        "GetMembership",
+        "ListCaseEdits",
+        "ListCases",
+        "ListComments",
+        "ListMemberships",
+        "ListTagsForResource",
+        "membership",
+        "TagResource",
+        "UntagResource",
+        "UpdateCase",
+        "UpdateCaseComment",
+        "UpdateCaseStatus",
+        "UpdateMembership",
+        "UpdateResolverType"
+    ]
+}

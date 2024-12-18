@@ -1,0 +1,8 @@
+{
+    "servicePrefix": "resource-explorer",
+    "AllowActions": [
+        "ListResourceTypes",
+        "ListResources",
+        "ListTags"
+    ]
+}

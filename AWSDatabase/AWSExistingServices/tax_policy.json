@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "tax",
+    "AllowActions": [
+        "BatchDeleteTaxRegistration",
+        "BatchPutTaxRegistration",
+        "DeleteSupplementalTaxRegistration",
+        "DeleteTaxRegistration",
+        "GetExemptions",
+        "GetTaxInfoReportingDocument",
+        "GetTaxInheritance",
+        "GetTaxInterview",
+        "GetTaxRegistration",
+        "GetTaxRegistrationDocument",
+        "ListSupplementalTaxRegistrations",
+        "ListTaxRegistrations",
+        "PutSupplementalTaxRegistration",
+        "PutTaxInheritance",
+        "PutTaxInterview",
+        "PutTaxRegistration",
+        "UpdateExemptions"
+    ]
+}

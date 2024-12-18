@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "billing",
+    "AllowActions": [
+        "GetBillingData",
+        "GetBillingDetails",
+        "GetBillingNotifications",
+        "GetBillingPreferences",
+        "GetContractInformation",
+        "GetCredits",
+        "GetIAMAccessPreference",
+        "GetSellerOfRecord",
+        "ListBillingViews",
+        "PutContractInformation",
+        "RedeemCredits",
+        "UpdateBillingPreferences",
+        "UpdateIAMAccessPreference"
+    ]
+}

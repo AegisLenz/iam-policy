@@ -1,0 +1,26 @@
+{
+    "servicePrefix": "mediapackage",
+    "AllowActions": [
+        "ConfigureLogs",
+        "CreateChannel",
+        "CreateHarvestJob",
+        "CreateOriginEndpoint",
+        "DeleteChannel",
+        "DeleteOriginEndpoint",
+        "DescribeChannel",
+        "DescribeHarvestJob",
+        "DescribeOriginEndpoint",
+        "ListChannels",
+        "ListHarvestJobs",
+        "ListOriginEndpoints",
+        "ListTagsForResource",
+        "harvest_jobs",
+        "origin_endpoints",
+        "RotateChannelCredentials",
+        "RotateIngestEndpointCredentials",
+        "TagResource",
+        "UntagResource",
+        "UpdateChannel",
+        "UpdateOriginEndpoint"
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "servicePrefix": "synthetics",
+    "AllowActions": [
+        "AssociateResource",
+        "CreateCanary",
+        "CreateGroup",
+        "DeleteCanary",
+        "DeleteGroup",
+        "DescribeCanaries",
+        "DescribeCanariesLastRun",
+        "DescribeRuntimeVersions",
+        "DisassociateResource",
+        "GetCanary",
+        "GetCanaryRuns",
+        "GetGroup",
+        "ListAssociatedGroups",
+        "ListGroupResources",
+        "ListGroups",
+        "ListTagsForResource",
+        "group",
+        "StartCanary",
+        "StopCanary",
+        "TagResource",
+        "UntagResource",
+        "UpdateCanary"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "servicePrefix": "medical-imaging",
+    "AllowActions": [
+        "CopyImageSet",
+        "imageset*",
+        "CreateDatastore",
+        "DeleteDatastore",
+        "DeleteImageSet",
+        "GetDICOMImportJob",
+        "GetDICOMInstance",
+        "GetDICOMInstanceFrames",
+        "GetDICOMInstanceMetadata",
+        "GetDatastore",
+        "GetImageFrame",
+        "GetImageSet",
+        "GetImageSetMetadata",
+        "ListDICOMImportJobs",
+        "ListDatastores",
+        "ListImageSetVersions",
+        "ListTagsForResource",
+        "imageset",
+        "SearchImageSets",
+        "StartDICOMImportJob",
+        "TagResource",
+        "UntagResource",
+        "UpdateImageSetMetadata"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "aws-marketplace-management",
+    "AllowActions": [
+        "GetAdditionalSellerNotificationRecipients",
+        "GetBankAccountVerificationDetails",
+        "GetSecondaryUserVerificationDetails",
+        "GetSellerVerificationDetails",
+        "PutAdditionalSellerNotificationRecipients",
+        "PutBankAccountVerificationDetails",
+        "PutSecondaryUserVerificationDetails",
+        "PutSellerVerificationDetails",
+        "uploadFiles",
+        "viewMarketing",
+        "viewReports",
+        "viewSettings",
+        "viewSupport"
+    ]
+}

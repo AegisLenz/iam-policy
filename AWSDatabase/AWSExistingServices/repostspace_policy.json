@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "repostspace",
+    "AllowActions": [
+        "BatchAddRole",
+        "BatchRemoveRole",
+        "CreateSpace",
+        "DeleteSpace",
+        "DeregisterAdmin",
+        "GetSpace",
+        "ListSpaces",
+        "ListTagsForResource",
+        "RegisterAdmin",
+        "SendInvites",
+        "TagResource",
+        "UntagResource",
+        "UpdateSpace"
+    ]
+}

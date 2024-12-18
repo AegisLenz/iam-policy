@@ -1,0 +1,6 @@
+{
+    "servicePrefix": "cloudtrail-data",
+    "AllowActions": [
+        "PutAuditEvents"
+    ]
+}

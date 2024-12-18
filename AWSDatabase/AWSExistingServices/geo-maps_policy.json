@@ -1,0 +1,7 @@
+{
+    "servicePrefix": "geo-maps",
+    "AllowActions": [
+        "GetStaticMap",
+        "GetTile"
+    ]
+}

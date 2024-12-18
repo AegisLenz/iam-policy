@@ -1,0 +1,15 @@
+{
+    "servicePrefix": "pipes",
+    "AllowActions": [
+        "CreatePipe",
+        "DeletePipe",
+        "DescribePipe",
+        "ListPipes",
+        "ListTagsForResource",
+        "StartPipe",
+        "StopPipe",
+        "TagResource",
+        "UntagResource",
+        "UpdatePipe"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "servicePrefix": "iotdeviceadvisor",
+    "AllowActions": [
+        "CreateSuiteDefinition",
+        "DeleteSuiteDefinition",
+        "GetEndpoint",
+        "GetSuiteDefinition",
+        "GetSuiteRun",
+        "GetSuiteRunReport",
+        "ListSuiteDefinitions",
+        "ListSuiteRuns",
+        "ListTagsForResource",
+        "Suiterun",
+        "StartSuiteRun",
+        "StopSuiteRun",
+        "TagResource",
+        "UntagResource",
+        "UpdateSuiteDefinition"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "appstudio",
+    "AllowActions": [
+        "GetAccountStatus",
+        "GetEnablementJobStatus",
+        "StartEnablementJob",
+        "StartRollbackEnablementJob",
+        "StartTeamDeployment"
+    ]
+}

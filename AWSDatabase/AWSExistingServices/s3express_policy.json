@@ -1,0 +1,16 @@
+{
+    "servicePrefix": "s3express",
+    "AllowActions": [
+        "CreateBucket",
+        "CreateSession",
+        "DeleteBucket",
+        "DeleteBucketPolicy",
+        "GetBucketPolicy",
+        "GetEncryptionConfiguration",
+        "GetLifecycleConfiguration",
+        "ListAllMyDirectoryBuckets",
+        "PutBucketPolicy",
+        "PutEncryptionConfiguration",
+        "PutLifecycleConfiguration"
+    ]
+}

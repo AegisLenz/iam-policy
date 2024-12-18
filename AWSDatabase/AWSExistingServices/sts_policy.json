@@ -1,0 +1,20 @@
+{
+    "servicePrefix": "sts",
+    "AllowActions": [
+        "AssumeRole",
+        "AssumeRoleWithSAML",
+        "AssumeRoleWithWebIdentity",
+        "AssumeRoot",
+        "DecodeAuthorizationMessage",
+        "GetAccessKeyInfo",
+        "GetCallerIdentity",
+        "GetFederationToken",
+        "GetServiceBearerToken",
+        "GetSessionToken",
+        "SetContext",
+        "self-session",
+        "SetSourceIdentity",
+        "user",
+        "TagSession"
+    ]
+}

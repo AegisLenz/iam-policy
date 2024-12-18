@@ -1,0 +1,7 @@
+{
+    "servicePrefix": "supportrecommendations",
+    "AllowActions": [
+        "GetSupportTroubleshootingResponse",
+        "StartSupportTroubleshooting"
+    ]
+}

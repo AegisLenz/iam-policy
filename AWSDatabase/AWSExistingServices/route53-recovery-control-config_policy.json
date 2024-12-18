@@ -1,0 +1,32 @@
+{
+    "servicePrefix": "route53-recovery-control-config",
+    "AllowActions": [
+        "CreateCluster",
+        "CreateControlPanel",
+        "CreateRoutingControl",
+        "CreateSafetyRule",
+        "DeleteCluster",
+        "DeleteControlPanel",
+        "DeleteRoutingControl",
+        "DeleteSafetyRule",
+        "DescribeCluster",
+        "DescribeControlPanel",
+        "DescribeRoutingControl",
+        "DescribeRoutingControlByName",
+        "DescribeSafetyRule",
+        "GetResourcePolicy",
+        "ListAssociatedRoute53HealthChecks",
+        "ListClusters",
+        "ListControlPanels",
+        "ListRoutingControls",
+        "ListSafetyRules",
+        "ListTagsForResource",
+        "TagResource",
+        "controlpanel",
+        "safetyrule",
+        "UntagResource",
+        "UpdateControlPanel",
+        "UpdateRoutingControl",
+        "UpdateSafetyRule"
+    ]
+}

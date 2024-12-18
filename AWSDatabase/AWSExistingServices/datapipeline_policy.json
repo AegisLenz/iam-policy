@@ -1,0 +1,26 @@
+{
+    "servicePrefix": "datapipeline",
+    "AllowActions": [
+        "ActivatePipeline",
+        "AddTags",
+        "CreatePipeline",
+        "DeactivatePipeline",
+        "DeletePipeline",
+        "DescribeObjects",
+        "DescribePipelines",
+        "EvaluateExpression",
+        "GetAccountLimits",
+        "GetPipelineDefinition",
+        "ListPipelines",
+        "PollForTask",
+        "PutAccountLimits",
+        "PutPipelineDefinition",
+        "QueryObjects",
+        "RemoveTags",
+        "ReportTaskProgress",
+        "ReportTaskRunnerHeartbeat",
+        "SetStatus",
+        "SetTaskStatus",
+        "ValidatePipelineDefinition"
+    ]
+}

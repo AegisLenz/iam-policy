@@ -1,0 +1,23 @@
+{
+    "servicePrefix": "kafkaconnect",
+    "AllowActions": [
+        "CreateConnector",
+        "CreateCustomPlugin",
+        "CreateWorkerConfiguration",
+        "DeleteConnector",
+        "DeleteCustomPlugin",
+        "DeleteWorkerConfiguration",
+        "DescribeConnector",
+        "DescribeCustomPlugin",
+        "DescribeWorkerConfiguration",
+        "ListConnectors",
+        "ListCustomPlugins",
+        "ListTagsForResource",
+        "custom plugin",
+        "worker configuration",
+        "ListWorkerConfigurations",
+        "TagResource",
+        "UntagResource",
+        "UpdateConnector"
+    ]
+}

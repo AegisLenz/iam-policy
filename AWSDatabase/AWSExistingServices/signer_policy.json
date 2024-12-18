@@ -1,0 +1,25 @@
+{
+    "servicePrefix": "signer",
+    "AllowActions": [
+        "AddProfilePermission",
+        "CancelSigningProfile",
+        "DescribeSigningJob",
+        "GetRevocationStatus",
+        "signing-profile*",
+        "GetSigningPlatform",
+        "GetSigningProfile",
+        "ListProfilePermissions",
+        "ListSigningJobs",
+        "ListSigningPlatforms",
+        "ListSigningProfiles",
+        "ListTagsForResource",
+        "PutSigningProfile",
+        "RemoveProfilePermission",
+        "RevokeSignature",
+        "RevokeSigningProfile",
+        "SignPayload",
+        "StartSigningJob",
+        "TagResource",
+        "UntagResource"
+    ]
+}

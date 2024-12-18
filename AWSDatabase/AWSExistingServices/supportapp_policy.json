@@ -1,0 +1,18 @@
+{
+    "servicePrefix": "supportapp",
+    "AllowActions": [
+        "CreateSlackChannelConfiguration",
+        "DeleteAccountAlias",
+        "DeleteSlackChannelConfiguration",
+        "DeleteSlackWorkspaceConfiguration",
+        "DescribeSlackChannels",
+        "GetAccountAlias",
+        "GetSlackOauthParameters",
+        "ListSlackChannelConfigurations",
+        "ListSlackWorkspaceConfigurations",
+        "PutAccountAlias",
+        "RedeemSlackOauthCode",
+        "RegisterSlackWorkspaceForOrganization",
+        "UpdateSlackChannelConfiguration"
+    ]
+}

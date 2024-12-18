@@ -1,0 +1,13 @@
+{
+    "servicePrefix": "iotfleethub",
+    "AllowActions": [
+        "CreateApplication",
+        "DeleteApplication",
+        "DescribeApplication",
+        "ListApplications",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateApplication"
+    ]
+}

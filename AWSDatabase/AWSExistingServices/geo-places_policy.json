@@ -1,0 +1,12 @@
+{
+    "servicePrefix": "geo-places",
+    "AllowActions": [
+        "Autocomplete",
+        "Geocode",
+        "GetPlace",
+        "ReverseGeocode",
+        "SearchNearby",
+        "SearchText",
+        "Suggest"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "servicePrefix": "monitron",
+    "AllowActions": [
+        "AssociateProjectAdminUser",
+        "CreateProject",
+        "CreateProjectUserAssociation",
+        "CreateUserAccessRoleAssociation",
+        "DeleteProject",
+        "DeleteProjectUserAssociation",
+        "DeleteUserAccessRoleAssociation",
+        "DisassociateProjectAdminUser",
+        "GetProject",
+        "GetProjectAdminUser",
+        "ListProjectAdminUsers",
+        "ListProjectUserAssociations",
+        "ListProjects",
+        "ListTagsForResource",
+        "ListUserAccessRoleAssociations",
+        "TagResource",
+        "UntagResource",
+        "UpdateProject"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "servicePrefix": "ssmmessages",
+    "AllowActions": [
+        "CreateControlChannel",
+        "CreateDataChannel",
+        "OpenControlChannel",
+        "OpenDataChannel"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "servicePrefix": "lookoutvision",
+    "AllowActions": [
+        "CreateDataset",
+        "CreateModel",
+        "CreateProject",
+        "DeleteDataset",
+        "DeleteModel",
+        "DeleteProject",
+        "DescribeDataset",
+        "DescribeModel",
+        "DescribeModelPackagingJob",
+        "DescribeProject",
+        "DescribeTrialDetection",
+        "DetectAnomalies",
+        "ListDatasetEntries",
+        "ListModelPackagingJobs",
+        "ListModels",
+        "ListProjects",
+        "ListTagsForResource",
+        "ListTrialDetections",
+        "StartModel",
+        "StartModelPackagingJob",
+        "StartTrialDetection",
+        "StopModel",
+        "TagResource",
+        "UntagResource",
+        "UpdateDatasetEntries"
+    ]
+}

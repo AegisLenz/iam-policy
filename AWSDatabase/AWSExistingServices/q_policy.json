@@ -1,0 +1,28 @@
+{
+    "servicePrefix": "q",
+    "AllowActions": [
+        "CreateAssignment",
+        "CreatePlugin",
+        "DeleteAssignment",
+        "DeletePlugin",
+        "GenerateCodeFromCommands",
+        "GetConversation",
+        "GetIdentityMetadata",
+        "GetPlugin",
+        "GetTroubleshootingResults",
+        "ListConversations",
+        "ListDashboardMetrics",
+        "ListPluginProviders",
+        "ListPlugins",
+        "ListTagsForResource",
+        "PassRequest",
+        "SendMessage",
+        "StartConversation",
+        "StartTroubleshootingAnalysis",
+        "StartTroubleshootingResolutionExplanation",
+        "TagResource",
+        "UntagResource",
+        "UpdateTroubleshootingCommandResult",
+        "UsePlugin"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "customer-verification",
+    "AllowActions": [
+        "CreateCustomerVerificationDetails",
+        "CreateUploadUrls",
+        "GetCustomerVerificationDetails",
+        "GetCustomerVerificationEligibility",
+        "UpdateCustomerVerificationDetails"
+    ]
+}

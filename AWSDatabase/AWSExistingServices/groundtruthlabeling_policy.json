@@ -1,0 +1,21 @@
+{
+    "servicePrefix": "groundtruthlabeling",
+    "AllowActions": [
+        "AssociatePatchToManifestJob",
+        "CreateBatch",
+        "CreateIntakeForm",
+        "CreateProject",
+        "CreateWorkflowDefinition",
+        "DescribeConsoleJob",
+        "GenerateLIDARPreviewTaskConfigJob",
+        "GetBatch",
+        "GetIntakeFormStatus",
+        "ListBatches",
+        "ListDatasetObjects",
+        "ListProjects",
+        "RunFilterOrSampleDatasetJob",
+        "RunGenerateManifestByCrawlingJob",
+        "RunGenerateManifestMetricsJob",
+        "UpdateBatch"
+    ]
+}

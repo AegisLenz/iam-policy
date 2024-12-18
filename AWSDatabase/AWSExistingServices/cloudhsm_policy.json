@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "cloudhsm",
+    "AllowActions": [
+        "CopyBackupToRegion",
+        "CreateCluster",
+        "CreateHsm",
+        "DeleteBackup",
+        "DeleteCluster",
+        "DeleteHsm",
+        "DeleteResourcePolicy",
+        "DescribeBackups",
+        "DescribeClusters",
+        "GetResourcePolicy",
+        "InitializeCluster",
+        "ListTags",
+        "cluster",
+        "ModifyBackupAttributes",
+        "ModifyCluster",
+        "PutResourcePolicy",
+        "RestoreBackup",
+        "TagResource",
+        "UntagResource"
+    ]
+}

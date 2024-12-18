@@ -1,0 +1,32 @@
+{
+    "servicePrefix": "scn",
+    "AllowActions": [
+        "AssignAdminPermissionsToUser",
+        "CreateBillOfMaterialsImportJob",
+        "CreateDataIntegrationFlow",
+        "CreateDataLakeDataset",
+        "CreateInstance",
+        "CreateSSOApplication",
+        "DeleteDataIntegrationFlow",
+        "DeleteDataLakeDataset",
+        "DeleteInstance",
+        "DeleteSSOApplication",
+        "DescribeInstance",
+        "GetBillOfMaterialsImportJob",
+        "GetDataIntegrationFlow",
+        "GetDataLakeDataset",
+        "GetInstance",
+        "ListAdminUsers",
+        "ListDataIntegrationFlows",
+        "ListDataLakeDatasets",
+        "ListInstances",
+        "ListTagsForResource",
+        "RemoveAdminPermissionsForUser",
+        "SendDataIntegrationEvent",
+        "TagResource",
+        "UntagResource",
+        "UpdateDataIntegrationFlow",
+        "UpdateDataLakeDataset",
+        "UpdateInstance"
+    ]
+}

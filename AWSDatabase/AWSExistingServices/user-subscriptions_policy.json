@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "user-subscriptions",
+    "AllowActions": [
+        "CreateClaim",
+        "DeleteClaim",
+        "ListApplicationClaims",
+        "ListClaims",
+        "ListUserSubscriptions",
+        "UpdateClaim"
+    ]
+}

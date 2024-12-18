@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "application-cost-profiler",
+    "AllowActions": [
+        "DeleteReportDefinition",
+        "GetReportDefinition",
+        "ImportApplicationUsage",
+        "ListReportDefinitions",
+        "PutReportDefinition",
+        "UpdateReportDefinition"
+    ]
+}

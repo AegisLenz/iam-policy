@@ -1,0 +1,21 @@
+{
+    "servicePrefix": "application-signals",
+    "AllowActions": [
+        "BatchGetServiceLevelObjectiveBudgetReport",
+        "CreateServiceLevelObjective",
+        "DeleteServiceLevelObjective",
+        "GetService",
+        "GetServiceLevelObjective",
+        "ListObservedEntities",
+        "ListServiceDependencies",
+        "ListServiceDependents",
+        "ListServiceLevelObjectives",
+        "ListServiceOperations",
+        "ListServices",
+        "ListTagsForResource",
+        "StartDiscovery",
+        "TagResource",
+        "UntagResource",
+        "UpdateServiceLevelObjective"
+    ]
+}

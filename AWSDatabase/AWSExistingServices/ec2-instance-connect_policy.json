@@ -1,0 +1,9 @@
+{
+    "servicePrefix": "ec2-instance-connect",
+    "AllowActions": [
+        "OpenTunnel",
+        "instance-connect-endpoint",
+        "SendSSHPublicKey",
+        "SendSerialConsoleSSHPublicKey"
+    ]
+}

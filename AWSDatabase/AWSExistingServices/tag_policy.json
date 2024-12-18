@@ -1,0 +1,13 @@
+{
+    "servicePrefix": "tag",
+    "AllowActions": [
+        "DescribeReportCreation",
+        "GetComplianceSummary",
+        "GetResources",
+        "GetTagKeys",
+        "GetTagValues",
+        "StartReportCreation",
+        "TagResources",
+        "UntagResources"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "servicePrefix": "pcs",
+    "AllowActions": [
+        "AllowVendedLogDeliveryForResource",
+        "CreateCluster",
+        "CreateComputeNodeGroup",
+        "CreateQueue",
+        "DeleteCluster",
+        "DeleteComputeNodeGroup",
+        "computenodegroup*",
+        "DeleteQueue",
+        "queue*",
+        "GetCluster",
+        "GetComputeNodeGroup",
+        "GetQueue",
+        "ListClusters",
+        "ListComputeNodeGroups",
+        "ListQueues",
+        "ListTagsForResource",
+        "RegisterComputeNodeGroupInstance",
+        "TagResource",
+        "computenodegroup",
+        "queue",
+        "UntagResource",
+        "UpdateComputeNodeGroup",
+        "UpdateQueue"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "servicePrefix": "braket",
+    "AllowActions": [
+        "AcceptUserAgreement",
+        "AccessBraketFeature",
+        "CancelJob",
+        "CancelQuantumTask",
+        "CreateJob",
+        "CreateQuantumTask",
+        "GetDevice",
+        "GetJob",
+        "GetQuantumTask",
+        "GetServiceLinkedRoleStatus",
+        "GetUserAgreementStatus",
+        "ListTagsForResource",
+        "quantum-task",
+        "SearchDevices",
+        "SearchJobs",
+        "SearchQuantumTasks",
+        "TagResource",
+        "UntagResource"
+    ]
+}

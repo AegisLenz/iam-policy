@@ -1,0 +1,17 @@
+{
+    "servicePrefix": "airflow",
+    "AllowActions": [
+        "CreateCliToken",
+        "CreateEnvironment",
+        "CreateWebLoginToken",
+        "DeleteEnvironment",
+        "GetEnvironment",
+        "InvokeRestApi",
+        "ListEnvironments",
+        "ListTagsForResource",
+        "PublishMetrics",
+        "TagResource",
+        "UntagResource",
+        "UpdateEnvironment"
+    ]
+}

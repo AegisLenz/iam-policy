@@ -1,0 +1,24 @@
+{
+    "servicePrefix": "servicequotas",
+    "AllowActions": [
+        "AssociateServiceQuotaTemplate",
+        "DeleteServiceQuotaIncreaseRequestFromTemplate",
+        "DisassociateServiceQuotaTemplate",
+        "GetAWSDefaultServiceQuota",
+        "GetAssociationForServiceQuotaTemplate",
+        "GetRequestedServiceQuotaChange",
+        "GetServiceQuota",
+        "GetServiceQuotaIncreaseRequestFromTemplate",
+        "ListAWSDefaultServiceQuotas",
+        "ListRequestedServiceQuotaChangeHistory",
+        "ListRequestedServiceQuotaChangeHistoryByQuota",
+        "ListServiceQuotaIncreaseRequestsInTemplate",
+        "ListServiceQuotas",
+        "ListServices",
+        "ListTagsForResource",
+        "PutServiceQuotaIncreaseRequestIntoTemplate",
+        "RequestServiceQuotaIncrease",
+        "TagResource",
+        "UntagResource"
+    ]
+}

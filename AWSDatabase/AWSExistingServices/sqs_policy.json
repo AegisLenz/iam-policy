@@ -1,0 +1,25 @@
+{
+    "servicePrefix": "sqs",
+    "AllowActions": [
+        "AddPermission",
+        "CancelMessageMoveTask",
+        "ChangeMessageVisibility",
+        "CreateQueue",
+        "DeleteMessage",
+        "DeleteQueue",
+        "GetQueueAttributes",
+        "GetQueueUrl",
+        "ListDeadLetterSourceQueues",
+        "ListMessageMoveTasks",
+        "ListQueueTags",
+        "ListQueues",
+        "PurgeQueue",
+        "ReceiveMessage",
+        "RemovePermission",
+        "SendMessage",
+        "SetQueueAttributes",
+        "StartMessageMoveTask",
+        "TagQueue",
+        "UntagQueue"
+    ]
+}

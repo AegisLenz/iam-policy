@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "ds-data",
+    "AllowActions": [
+        "AddGroupMember",
+        "CreateGroup",
+        "CreateUser",
+        "DeleteGroup",
+        "DeleteUser",
+        "DescribeGroup",
+        "DescribeUser",
+        "DisableUser",
+        "ListGroupMembers",
+        "ListGroups",
+        "ListGroupsForMember",
+        "ListUsers",
+        "RemoveGroupMember",
+        "SearchGroups",
+        "SearchUsers",
+        "UpdateGroup",
+        "UpdateUser"
+    ]
+}

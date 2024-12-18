@@ -1,0 +1,22 @@
+{
+    "servicePrefix": "cognito-sync",
+    "AllowActions": [
+        "BulkPublish",
+        "DeleteDataset",
+        "DescribeDataset",
+        "DescribeIdentityPoolUsage",
+        "DescribeIdentityUsage",
+        "GetBulkPublishDetails",
+        "GetCognitoEvents",
+        "GetIdentityPoolConfiguration",
+        "ListDatasets",
+        "ListIdentityPoolUsage",
+        "ListRecords",
+        "RegisterDevice",
+        "SetCognitoEvents",
+        "SetIdentityPoolConfiguration",
+        "SubscribeToDataset",
+        "UnsubscribeFromDataset",
+        "UpdateRecords"
+    ]
+}

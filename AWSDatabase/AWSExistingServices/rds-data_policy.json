@@ -1,0 +1,11 @@
+{
+    "servicePrefix": "rds-data",
+    "AllowActions": [
+        "BatchExecuteStatement",
+        "BeginTransaction",
+        "CommitTransaction",
+        "ExecuteSql",
+        "ExecuteStatement",
+        "RollbackTransaction"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "servicePrefix": "elemental-appliances-software",
+    "AllowActions": [
+        "CompleteUpload",
+        "CreateOrderV1",
+        "CreateQuote",
+        "GetAvsCorrectAddress",
+        "GetBillingAddresses",
+        "GetDeliveryAddressesV2",
+        "GetOrder",
+        "GetOrdersV2",
+        "GetQuote",
+        "GetTaxes",
+        "ListQuotes",
+        "StartUpload",
+        "SubmitOrderV1",
+        "UpdateQuote"
+    ]
+}

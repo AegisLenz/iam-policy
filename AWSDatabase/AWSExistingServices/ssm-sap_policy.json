@@ -1,0 +1,31 @@
+{
+    "servicePrefix": "ssm-sap",
+    "AllowActions": [
+        "BackupDatabase",
+        "DeleteResourcePermission",
+        "DeregisterApplication",
+        "GetApplication",
+        "GetComponent",
+        "GetDatabase",
+        "GetOperation",
+        "GetResourcePermission",
+        "ListApplications",
+        "ListComponents",
+        "ListDatabases",
+        "ListOperationEvents",
+        "ListOperations",
+        "ListTagsForResource",
+        "PutResourcePermission",
+        "RegisterApplication",
+        "RestoreDatabase",
+        "StartApplication",
+        "StartApplicationRefresh",
+        "StopApplication",
+        "TagResource",
+        "component",
+        "database",
+        "UntagResource",
+        "UpdateApplicationSettings",
+        "UpdateHANABackupSettings"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "servicePrefix": "opensearch",
+    "AllowActions": [
+        "ApplicationAccessAll",
+        "CancelDirectQuery",
+        "GetDirectQuery",
+        "GetDirectQueryResult",
+        "StartDirectQuery"
+    ]
+}
