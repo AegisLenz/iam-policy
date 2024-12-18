@@ -1,6 +1,10 @@
 # common_utils.py
 import json
-import os
+import random
+import string
+
+def generate_random_sid():
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=10))
 
 def load_json(file_path):
     try:
@@ -16,7 +20,7 @@ def extract_resource_from_log(log):
 def generate_least_privilege_policy(actions, resources, effect="Allow"):
     return [
         {
-            "Sid": f"policy-{actions[0]}",
+            "Sid": generate_random_sid(),
             "Effect": effect,
             "Action": actions,
             "Resource": resources
@@ -48,7 +52,7 @@ def merge_policies(policies):
 
     for resource, actions in resource_action_map.items():
         merged_policy["PolicyDocument"]["Statement"].append({
-            "Sid": f"policy-{resource.replace(':', '-').replace('/', '-')}",
+            "Sid": generate_random_sid(),
             "Effect": "Allow",
             "Action": list(actions),
             "Resource": resource,
@@ -62,7 +66,7 @@ def map_etc(event_source, event_name):
         "Version": "2012-10-17",
         "Statement": [
             {
-                "Sid": f"policy-{action}",
+                "Sid": generate_random_sid(),
                 "Effect": "Allow",
                 "Action": action,
                 "Resource": "*",
