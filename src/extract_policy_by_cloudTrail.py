@@ -71,10 +71,9 @@ def extract_policy_by_cloudTrail(file_path):
                 continue
 
             isAttack = log_entry.get("mitreAttackTactics")
-            policy = making_policy(log_entry)
-            if policy:
-                if isAttack is None:
-                    normal_log.append(log_entry)
+            if isAttack is None:
+                normal_log.append(log_entry)
+
         #Attack고려한 최소권한 추출
         for log_entry in normal_log:
             if not isinstance(log_entry, dict):
