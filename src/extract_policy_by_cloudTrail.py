@@ -17,7 +17,7 @@ def clustering_by_username(file_path):
         elif userIdentity.get("type") == "Root":
             userName = "root"
         else:
-            userName = "unknown"
+            userName = "AWS"
 
         if userName not in cluster:
             cluster[userName] = [] 
@@ -54,40 +54,40 @@ def making_policy(log_entry):
     return policy
 
 def extract_policy_by_cloudTrail(file_path):
-    logs = load_json(file_path).get("Records",[])
+    logs = load_json(file_path).get("Records", [])
     if not isinstance(logs, list):
         print("Error: The log file does not contain a valid list of log entries.")
         return
     
-    normal_log = []
-    all_policies = []
-    cluster = clustering_by_username(file_path)
-    policies = {}
-    for userName in cluster:
-        #attack에서만 단독적으로 사용된 권한 제외
-        for log_entry in cluster[userName]:
+    cluster = clustering_by_username(file_path) # 사용자별 클러스터링 추가
+    policies_by_user = {} # 사용자별로 정책을 저장하기 위한 딕셔너리 생성
+
+    for userName, user_logs in cluster.items():
+        service_policies = {} # 사용자별 서비스 정책 생성 추가
+
+        for log_entry in user_logs:
             if not isinstance(log_entry, dict):
                 print("Error: Log entry is not a valid dictionary.")
                 continue
 
-            isAttack = log_entry.get("mitreAttackTactics")
-            if isAttack is None:
-                normal_log.append(log_entry)
+            event_source = log_entry.get("eventSource")
+            if event_source not in service_policies: # 서비스별로 정책을 분리하여 저장
+                service_policies[event_source] = []
 
-        #Attack고려한 최소권한 추출
-        for log_entry in normal_log:
-            if not isinstance(log_entry, dict):
-                print("Error: Log entry is not a valid dictionary.")
-                continue
-            policy = making_policy(log_entry)
-            all_policies.append(policy)
-        if not all_policies:
-            print("No valid policies were generated.")
-            return
-        final_policy = merge_policies(all_policies)
-        if userName not in policies:
-            policies[userName] = []
-        policies[userName].append(final_policy)
-    return policies
+            policy = making_policy(log_entry) # 개별 로그로부터 정책 생성
+            if policy:
+                service_policies[event_source].append(policy)
+
+        user_policies = []
+        for service, policies in service_policies.items():
+            merged_policy = merge_policies(policies) # 서비스별 리소스별로 액션을 묶어서 병합
+            user_policies.append({
+                "Service": service, # 서비스별로 정책 생성 추가
+                "Policy": merged_policy
+            })
+
+        policies_by_user[userName] = user_policies # 사용자별로 정책 클러스터링 추가
+    return policies_by_user
+
 
 

@@ -12,8 +12,6 @@ def main():
     print(json.dumps(userPolicy, indent=4))
 
     clustered_policy_by_cloudtrail = extract_policy_by_cloudTrail(log_path)
-    with open("C:\Workspace\iam-policy\src\clustered_policy_by_cloudtrail.json", 'w', encoding='utf-8') as file:
-        json.dump(clustered_policy_by_cloudtrail, file, ensure_ascii=False, indent=4)
     print("최소권한 Policy: ")
     print(json.dumps(clustered_policy_by_cloudtrail, indent=4))
 

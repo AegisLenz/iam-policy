@@ -8,7 +8,7 @@
                     {
                         "Sid": "policy-iam:ListGroupsForUser",
                         "Effect": "Allow",
-                        "Action": "iam:ListGroupsForUser",
+                        "Action": "iam:ListGroupsForUser1111",
                         "Resource": [
                             "arn:aws:iam::891377205497:user/testAdmin"
                         ]
@@ -139,6 +139,120 @@
                         "Action": "iam:UpdateAssumeRolePolicy",
                         "Resource": [
                             "arn:aws:iam::891377205497:user/testAdmin"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "AWS": [
+        {
+            "PolicyName": "Aegislenz-Least-Privilege-Policy",
+            "PolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "policy-iam:ListGroupsForUser",
+                        "Effect": "Allow",
+                        "Action": "iam:ListGroupsForUser1111",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:DeleteAccessKey",
+                        "Effect": "Allow",
+                        "Action": "iam:DeleteAccessKey",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:DeleteUser",
+                        "Effect": "Allow",
+                        "Action": "iam:DeleteUser",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:ListPolicyVersions",
+                        "Effect": "Allow",
+                        "Action": "iam:ListPolicyVersions",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:DetachUserPolicy",
+                        "Effect": "Allow",
+                        "Action": "iam:DetachUserPolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:DeletePolicy",
+                        "Effect": "Allow",
+                        "Action": "iam:DeletePolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-sts:GetCallerIdentity",
+                        "Effect": "Allow",
+                        "Action": "sts:GetCallerIdentity",
+                        "Resource": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:ListAttachedRolePolicies",
+                        "Effect": "Allow",
+                        "Action": "iam:ListAttachedRolePolicies",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:ListAttachedUserPolicies",
+                        "Effect": "Allow",
+                        "Action": "iam:ListAttachedUserPolicies",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:GetPolicyVersion",
+                        "Effect": "Allow",
+                        "Action": "iam:GetPolicyVersion",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:GetUser",
+                        "Effect": "Allow",
+                        "Action": "iam:GetUser",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:GetPolicy",
+                        "Effect": "Allow",
+                        "Action": "iam:GetPolicy",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
+                        ]
+                    },
+                    {
+                        "Sid": "policy-iam:ListAccessKeys",
+                        "Effect": "Allow",
+                        "Action": "iam:ListAccessKeys",
+                        "Resource": [
+                            "arn:aws:iam::891377205497:user/testUser"
                         ]
                     }
                 ]

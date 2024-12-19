@@ -11,7 +11,7 @@ def iam_map_resource(log):
 def iam_policy_mapper(log):
     resource = extract_resource_from_log(log)
     resource_list = iam_map_resource(log)
-    event_name = log.get("eventName", "UnknownEvent")
+    event_name = log.get("eventName", "AWSEvent")
     least_privilege_policies = generate_least_privilege_policy([f"{resource}:{event_name}"], resource_list)
 
     final_policy = {
