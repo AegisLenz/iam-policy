@@ -1,24 +1,12 @@
 # AWS 최소권한 정책 생성하기
 
-AWS CloudTrail Log를 분석하여 사용자에게 적합한 최소권한 정책을 생성하는 도구입니다. 이 프로젝트는 사용자의 활동을 기반으로 최소한의 권한만을 부여함으로써 보안을 강화하는 것을 목표로 합니다.
-
-## 기본 설정
-
-1. eventName과 최소 Action이 맵핑되어 있는 DataBase
-2. CloudTrail Log json 파일
-
-## 코드 설명
-
-<<<<<<< HEAD
-
-# AWS 최소권한 정책 생성하기
-
 AWS CloudTrail Log를 분석하여 사용자에게 알맞는 최소권한 정책을 생성합니다.
 
 ## 기본 설정
 
 1. eventName과 최소 Action이 맵핑되어 있는 DataBase
-2. CloudTrail Log json 파일
+2. AWS의 실제 서비스 목록이 존재하는 DataBase
+3. CloudTrail Log json 파일
 
 ## 코드 설명
 

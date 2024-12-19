@@ -15,7 +15,7 @@ def load_json(file_path):
         return None
 
 def extract_resource_from_log(log):
-    return log.get("eventSource", "unknown").split(".")[0]
+    return log.get("eventSource", "AWS").split(".")[0]
 
 def generate_least_privilege_policy(actions, resources, effect="Allow"):
     return [

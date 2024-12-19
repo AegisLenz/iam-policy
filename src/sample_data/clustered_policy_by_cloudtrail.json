@@ -1,0 +1,1443 @@
+{
+    "root": [
+        {
+            "Service": "signin.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "snxxVgsmJQ",
+                            "Effect": "Allow",
+                            "Action": [
+                                "signin:ConsoleLogin"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ce.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "AcrEo4JR8K",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ce:GetCostForecast",
+                                "ce:GetCostAndUsage"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "cost-optimization-hub.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "Woke0MGwpJ",
+                            "Effect": "Allow",
+                            "Action": [
+                                "cost-optimization-hub:ListEnrollmentStatuses"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "health.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "3pJ10KLEGP",
+                            "Effect": "Allow",
+                            "Action": [
+                                "health:DescribeEvents",
+                                "health:DescribeEventAggregates"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "servicecatalog-appregistry.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "buW2pXw8Ct",
+                            "Effect": "Allow",
+                            "Action": [
+                                "servicecatalog-appregistry:ListApplications"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "notifications.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "NeS6EMnTgk",
+                            "Effect": "Allow",
+                            "Action": [
+                                "notifications:ListNotificationHubs"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ec2.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "HqPtvDEeF2",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ec2:DescribeVolumeStatus",
+                                "ec2:DescribeHosts",
+                                "ec2:DescribeInstanceStatus",
+                                "ec2:DescribeInstanceAttribute",
+                                "ec2:DescribeInstances",
+                                "ec2:DescribeVolumes",
+                                "ec2:DescribeAccountAttributes",
+                                "ec2:DescribeInstanceTypes",
+                                "ec2:DescribeSnapshots",
+                                "ec2:DescribeVpcs",
+                                "ec2:DescribeAddresses",
+                                "ec2:DescribeSubnets",
+                                "ec2:DescribeInstanceCreditSpecifications",
+                                "ec2:DescribeRegions",
+                                "ec2:DescribeLaunchTemplates",
+                                "ec2:DescribeCapacityReservations",
+                                "ec2:DescribeAvailabilityZones",
+                                "ec2:DescribeKeyPairs",
+                                "ec2:DescribeTags",
+                                "ec2:DescribeImages",
+                                "ec2:DescribeNetworkInterfaces",
+                                "ec2:DescribeReplaceRootVolumeTasks",
+                                "ec2:DescribePlacementGroups",
+                                "ec2:DescribeSecurityGroups"
+                            ],
+                            "Resource": "*"
+                        },
+                        {
+                            "Sid": "E6ge0a61aa",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ec2:StartInstances",
+                                "ec2:StopInstances"
+                            ],
+                            "Resource": "arn:aws:ec2:us-east-1:713881791527:instance/i-0414709f97c9f57ab"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "elasticloadbalancing.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "6zG6HKoptw",
+                            "Effect": "Allow",
+                            "Action": [
+                                "elasticloadbalancing:DescribeLoadBalancers"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "monitoring.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "yBDp8ajn4m",
+                            "Effect": "Allow",
+                            "Action": [
+                                "monitoring:DescribeAlarms"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "autoscaling.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "5OnEPcS54S",
+                            "Effect": "Allow",
+                            "Action": [
+                                "autoscaling:DescribeAutoScalingGroups"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "freetier.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "1aaeK5ixKF",
+                            "Effect": "Allow",
+                            "Action": [
+                                "freetier:GetFreeTierUsage"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "compute-optimizer.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "SmHtyFwUka",
+                            "Effect": "Allow",
+                            "Action": [
+                                "compute-optimizer:GetEnrollmentStatus"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "iam.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "I6YSgU9iWa",
+                            "Effect": "Allow",
+                            "Action": [
+                                "iam:GetInstanceProfile",
+                                "iam:ListGroupsForUser",
+                                "iam:ListPolicies",
+                                "iam:ListUserPolicies",
+                                "iam:ListAccountAliases",
+                                "iam:GetUser",
+                                "iam:ListSSHPublicKeys",
+                                "iam:ListMFADevices",
+                                "iam:UpdateLoginProfile",
+                                "iam:ListUserTags",
+                                "iam:GetAccountPasswordPolicy",
+                                "iam:GetLoginProfile",
+                                "iam:GetAccessKeyLastUsed",
+                                "iam:ListUsers",
+                                "iam:ListSigningCertificates",
+                                "iam:ListAttachedUserPolicies",
+                                "iam:GetAccountSummary",
+                                "iam:ListServiceSpecificCredentials",
+                                "iam:ListAccessKeys"
+                            ],
+                            "Resource": "arn:aws:iam::713881791527:user/None"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ssm.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "96w9TcY2S5",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ssm:DescribeInstanceInformation"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "logs.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "tyAdc4xbOA",
+                            "Effect": "Allow",
+                            "Action": [
+                                "logs:DescribeMetricFilters"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "s3.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "lSWCN58zxp",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:GetBucketObjectLockConfiguration",
+                                "s3:ListAllMyBuckets",
+                                "s3:GetBucketOwnershipControls",
+                                "s3:ListJobs",
+                                "s3:ListStorageLensConfigurations",
+                                "s3:GetBucketVersioning",
+                                "s3:GetBucketLocation"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "resource-explorer-2.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "mReaPghvK7",
+                            "Effect": "Allow",
+                            "Action": [
+                                "resource-explorer-2:ListIndexes"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "securityhub.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "M0Ah3FmCF4",
+                            "Effect": "Allow",
+                            "Action": [
+                                "securityhub:DescribeHub"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "organizations.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "SzoW2RLLDF",
+                            "Effect": "Allow",
+                            "Action": [
+                                "organizations:DescribeOrganization"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "cloudtrail.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "Zz1XN1Enck",
+                            "Effect": "Allow",
+                            "Action": [
+                                "cloudtrail:LookupEvents",
+                                "cloudtrail:ListTrails",
+                                "cloudtrail:ListEventDataStores",
+                                "cloudtrail:DescribeTrails",
+                                "cloudtrail:GetTrailStatus"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "config.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "BjKqDNySCr",
+                            "Effect": "Allow",
+                            "Action": [
+                                "config:ListDiscoveredResources",
+                                "config:DescribeConfigurationRecorders",
+                                "config:DescribeConfigurationRecorderStatus"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "discovery-marketplace.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "3MvPPOrQbP",
+                            "Effect": "Allow",
+                            "Action": [
+                                "discovery-marketplace:SearchListings"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "access-analyzer.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "yLIWkeYkLs",
+                            "Effect": "Allow",
+                            "Action": [
+                                "access-analyzer:ListPolicyGenerations",
+                                "access-analyzer:ListAnalyzers"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "sso.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "8cnnKdVFQl",
+                            "Effect": "Allow",
+                            "Action": [
+                                "sso:DescribeRegisteredRegions"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "AWS": [
+        {
+            "Service": "sts.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "AbfHn3ftdP",
+                            "Effect": "Allow",
+                            "Action": [
+                                "sts:AssumeRole"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "s3.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "b2DYijHgFn",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:GetBucketAcl"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "Wonje_Cha": [
+        {
+            "Service": "iam.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "r2wxt5NLuk",
+                            "Effect": "Allow",
+                            "Action": [
+                                "iam:ListUserPolicies",
+                                "iam:GetPolicy",
+                                "iam:GetAccessKeyLastUsed",
+                                "iam:GetUser",
+                                "iam:ListUsers",
+                                "iam:ListGroupsForUser",
+                                "iam:ListAttachedUserPolicies",
+                                "iam:ListMFADevices",
+                                "iam:GetAccountSummary",
+                                "iam:ListRoles",
+                                "iam:GetPolicyVersion",
+                                "iam:ListRolePolicies",
+                                "iam:ListAttachedRolePolicies",
+                                "iam:ListAccessKeys"
+                            ],
+                            "Resource": "arn:aws:iam::713881791527:user/Wonje_Cha"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ec2.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "fDeTWqV0UT",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ec2:DescribeInstances",
+                                "ec2:DescribeSecurityGroups"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "s3.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "3Q5RFx6cno",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:GetBucketTagging",
+                                "s3:GetBucketPolicy",
+                                "s3:ListAllMyBuckets",
+                                "s3:GetBucketLogging",
+                                "s3:GetBucketAcl",
+                                "s3:GetBucketVersioning",
+                                "s3:GetBucketLocation"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "cloudtrail.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "UEPHGvp6xG",
+                            "Effect": "Allow",
+                            "Action": [
+                                "cloudtrail:LookupEvents"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "Jiyun_Kim": [
+        {
+            "Service": "health.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "m4GH9nDeEp",
+                            "Effect": "Allow",
+                            "Action": [
+                                "health:DescribeEventAggregates"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ce.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "emLdKM3a3S",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ce:GetCostForecast",
+                                "ce:GetCostAndUsage"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "cost-optimization-hub.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "fFxnzzqSWS",
+                            "Effect": "Allow",
+                            "Action": [
+                                "cost-optimization-hub:ListEnrollmentStatuses"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ec2.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "7yev0KMKyc",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ec2:DescribeRegions"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "servicecatalog-appregistry.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "AeTsiUvSRS",
+                            "Effect": "Allow",
+                            "Action": [
+                                "servicecatalog-appregistry:ListApplications"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "notifications.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "TTa8l26tC0",
+                            "Effect": "Allow",
+                            "Action": [
+                                "notifications:ListNotificationHubs"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "resource-explorer-2.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "DYJtK9z1z5",
+                            "Effect": "Allow",
+                            "Action": [
+                                "resource-explorer-2:ListIndexes"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "organizations.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "nKA5y2oFIZ",
+                            "Effect": "Allow",
+                            "Action": [
+                                "organizations:DescribeOrganization"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "iam.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "saxMFVMvzv",
+                            "Effect": "Allow",
+                            "Action": [
+                                "iam:ListUserPolicies",
+                                "iam:ListAccountAliases",
+                                "iam:GetLoginProfile",
+                                "iam:GetRole",
+                                "iam:GetPolicy",
+                                "iam:GetAccessKeyLastUsed",
+                                "iam:GetUser",
+                                "iam:ListUserTags",
+                                "iam:ListUsers",
+                                "iam:ListSigningCertificates",
+                                "iam:ListGroupsForUser",
+                                "iam:ListAttachedUserPolicies",
+                                "iam:GetAccountSummary",
+                                "iam:ListMFADevices",
+                                "iam:ListRoles",
+                                "iam:ListAccessKeys",
+                                "iam:ListPolicies"
+                            ],
+                            "Resource": "arn:aws:iam::713881791527:user/Jiyun_Kim"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "sso.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "t50D6VV7kj",
+                            "Effect": "Allow",
+                            "Action": [
+                                "sso:DescribeRegisteredRegions"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "access-analyzer.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "lkoCKLMY8O",
+                            "Effect": "Allow",
+                            "Action": [
+                                "access-analyzer:ListPolicyGenerations"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "billingconsole.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "LEZ3vICVd5",
+                            "Effect": "Allow",
+                            "Action": [
+                                "billingconsole:ListRegions",
+                                "billingconsole:AWSPaymentPortalService.DescribePaymentsDashboard",
+                                "billingconsole:GetCommercialInvoicesForBillingPeriod",
+                                "billingconsole:GetPublicSectorCustomerContract",
+                                "billingconsole:AWSPaymentPortalService.GetAccountPreferences",
+                                "billingconsole:GetChallengeQuestions",
+                                "billingconsole:GetAccountInformation",
+                                "billingconsole:GetSellerOfRecord",
+                                "billingconsole:GetTotal",
+                                "billingconsole:GetAlternateContact",
+                                "billingconsole:GetContactInformation",
+                                "billingconsole:GetIAMAccessPreference",
+                                "billingconsole:GetBillingNotifications"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "account.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "opa8hpj1AZ",
+                            "Effect": "Allow",
+                            "Action": [
+                                "account:ListRegions",
+                                "account:GetAlternateContact"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "freetier.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "zNxonp6ZFk",
+                            "Effect": "Allow",
+                            "Action": [
+                                "freetier:GetAccountTrialInformation"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "TESTTEST": [
+        {
+            "Service": "health.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "UbvbzHyDd5",
+                            "Effect": "Allow",
+                            "Action": [
+                                "health:DescribeEvents",
+                                "health:DescribeEventAggregates"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ce.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "7hFnpuLhhd",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ce:GetCostForecast",
+                                "ce:GetCostAndUsage"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "cost-optimization-hub.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "GJ9lvTBwLF",
+                            "Effect": "Allow",
+                            "Action": [
+                                "cost-optimization-hub:ListEnrollmentStatuses"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "iam.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "8vTjvRxaqA",
+                            "Effect": "Allow",
+                            "Action": [
+                                "iam:CreateVirtualMFADevice",
+                                "iam:ListGroupsForUser",
+                                "iam:ListAccountAliases",
+                                "iam:EnableMFADevice",
+                                "iam:ListPolicies",
+                                "iam:ListUserPolicies",
+                                "iam:ListAccessKeys",
+                                "iam:GetAccountName",
+                                "iam:GetUser",
+                                "iam:ListSSHPublicKeys",
+                                "iam:ListMFADevices",
+                                "iam:ListUserTags",
+                                "iam:GetAccountEmailAddress",
+                                "iam:GetAccountPasswordPolicy",
+                                "iam:GetLoginProfile",
+                                "iam:GetAccessKeyLastUsed",
+                                "iam:ListUsers",
+                                "iam:ListSigningCertificates",
+                                "iam:ListAttachedUserPolicies",
+                                "iam:GetAccountSummary",
+                                "iam:ListVirtualMFADevices",
+                                "iam:ListServiceSpecificCredentials",
+                                "iam:GetMFADevice"
+                            ],
+                            "Resource": "arn:aws:iam::713881791527:user/TESTTEST"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "sso.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "2adQ8xRIOv",
+                            "Effect": "Allow",
+                            "Action": [
+                                "sso:DescribeRegisteredRegions"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "organizations.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "s7scp85VCQ",
+                            "Effect": "Allow",
+                            "Action": [
+                                "organizations:DescribeOrganization"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "s3.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "EumEbp5TYP",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:GetBucketVersioning",
+                                "s3:GetBucketObjectLockConfiguration",
+                                "s3:ListAllMyBuckets",
+                                "s3:GetBucketOwnershipControls"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "notifications.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "OCP54LSiYY",
+                            "Effect": "Allow",
+                            "Action": [
+                                "notifications:ListNotificationHubs"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "account.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "psBhurNFPy",
+                            "Effect": "Allow",
+                            "Action": [
+                                "account:ListRegions"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "billingconsole.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "ForJ7ydBKr",
+                            "Effect": "Allow",
+                            "Action": [
+                                "billingconsole:ListRegions",
+                                "billingconsole:GetPublicSectorCustomerContract",
+                                "billingconsole:GetChallengeQuestions",
+                                "billingconsole:GetAccountInformation",
+                                "billingconsole:GetSellerOfRecord",
+                                "billingconsole:GetAlternateContact",
+                                "billingconsole:GetContactInformation",
+                                "billingconsole:GetIAMAccessPreference"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "ec2.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "AlWfHVQH5J",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ec2:DescribeTags",
+                                "ec2:DescribeAddresses",
+                                "ec2:DescribePlacementGroups",
+                                "ec2:DescribeVolumeStatus",
+                                "ec2:DescribeHosts",
+                                "ec2:DescribeInstanceStatus",
+                                "ec2:DescribeRegions",
+                                "ec2:DescribeLaunchTemplates",
+                                "ec2:DescribeCapacityReservations",
+                                "ec2:DescribeVolumes",
+                                "ec2:DescribeAvailabilityZones",
+                                "ec2:DescribeKeyPairs",
+                                "ec2:DescribeAccountAttributes",
+                                "ec2:DescribeInstances",
+                                "ec2:DescribeSecurityGroups",
+                                "ec2:DescribeInstanceTypes",
+                                "ec2:DescribeSnapshots"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "access-analyzer.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "hmZ7m4q4XH",
+                            "Effect": "Allow",
+                            "Action": [
+                                "access-analyzer:ListPolicyGenerations"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "resource-explorer-2.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "nwCzES6YTJ",
+                            "Effect": "Allow",
+                            "Action": [
+                                "resource-explorer-2:ListIndexes"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "cloudtrail.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "egPnV72i88",
+                            "Effect": "Allow",
+                            "Action": [
+                                "cloudtrail:LookupEvents",
+                                "cloudtrail:ListTrails",
+                                "cloudtrail:DescribeTrails",
+                                "cloudtrail:ListEventDataStores",
+                                "cloudtrail:GetTrailStatus"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "config.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "m26fOT6zZz",
+                            "Effect": "Allow",
+                            "Action": [
+                                "config:ListDiscoveredResources",
+                                "config:DescribeConfigurationRecorders",
+                                "config:DescribeConfigurationRecorderStatus"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "servicecatalog-appregistry.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "NFlXd374A4",
+                            "Effect": "Allow",
+                            "Action": [
+                                "servicecatalog-appregistry:ListApplications"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "elasticloadbalancing.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "tD2tll8l6h",
+                            "Effect": "Allow",
+                            "Action": [
+                                "elasticloadbalancing:DescribeLoadBalancers"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "freetier.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "CTMsBEPTnD",
+                            "Effect": "Allow",
+                            "Action": [
+                                "freetier:GetFreeTierUsage"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "autoscaling.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "5WkbmQ2JUE",
+                            "Effect": "Allow",
+                            "Action": [
+                                "autoscaling:DescribeAutoScalingGroups"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "monitoring.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "DU8X2kGbmM",
+                            "Effect": "Allow",
+                            "Action": [
+                                "monitoring:DescribeAlarms"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "cloudshell.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "k8AY1C7maf",
+                            "Effect": "Allow",
+                            "Action": [
+                                "cloudshell:PutCredentials",
+                                "cloudshell:CreateEnvironment",
+                                "cloudshell:RedeemCode",
+                                "cloudshell:DeleteSession",
+                                "cloudshell:GetEnvironmentStatus",
+                                "cloudshell:DescribeEnvironments",
+                                "cloudshell:CreateSession"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Service": "sts.amazonaws.com",
+            "Policy": {
+                "PolicyName": "Aegislenz-Least-Privilege-Policy",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "UIg9gdX6Nu",
+                            "Effect": "Allow",
+                            "Action": [
+                                "sts:GetCallerIdentity"
+                            ],
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
