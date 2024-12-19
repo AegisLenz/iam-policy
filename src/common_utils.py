@@ -38,17 +38,18 @@ def merge_policies(policies):
     resource_action_map = {}
 
     for policy in policies:
+        actions, resources = None, None
         for statement in policy.get("Statement", []):
             actions = statement.get("Action", [])
             resources = statement.get("Resource", [])
-            actions = [actions] if isinstance(actions, str) else actions
-            resources = [resources] if isinstance(resources, str) else resources
-
-            for resource in resources:
-                if resource not in resource_action_map:
-                    resource_action_map[resource] = set(actions)
-                else:
-                    resource_action_map[resource].update(actions)
+            actions = set([actions] if isinstance(actions, str) else actions)
+            resources = set([resources] if isinstance(resources, str) else resources)
+            
+        for resource in resources:
+            if resource not in resource_action_map:
+                resource_action_map[resource] = set(actions)
+            else:
+                resource_action_map[resource].update(actions)
 
     for resource, actions in resource_action_map.items():
         merged_policy["PolicyDocument"]["Statement"].append({
