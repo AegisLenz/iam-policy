@@ -53,41 +53,66 @@ def making_policy(log_entry):
 
     return policy
 
+
 def extract_policy_by_cloudTrail(file_path):
     logs = load_json(file_path).get("Records", [])
     if not isinstance(logs, list):
         print("Error: The log file does not contain a valid list of log entries.")
         return
     
-    cluster = clustering_by_username(file_path) # 사용자별 클러스터링 추가
-    policies_by_user = {} # 사용자별로 정책을 저장하기 위한 딕셔너리 생성
+    cluster = clustering_by_username(file_path)  # 사용자별 클러스터링
+    policies_by_user = {}  # 사용자별로 정책을 저장하기 위한 딕셔너리 생성
 
     for userName, user_logs in cluster.items():
-        service_policies = {} # 사용자별 서비스 정책 생성 추가
-
+        service_policies = {}  # 사용자별 서비스 정책
+        attack_policies = {}  # Attack 로그에서 추출한 서비스별 정책 추가
+        normal_logs = []  # Attack이 아닌 일반 로그만 저장
+        
         for log_entry in user_logs:
             if not isinstance(log_entry, dict):
                 print("Error: Log entry is not a valid dictionary.")
                 continue
 
             event_source = log_entry.get("eventSource")
-            if event_source not in service_policies: # 서비스별로 정책을 분리하여 저장
+            if event_source not in service_policies:
                 service_policies[event_source] = []
 
-            policy = making_policy(log_entry) # 개별 로그로부터 정책 생성
+            isAttack = log_entry.get("mitreAttackTactics")  # Attack 로그인지 확인
+            policy = making_policy(log_entry)  # 개별 로그로부터 정책 생성
+
             if policy:
-                service_policies[event_source].append(policy)
+                if isAttack:  # Attack 로그에만 존재하는 권한을 기록
+                    if event_source not in attack_policies:
+                        attack_policies[event_source] = []
+                    attack_policies[event_source].append(policy)
+                else:  # 일반 로그는 따로 저장
+                    service_policies[event_source].append(policy)
+                    normal_logs.append(log_entry)
 
         user_policies = []
         for service, policies in service_policies.items():
-            merged_policy = merge_policies(policies) # 서비스별 리소스별로 액션을 묶어서 병합
-            user_policies.append({
-                "Service": service, # 서비스별로 정책 생성 추가
-                "Policy": merged_policy
-            })
+            # 서비스별 리소스별로 액션을 묶어서 병합
+            merged_policy = merge_policies(policies) 
 
-        policies_by_user[userName] = user_policies # 사용자별로 정책 클러스터링 추가
+            # Attack 로그에만 존재하는 액션을 제거하는 부분 (핵심 추가 부분)
+            if service in attack_policies:
+                attack_policy = merge_policies(attack_policies[service])  # Attack 전용 정책 병합
+                attack_actions = set()
+                for statement in attack_policy.get('Statement', []):
+                    attack_actions.update(statement.get('Action', []))
+                
+                new_statements = []
+                for statement in merged_policy.get('Statement', []):
+                    remaining_actions = list(set(statement.get('Action', [])) - attack_actions)
+                    if remaining_actions:  # 남아있는 Action이 있을 경우만 추가
+                        new_statements.append({
+                            'Effect': statement.get('Effect', 'Allow'),
+                            'Action': remaining_actions,
+                            'Resource': statement.get('Resource', [])
+                        })
+                merged_policy['Statement'] = new_statements  # 변경된 정책을 다시 할당
+
+            user_policies.append(merged_policy)
+
+        policies_by_user[userName] = user_policies  # 사용자별로 정책 클러스터링 추가
     return policies_by_user
-
-
-
