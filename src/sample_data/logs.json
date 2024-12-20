@@ -11484,6 +11484,146 @@
                 ],
                 "eventSource": "s3.amazonaws.com",
                 "eventName": "GetBucketTagging"
+            },
+            {
+                "eventName": "GetRole",
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "principalId": "AIDA2MNVLVQTRDIWKGAC5",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "type": "IAMUser",
+                    "accessKeyId": "ASIA2MNVLVQT7DAIAU3S",
+                    "accountId": "713881791527",
+                    "userName": "Victim",
+                    "sessionContext": {
+                        "attributes": {
+                            "creationDate": "2024-12-03T04:48:44Z",
+                            "mfaAuthenticated": "false"
+                        }
+                    }
+                },
+                "eventSource": "iam.amazonaws.com"
+            },
+            {
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "accessKeyId": "AKIA2MNVLVQT53CDZV4V",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "userName": "Wonje_Cha",
+                    "type": "Victim",
+                    "principalId": "AIDA2MNVLVQT5TARLHOZP",
+                    "accountId": "713881791527"
+                },
+                "eventName": "GetPolicyVersion",
+                "eventSource": "iam.amazonaws.com"
+            },
+            {
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "accessKeyId": "AKIA2MNVLVQT53CDZV4V",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "userName": "Victim",
+                    "type": "IAMUser",
+                    "principalId": "AIDA2MNVLVQT5TARLHOZP",
+                    "accountId": "713881791527"
+                },
+                "eventName": "ListRolePolicies",
+                "eventSource": "iam.amazonaws.com"
+            },
+            {
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "accessKeyId": "AKIA2MNVLVQT53CDZV4V",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "userName": "Victim",
+                    "type": "IAMUser",
+                    "principalId": "AIDA2MNVLVQT5TARLHOZP",
+                    "accountId": "713881791527"
+                },
+                "eventName": "ListAccessKeys",
+                "eventSource": "iam.amazonaws.com"
+            },
+            {
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "accessKeyId": "AKIA2MNVLVQT53CDZV4V",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "userName": "Victim",
+                    "type": "IAMUser",
+                    "principalId": "AIDA2MNVLVQT5TARLHOZP",
+                    "accountId": "713881791527"
+                },
+                "eventName": "GetAccessKeyLastUsed",
+                "eventSource": "iam.amazonaws.com"
+            },
+            {
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "accessKeyId": "AKIA2MNVLVQT53CDZV4V",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "userName": "Victim",
+                    "type": "IAMUser",
+                    "principalId": "AIDA2MNVLVQT5TARLHOZP",
+                    "accountId": "713881791527"
+                },
+                "eventName": "GetPolicyVersion",
+                "eventSource": "iam.amazonaws.com"
+            },
+            {
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "accessKeyId": "AKIA2MNVLVQT53CDZV4V",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "userName": "Victim",
+                    "type": "IAMUser",
+                    "principalId": "AIDA2MNVLVQT5TARLHOZP",
+                    "accountId": "713881791527"
+                },
+                "eventName": "ListAttachedUserPolicies",
+                "eventSource": "iam.amazonaws.com"
+            },
+            {
+                "userIdentity": {
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "accountId": "713881791527",
+                    "accessKeyId": "ASIA2MNVLVQTWOHMXVJW",
+                    "type": "IAMUser",
+                    "userName": "Victim",
+                    "principalId": "AIDA2MNVLVQT6H4YW2SMB",
+                    "sessionContext": {
+                        "webIdFederationData": {},
+                        "attributes": {
+                            "creationDate": "2024-12-14T15:48:16Z",
+                            "mfaAuthenticated": "true"
+                        },
+                        "sessionIssuer": {}
+                    }
+                },
+                "eventSource": "sts.amazonaws.com",
+                "eventName": "GetCallerIdentity",
+                "awsRegion": "us-east-1"
+            },
+            {
+                "eventName": "GetCallerIdentity",
+                "eventSource": "sts.amazonaws.com",
+                "awsRegion": "us-east-1",
+                "userIdentity": {
+                    "accessKeyId": "ASIA2MNVLVQTXEVY4FCM",
+                    "arn": "arn:aws:iam::713881791527:user/Victim",
+                    "accountId": "713881791527",
+                    "type": "IAMUser",
+                    "principalId": "AIDA2MNVLVQT6H4YW2SMB",
+                    "userName": "Victim",
+                    "sessionContext": {
+                        "attributes": {
+                            "mfaAuthenticated": "true",
+                            "creationDate": "2024-12-14T15:48:16Z"
+                        },
+                        "webIdFederationData": {},
+                        "sessionIssuer": {}
+                    }
+                }
             }
+            
         ]
     }
