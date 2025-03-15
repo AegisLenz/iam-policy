@@ -17,15 +17,6 @@
             "Resource": [
                 "*"
             ]
-        },
-        {
-            "Action": [
-                "ec2:CreateTags"
-            ],
-            "Effect": "Allow",
-            "Resource": [
-                "*"
-            ]
         }
     ]
 }
